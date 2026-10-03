@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary":"#ffffff","surface":"#f8f9ff","on-error":"#ffffff","on-secondary-fixed":"#2f1500","primary-fixed-dim":"#8fd6a9","tertiary-fixed-dim":"#b6c4ff","primary":"#004125","secondary-fixed-dim":"#ffb77d","tertiary-container":"#2f4999","error-container":"#ffdad6","on-surface-variant":"#404942","on-tertiary-container":"#adbeff","inverse-on-surface":"#eaf1ff","on-secondary-container":"#663500","on-primary-fixed":"#002110","surface-container-low":"#eff4ff","tertiary":"#123181","on-tertiary-fixed-variant":"#264191","secondary":"#904d00","surface-tint":"#236b46","on-primary-fixed-variant":"#005230","surface-container-high":"#dee9fc","on-secondary-fixed-variant":"#6e3900","primary-container":"#0c5a37","on-tertiary":"#ffffff","outline":"#707971","on-primary-container":"#88cfa3","surface-container-lowest":"#ffffff","on-background":"#121c2a","surface-dim":"#d0dbed","on-error-container":"#93000a","surface-container":"#e6eeff","background":"#f8f9ff","outline-variant":"#bfc9bf","error":"#ba1a1a","surface-bright":"#f8f9ff","secondary-fixed":"#ffdcc3","on-surface":"#121c2a","on-secondary":"#ffffff","surface-variant":"#d9e3f6","on-tertiary-fixed":"#00164e","tertiary-fixed":"#dce1ff","inverse-primary":"#8fd6a9","inverse-surface":"#27313f","secondary-container":"#fe932c","surface-container-highest":"#d9e3f6","primary-fixed":"#aaf2c4"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{gutter:"1.5rem","gutter-mobile":"1rem","margin-desktop":"3rem","space-lg":"1.5rem","space-md":"1rem","space-3xl":"4.5rem","space-xs":"0.25rem",margin:"2rem","space-2xl":"3rem","margin-mobile":"1rem","space-sm":"0.5rem","space-xl":"2rem"},fontFamily:{"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"]},fontSize:{"headline-xl":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"700"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"display-lg-mobile":["34px",{lineHeight:"42px",letterSpacing:"-0.02em",fontWeight:"800"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-md":["16px",{lineHeight:"26px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-sm":["18px",{lineHeight:"26px",letterSpacing:"-0.005em",fontWeight:"600"}],"headline-md":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"800"}],"body-sm":["14px",{lineHeight:"22px",letterSpacing:"0.005em",fontWeight:"400"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-on-primary py-space-xs px-margin-mobile lg:px-margin text-label-sm font-label-sm"><div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm"><div><span>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span><span class="mx-2 opacity-50">|</span><span>Pemberdayaan Umat &amp; Khidmah Ranting NU Banjaranyar</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">schedule</span><span>Jadwal Sholat Hari Ini: Ashar 15:18 WIB</span></div><span class="opacity-40">•</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">calendar_today</span><span>14 Syaban 1445 H / 24 Februari 2025</span></div></div></div></div><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="Logo NU Ranting Banjaranyar" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI5hbWBChrmhDKxy7lin3hdm2BNe7kHiAeQ6mbBrqqssnB3cHFPEWslX1VTN4fFEpRTp4zywxk7hFUUPvCfqq3_c8wcZxOUtn4m3zAyMi9PqP9QV_04kXv-ZIk_iEiI0iRmcc2Fy3aveJtNpe9gnh2_Vr5TOq_UvBvQv1po8QA4k3IfFzrRDSM2xWZHlhZB-JzqEXFmawHfzaOj7PiE8OCpYN8VP_z2fRKWHuKNREk3axepX3sn84"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">NU Ranting Banjaranyar</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Kecamatan Baureno, Kabupaten Bojonegoro</span></div></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg px-space-sm py-space-xs"><a aria-current="page" class="transition-colors bg-primary-container text-on-primary font-bold rounded-lg px-space-sm py-space-xs" data-path="beranda" href="#">Beranda</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="profil" href="#">Profil</a><div class="relative group py-space-sm"><button class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface flex items-center gap-space-xs transition-colors" type="button"><span>Badan Otonom</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button><div class="absolute top-full left-0 hidden group-hover:block bg-surface-container-lowest p-space-sm rounded-lg shadow-[0_8px_20px_-4px_rgba(12,90,55,0.08)] min-w-[200px] border-0 z-50"><a class="block px-space-md py-space-sm rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banom-ipnu" href="#">IPNU Banjaranyar</a><a class="block px-space-md py-space-sm rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banom-ippnu" href="#">IPPNU Banjaranyar</a><a class="block px-space-md py-space-sm rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banom-fatayat" href="#">Fatayat NU</a><a class="block px-space-md py-space-sm rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banom-ansor" href="#">GP Ansor</a><a class="block px-space-md py-space-sm rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banom-banser" href="#">Satkorkel Banser</a></div></div><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="struktur-organisasi" href="#">Struktur Organisasi</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="berita" href="#">Berita</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="agenda-terdekat" href="#">Agenda Terdekat</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="kotak-aspirasi" href="#">Kotak Aspirasi</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg px-space-md py-2.5 rounded-lg transition-colors" data-path="kotak-aspirasi" href="#"><span class="material-symbols-outlined text-[18px]">chat</span><span>Kirim Aspirasi</span></a><a class="inline-flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg px-space-md py-2.5 rounded-lg transition-colors" data-path="admin-portal-login" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">lock</span><span class="hidden md:inline">Admin Portal</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- HERO SECTION WITH ASYMMETRICAL EDITORIAL COMPOSITION -->
+<section class="relative w-full overflow-hidden bg-primary text-on-primary">
+<!-- Ambient glow decorative layers -->
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-primary-container/60 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="relative max-w-7xl mx-auto px-margin-mobile lg:px-gutter py-space-2xl lg:py-space-3xl flex flex-col gap-space-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Text & Action Column -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-lowest/10 w-fit backdrop-blur-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="font-label-md text-label-md text-primary-fixed uppercase tracking-wider">Khidmah Jam'iyyah &amp; Jemaah Desa</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile lg:text-display-lg text-on-primary font-extrabold tracking-tight">
+            Merawat Tradisi, Meneguhkan Aswaja, <span class="text-secondary-container">Melayani Ummat.</span>
+</h1>
+<p class="font-body-lg text-body-md lg:text-body-lg text-surface-container-high/90 max-w-2xl leading-relaxed">
+            Pusat informasi resmi Nahdlatul Ulama Ranting Banjaranyar, Kecamatan Baureno, Kabupaten Bojonegoro. Mengokohkan pilar Ahlussunnah wal Jama'ah An-Nahdliyyah demi keharmonisan sosial dan kemandirian warga desa.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+<a class="inline-flex items-center gap-space-xs bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg px-space-lg py-3 rounded-lg shadow-md transition-transform hover:-translate-y-0.5 duration-200" data-path="profil" href="#">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+<span>Lihat Profil Organisasi</span>
+</a>
+<a class="inline-flex items-center gap-space-xs bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 text-on-primary font-label-lg text-label-lg px-space-lg py-3 rounded-lg backdrop-blur-md transition-colors" href="#berita-ranting">
+<span class="material-symbols-outlined text-[20px]">feed</span>
+<span>Jelajahi Berita &amp; Kegiatan</span>
+</a>
+</div>
+</div>
+<!-- Hero Mosaic / Contextual Imagery -->
+<div class="lg:col-span-5 relative">
+<div class="relative mx-auto max-w-md lg:max-w-none rounded-xl overflow-hidden shadow-2xl bg-surface-container-lowest/5 p-space-sm backdrop-blur-md">
+<div class="relative h-80 lg:h-96 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Dignified assembly of Javanese Nahdlatul Ulama village elders, santri, and congregants wearing traditional sarong, white songkok, and green NU scarves, gathered inside a spacious village mosque bathed in warm afternoon natural golden light, peaceful atmosphere with deep green accents and wood architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq1sVzxEZAPrNbuFk8FFizkEt5eDyTUA7x4MZAwskQZVUOaQ_Zo2AQFjJ2APKnq3RzwjlPcFVPVF3_ryxjb7jCwNTAXqc4jC5jkFB2RLY38MdExtCxCdOnpyCfc-VkMfcCT65EEYMGHhj-O-Mcb2iiKfjDNFHPgRs9dIJabu3SNtW0zlmQhBCLYxZNeSvusVAnsByWaiuwBGhy471gjNyMrzUlElspaiTcnUw43t82PaRJruQI5xQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+<!-- Floating Live Citation Badge -->
+<div class="absolute bottom-space-md left-space-md right-space-md bg-surface-container-lowest/90 backdrop-blur-md p-space-md rounded-lg text-on-surface shadow-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<span class="font-label-md text-label-md text-primary font-bold">Aswaja Ranting Banjaranyar</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Baureno - Bojonegoro</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-1">"Hubbul Wathon Minal Iman — Mencintai Tanah Air Sebagian dari Iman"</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Metric Indicator Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md -mt-2 lg:-mt-4">
+<div class="bg-surface-container-lowest/10 backdrop-blur-md rounded-xl p-space-md hover:bg-surface-container-lowest/15 transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-container text-[24px]">groups</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg font-bold text-on-primary">480+</span>
+<p class="font-label-sm text-label-sm text-surface-container-high">Kader Terdata Aktif</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest/10 backdrop-blur-md rounded-xl p-space-md hover:bg-surface-container-lowest/15 transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-container text-[24px]">auto_stories</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-primary">Malam Ahad</span>
+<p class="font-label-sm text-label-sm text-surface-container-high">Pengajian Rutin Selapanan</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest/10 backdrop-blur-md rounded-xl p-space-md hover:bg-surface-container-lowest/15 transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-container text-[24px]">payments</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg font-bold text-on-primary">Rp 48,2 Jt</span>
+<p class="font-label-sm text-label-sm text-surface-container-high">ZISWAF Koin Lazisnu 2025</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest/10 backdrop-blur-md rounded-xl p-space-md hover:bg-surface-container-lowest/15 transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-container text-[24px]">location_city</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg font-bold text-on-primary">7 Musholla</span>
+<p class="font-label-sm text-label-sm text-surface-container-high">&amp; 1 Masjid Jami' Binaan</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SEKILAS PROFIL SECTION -->
+<section class="max-w-7xl mx-auto px-margin-mobile lg:px-gutter py-space-2xl lg:py-space-3xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<!-- Media Presentation with Geometric Overlay -->
+<div class="lg:col-span-5 relative order-2 lg:order-1">
+<div class="relative rounded-2xl overflow-hidden shadow-xl bg-surface-container-lowest">
+<img class="w-full h-[420px] object-cover" data-alt="Interior of traditional village santri prayer hall with wooden beams, green carpets, young and adult male worshippers sitting peacefully during Quran recital session, subtle incense smoke in gentle morning rays, warm and calm ambience" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGITmtXIdkfpYvM9j22GA2eBcZDy2z2TtX4pB91wK3muLhRGCYxfEu8Y3ThDgRN6nAAEflKd1L3CxIuddByrbz-jSOXwkl698m3nqC-cVGSk2abd1SBAkmBoWTuM6dS11Z_JkhIXqAkty-0RNdQq6IK8os3RctutdNH7eNUIdCsmZyEKsbDM767lGMFd0xxSVz9zChESmgcUuQKfQjZsHUqUhc9YhQLGneCglIwpM8t2Ks4_PpbOE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-space-lg left-space-lg right-space-lg text-on-primary">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-secondary-container text-on-secondary font-bold">Kilas Jam'iyyah</span>
+<h3 class="font-headline-md text-headline-md font-bold mt-2">Kemandirian Warga Berbasis Masjid &amp; Pesantren</h3>
+<p class="font-body-sm text-body-sm text-surface-variant mt-1">Mengokohkan silaturahmi antar-rukun tetangga di pelosok Desa Banjaranyar.</p>
+</div>
+</div>
+<!-- Decorative corner emblem tag -->
+<div class="hidden sm:flex absolute -bottom-6 -right-6 bg-surface-container-lowest p-space-md rounded-xl shadow-xl items-center gap-space-sm max-w-xs">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-bold text-primary">Amanah &amp; Transparan</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Laporan donasi koin Lazisnu terverifikasi berkala.</p>
+</div>
+</div>
+</div>
+<!-- Narrative Column -->
+<div class="lg:col-span-7 flex flex-col gap-space-md order-1 lg:order-2">
+<div class="flex items-center gap-space-xs text-primary font-bold">
+<span class="material-symbols-outlined text-[20px]">mosque</span>
+<span class="font-label-lg text-label-lg tracking-wider uppercase">Sekilas Ranting NU Banjaranyar</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">
+          Menjaga Akidah, Mengawal Umat, Membangun Desa yang Barokah
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Pengurus Ranting Nahdlatul Ulama (PRNU) Desa Banjaranyar berperan sebagai episentrum pergerakan sosial-keagamaan di tingkat akar rumput. Berakar dari tradisi para ulama salaf, kami hadir untuk memastikan ajaran Islam Ahlussunnah wal Jama'ah an-Nahdliyah tetap menjadi pegangan hidup sehari-hari warga.
+        </p>
+<!-- Dynamic Vision & Mission Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mt-space-sm">
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">church</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-primary mb-1">Misi Keagamaan</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Memakmurkan masjid, musholla, majelis istighotsah, tahlilan, serta mendampingi pembinaan akidah generasi muda santri.
+            </p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary text-on-secondary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">diversity_3</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-secondary mb-1">Misi Kemaslahatan</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Pengentasan dhuafa via Koin LAZISNU, tanggap bencana oleh Banser, serta penguatan wirausaha jam'iyyah desa.
+            </p>
+</div>
+</div>
+<div class="pt-space-sm">
+<a class="inline-flex items-center gap-space-xs text-primary font-label-lg text-label-lg font-bold hover:underline" data-path="profil" href="#">
+<span>Pelajari Sejarah &amp; Struktur Lengkap</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 5 BADAN OTONOM (BANOM) INTERACTIVE MOSAIC -->
+<section class="w-full bg-surface-container-low py-space-2xl lg:py-space-3xl">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-gutter flex flex-col gap-space-xl">
+<!-- Section Header with Badging -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-secondary font-bold">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+<span class="font-label-lg text-label-lg tracking-wider uppercase">Sinergi Badan Otonom</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-extrabold mt-1">
+            5 Pilar Gerakan BANOM Banjaranyar
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-2xl">
+            Wadah aktualisasi pemuda, wanita, cendekiawan, dan kader benteng ulama dalam menegakkan panji kemandirian Nahdliyin.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs text-label-md font-label-md text-on-surface-variant bg-surface-container-lowest px-space-md py-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span>100% Ber SK Resmi MWC Baureno</span>
+</div>
+</div>
+<!-- 5 Banom Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- 1. GP ANSOR -->
+<div class="group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                GP ANSOR
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">badge</span>
+<span>65 Kader</span>
+</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors">
+              Pimpinan Ranting GP Ansor
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+              Garda terdepan pemuda NU dalam mengawal NKRI, tanggap darurat kepemudaan, serta penguatan ekonomi kreatif desa.
+            </p>
+<div class="mt-space-md pt-space-sm flex flex-wrap gap-space-xs">
+<span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Rijalul Ansor</span>
+<span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">MDS Dzikir &amp; Sholawat</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md">
+<a class="w-full inline-flex items-center justify-center gap-space-xs bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-label-lg text-label-lg py-2.5 rounded-lg transition-colors duration-200" data-path="banom-ansor" href="#">
+<span>Lihat Profil BANOM</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- 2. SATKORKEL BANSER -->
+<div class="group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-primary-fixed text-on-primary-fixed font-bold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                SATKORKEL BANSER
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">military_tech</span>
+<span>42 Personel</span>
+</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors">
+              Banser Satkorkel Banjaranyar
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+              Benteng para Ulama dan Kyai. Mengawal pengamanan pengajian, lalu lintas kegiatan warga, serta penanggulangan bencana (BAGANA).
+            </p>
+<div class="mt-space-md pt-space-sm flex flex-wrap gap-space-xs">
+<span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Bagana</span>
+<span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Balakar</span>
+<span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Pengamanan</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md">
+<a class="w-full inline-flex items-center justify-center gap-space-xs bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-label-lg text-label-lg py-2.5 rounded-lg transition-colors duration-200" data-path="banom-banser" href="#">
+<span>Lihat Profil BANOM</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- 3. FATAYAT NU -->
+<div class="group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-primary-fixed-dim/40 text-on-primary-fixed-variant font-bold">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+                FATAYAT NU
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">group</span>
+<span>110 Anggota</span>
+</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors">
+              Pimpinan Ranting Fatayat NU
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+              Penggerak perempuan muda Islam. Fokus pada parenting sakinah, kesehatan ibu dan balita posyandu, serta kajian kitab fiqih nisa'.
+            </p>
+<div class="mt-space-md pt-space-sm flex flex-wrap gap-space-xs">
+<span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Fiqih Nisa</span>
+<span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Kopontren Putri</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md">
+<a class="w-full inline-flex items-center justify-center gap-space-xs bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-label-lg text-label-lg py-2.5 rounded-lg transition-colors duration-200" data-path="banom-fatayat" href="#">
+<span>Lihat Profil BANOM</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- 4. IPNU -->
+<div class="group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-secondary-fixed/50 text-on-secondary-fixed-variant font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                IPNU
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">school</span>
+<span>78 Pelajar</span>
+</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors">
+              Pimpinan Ranting IPNU
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+              Ikatan Pelajar Nahdlatul Ulama. Pengkaderan awal pelajar putra melalui Makesta, pelatihan jurnalistik desa, dan bimbingan belajar santri.
+            </p>
+<div class="mt-space-md pt-space-sm flex flex-wrap gap-space-xs">
+<span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Kaderisasi Makesta</span>
+<span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Literasi Digital</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md">
+<a class="w-full inline-flex items-center justify-center gap-space-xs bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-label-lg text-label-lg py-2.5 rounded-lg transition-colors duration-200" data-path="banom-ipnu" href="#">
+<span>Lihat Profil BANOM</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- 5. IPPNU -->
+<div class="group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-bold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                IPPNU
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">local_library</span>
+<span>85 Pelajar</span>
+</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors">
+              Pimpinan Ranting IPPNU
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+              Ikatan Pelajar Putri NU. Mengasah kepemimpinan remaja putri, sanggar seni hadrah banjari putri, dan kepedulian lingkungan hidup desa.
+            </p>
+<div class="mt-space-md pt-space-sm flex flex-wrap gap-space-xs">
+<span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Hadrah Sholawat</span>
+<span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Remaja Berdaya</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md">
+<a class="w-full inline-flex items-center justify-center gap-space-xs bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-label-lg text-label-lg py-2.5 rounded-lg transition-colors duration-200" data-path="banom-ippnu" href="#">
+<span>Lihat Profil BANOM</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- 6. LAZISNU Info Tile (Complementing Grid) -->
+<div class="bg-primary text-on-primary rounded-2xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-secondary-container text-on-secondary font-bold">
+<span class="w-2 h-2 rounded-full bg-surface-container-lowest"></span>
+                LEMBAGA ZISWAF
+              </span>
+<span class="material-symbols-outlined text-secondary-container text-[20px]">savings</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-primary">
+              Koin NU Peduli Umat
+            </h3>
+<p class="font-body-sm text-body-sm text-surface-container-high mt-space-sm">
+              Gerakan infaq receh kaleng warga yang kini menopang beasiswa anak yatim dan pengobatan darurat di Banjaranyar.
+            </p>
+<!-- Progress bar element -->
+<div class="mt-space-md">
+<div class="flex justify-between font-label-sm text-label-sm text-surface-container mb-1">
+<span>Capaian Kaleng Aktif</span>
+<span class="font-bold">340 / 400 KK (85%)</span>
+</div>
+<div class="w-full bg-surface-container-lowest/20 h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md">
+<a class="w-full inline-flex items-center justify-center gap-space-xs bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg py-2.5 rounded-lg transition-colors" data-path="kotak-aspirasi" href="#">
+<span class="material-symbols-outlined text-[18px]">volunteer_activism</span>
+<span>Ambil Kaleng Koin Lazisnu</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BERITA TERKINI & AGENDA TERDEKAT (SPLIT EDITORIAL SECTION) -->
+<section class="max-w-7xl mx-auto px-margin-mobile lg:px-gutter py-space-2xl lg:py-space-3xl" id="berita-ranting">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl">
+<!-- BERITA POSTS (8 COLUMNS) -->
+<div class="lg:col-span-8 flex flex-col gap-space-xl">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-primary font-bold">
+<span class="material-symbols-outlined text-[20px]">newspaper</span>
+<span class="font-label-lg text-label-lg tracking-wider uppercase">Warta Khidmah</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-extrabold mt-1">
+              Berita Terkini Ranting Banjaranyar
+            </h2>
+</div>
+<a class="hidden sm:inline-flex items-center gap-space-xs text-primary font-label-lg text-label-lg font-bold hover:underline" data-path="berita" href="#">
+<span>Arsip Warta Lengkap</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Featured Big News Item -->
+<article class="md:col-span-2 group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+<div class="grid grid-cols-1 md:grid-cols-12">
+<div class="md:col-span-7 h-64 md:h-auto relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Hundreds of Indonesian Muslim villagers gathered sitting in solemn Islamic congregation during Selapanan night recitation, listening attentively to NU Kyai giving tausiyah at the green decorated stage, warm ambience with string lights and mosque minarets in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbP1q6LY21Z8arks9El4ecbHbOLelcvo1KR6DvP-XUVWmHm6AY0WGDIEIvkljBMqSexzq89PpzZKpEyJ7bawza2uj3kYehRrYkYAkPBGo5V0uon9XBXkKz5awDYrYNZ0PH3mxlUo3E4MOHAvDXk9c51pau5EBCyN3O9itc463YHlJaVvpvHZcvjYLpyL5SUqFcWuyA9ytbjnceylqaPc3tSYaMNPHqWpmN8HitAsAaCWNYkBAu7o4"/>
+<span class="absolute top-space-md left-space-md px-3 py-1 rounded-full text-label-sm font-label-sm bg-primary text-on-primary font-bold shadow-sm">
+                  Pengajian Selapanan
+                </span>
+</div>
+<div class="md:col-span-5 p-space-lg flex flex-col justify-between bg-surface-container-lowest">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_month</span>
+<span>Ahad Kliwon, 22 Feb 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                    Semarak Selapanan Ahad Kliwon: Syuriyah PRNU Ajak Warga Banjaranyar Rawat Sanad Keilmuan
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm line-clamp-3">
+                    Bertempat di Halaman Masjid Jami' Baiturrahim, majelis selapanan dihadiri ratusan jamaah. Rais Syuriyah menegaskan pentingnya menyaring pemahaman agama di era medsos melalui kitab kuning ulama mu'tabar.
+                  </p>
+</div>
+<div class="mt-space-md pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oleh: LTN NU Banjaranyar</span>
+<a class="text-primary font-bold font-label-md text-label-md hover:underline flex items-center gap-1" data-path="berita" href="#">
+<span>Baca</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- News Item 2: Lazisnu Santunan -->
+<article class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col justify-between">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Heartwarming scene of NU Care Lazisnu volunteers handing over educational packages and envelopes to smiling village orphan children in green uniforms inside community hall, warm empathetic lighting, candid documentary photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXpA6BvEO_1ew8C66S5FyVYTQnPIy4NFhXDZHii_q4FTxJiv3AGhjyGZ-kb0atM18UGpS5X7Npi7qkcmcV2b3NLIcy9PlXPPUSLxVPaV6YU17-RW3gmqk2_Vc6w3DRazT1DzOxeNChuPcgNVvv9Kj0tHK0sEYINY4bQz-njASwxBHwhkTltCcsOWgAntcoLdcNZwdbr9uAYXWVjXZt1HG0xb8IVULMX_1bPAQiXcPpdJihPaHNci8"/>
+<span class="absolute top-space-sm left-space-sm px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-secondary-container text-on-secondary font-bold shadow-sm">
+                LAZISNU Peduli
+              </span>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_month</span>
+<span>18 Februari 2025</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Lazisnu Banjaranyar Salurkan Santunan Bulanan Bagi 28 Anak Yatim &amp; Dhuafa Desa
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 line-clamp-2">
+                  Penyaluran dana infaq kaleng koin NU tahap ke-2 berhasil membantu biaya perlengkapan sekolah madrasah dan paket sembako.
+                </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lazisnu Ranting</span>
+<a class="text-primary font-bold font-label-md text-label-md hover:underline" data-path="berita" href="#">Selengkapnya →</a>
+</div>
+</div>
+</article>
+<!-- News Item 3: Apel Banser -->
+<article class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col justify-between">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Indonesian Banser paramilitary corps members in striped green and black uniform standing in disciplined parade formation in front of village field with large red and white Indonesian flag and green NU flags waving under sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeOZZ_Nlm22g93MHxhzpk7-gcnvcXbTb0QTn3SmhiObysY_e216fTz8l1hvi2k2y160emg-fX58sIdcKN3wTTL4Hr_rfrkTVA8ZFreI1brumjiyoLvAugJ-Bn6dFc2yXpZyIzQxzviHE2U7FjFtPCgCWWZexbk8m6ksjmFg0CxkRrMDqyP94kQW9wizcK5wdpaaAG1owxh8gDwW1Ht0mNxS12Zw1fezOl4IzqZE-Pk28tUs6IVsvU"/>
+<span class="absolute top-space-sm left-space-sm px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-primary-container text-on-primary font-bold shadow-sm">
+                Apel Komando
+              </span>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_month</span>
+<span>14 Februari 2025</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Satkorkel Banser Banjaranyar Gelar Apel Kesiapsiagaan Tanggap Bencana Banjir Bengawan Solo
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 line-clamp-2">
+                  Mengingat debit air sungai Baureno yang meningkat, 35 personel Bagana disiagakan dengan perahu karet dan posko logistik.
+                </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Satkorkel Banser</span>
+<a class="text-primary font-bold font-label-md text-label-md hover:underline" data-path="berita" href="#">Selengkapnya →</a>
+</div>
+</div>
+</article>
+</div>
+<div class="sm:hidden w-full">
+<a class="w-full inline-flex items-center justify-center gap-space-xs bg-surface-container py-3 rounded-lg text-primary font-bold font-label-lg" data-path="berita" href="#">
+<span>Buka Seluruh Berita</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- AGENDA TERDEKAT WIDGET & COUNTDOWN (4 COLUMNS) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<div>
+<div class="flex items-center gap-space-xs text-secondary font-bold">
+<span class="material-symbols-outlined text-[20px]">event_upcoming</span>
+<span class="font-label-lg text-label-lg tracking-wider uppercase">Jadwal Jam'iyyah</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold mt-1">
+            Agenda Terdekat
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Hadirilah majelis ilmu dan dzikir untuk mempererat ukhuwah islamiyah.
+          </p>
+</div>
+<!-- Featured Countdown Agenda Box -->
+<div class="bg-gradient-to-br from-primary to-primary-container text-on-primary p-space-lg rounded-2xl shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary font-label-sm text-label-sm font-bold uppercase">
+              Agenda Utama
+            </span>
+<span class="material-symbols-outlined text-secondary-container">alarm</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-primary">
+              Istighotsah Kubro &amp; Doa Bersama Sambut Ramadhan 1446 H
+            </h3>
+<p class="font-body-sm text-body-sm text-surface-container-high mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Masjid Jami' Baiturrahim Banjaranyar</span>
+</p>
+</div>
+<!-- Live JS Countdown Component -->
+<div class="bg-surface-container-lowest/15 backdrop-blur-md p-space-md rounded-xl">
+<p class="font-label-sm text-label-sm text-surface-container-high mb-2 font-medium">Hitung Mundur Waktu Pelaksanaan:</p>
+<div class="grid grid-cols-4 gap-2 text-center" id="agenda-countdown">
+<div class="bg-surface-container-lowest/20 rounded-lg py-2">
+<span class="font-headline-sm text-headline-sm font-bold block" id="cd-days">04</span>
+<span class="font-label-sm text-label-sm opacity-80">Hari</span>
+</div>
+<div class="bg-surface-container-lowest/20 rounded-lg py-2">
+<span class="font-headline-sm text-headline-sm font-bold block" id="cd-hours">16</span>
+<span class="font-label-sm text-label-sm opacity-80">Jam</span>
+</div>
+<div class="bg-surface-container-lowest/20 rounded-lg py-2">
+<span class="font-headline-sm text-headline-sm font-bold block" id="cd-minutes">42</span>
+<span class="font-label-sm text-label-sm opacity-80">Menit</span>
+</div>
+<div class="bg-surface-container-lowest/20 rounded-lg py-2">
+<span class="font-headline-sm text-headline-sm font-bold block" id="cd-seconds">10</span>
+<span class="font-label-sm text-label-sm opacity-80">Detik</span>
+</div>
+</div>
+</div>
+<div class="text-surface-container-high font-body-sm text-body-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span>Jum'at Kliwon, 28 Feb 2025 • Ba'da Isya' (19.30 WIB)</span>
+</div>
+</div>
+<!-- Sequential Agenda List Cards -->
+<div class="flex flex-col gap-space-sm">
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-space-md">
+<div class="bg-surface-container text-primary font-bold text-center px-3 py-2 rounded-lg shrink-0">
+<span class="font-headline-sm text-headline-sm block leading-none">02</span>
+<span class="font-label-sm text-label-sm block uppercase mt-0.5">Mar</span>
+</div>
+<div class="flex-1 min-w-0">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Kaderisasi Fatayat</span>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface text-[16px] truncate mt-1">
+                Latihan Kader Dasar (LKD) Fatayat NU
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span>
+<span class="truncate">Gedung Madrasah Diniyah Al-Ihsan</span>
+</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-space-md">
+<div class="bg-surface-container text-primary font-bold text-center px-3 py-2 rounded-lg shrink-0">
+<span class="font-headline-sm text-headline-sm block leading-none">06</span>
+<span class="font-label-sm text-label-sm block uppercase mt-0.5">Mar</span>
+</div>
+<div class="flex-1 min-w-0">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Rijalul Ansor</span>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface text-[16px] truncate mt-1">
+                Majelis Dzikir &amp; Sholawat Malam Jum'at Legi
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span>
+<span class="truncate">Musholla Nurul Huda RT 04 RW 02</span>
+</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-space-md">
+<div class="bg-surface-container text-primary font-bold text-center px-3 py-2 rounded-lg shrink-0">
+<span class="font-headline-sm text-headline-sm block leading-none">09</span>
+<span class="font-label-sm text-label-sm block uppercase mt-0.5">Mar</span>
+</div>
+<div class="flex-1 min-w-0">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Pelajar IPNU-IPPNU</span>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface text-[16px] truncate mt-1">
+                Workshop Desain Grafis &amp; Jurnalistik Pelajar
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span>
+<span class="truncate">Kantor Sekretariat PRNU Banjaranyar</span>
+</p>
+</div>
+</div>
+</div>
+<a class="w-full inline-flex items-center justify-center gap-space-xs bg-surface-container-high hover:bg-surface-dim text-on-surface font-label-lg text-label-lg py-2.5 rounded-lg transition-colors" data-path="agenda-terdekat" href="#">
+<span>Lihat Kalender Seluruh Agenda</span>
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</a>
+</div>
+</div>
+</section>
+<!-- BANNER KOTAK ASPIRASI WARGA DESA -->
+<section class="max-w-7xl mx-auto px-margin-mobile lg:px-gutter pb-space-3xl w-full">
+<div class="relative overflow-hidden rounded-3xl bg-primary text-on-primary p-space-lg lg:p-space-2xl shadow-xl">
+<!-- Background subtle ornament -->
+<div class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-secondary-container/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container-lowest/15 w-fit backdrop-blur-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">forum</span>
+<span class="font-label-md text-label-md text-surface-container-high">Partisipasi &amp; Khidmah Warga Banjaranyar</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl font-extrabold tracking-tight">
+            Kotak Suara Nahdliyin: Ruang Saran, Kritik, &amp; Permohonan Doa
+          </h2>
+<p class="font-body-md text-body-md text-surface-container-high max-w-2xl leading-relaxed">
+            Punya gagasan untuk kemaslahatan kampung, ingin mendaftarkan keluarga dalam istighotsah doa arwah jama'ah, atau melaporkan warga yang butuh bantuan darurat LAZISNU? Pengurus siap menindaklanjuti.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs text-label-md font-label-md text-surface-container">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary-container">check_circle</span> Rahasia &amp; Amanah</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary-container">check_circle</span> Langsung ke Sekretaris Ranting</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary-container">check_circle</span> Respons Cepat 1x24 Jam</span>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-md justify-center">
+<a class="inline-flex items-center justify-center gap-space-xs bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg px-space-lg py-3.5 rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 duration-200 font-bold" data-path="kotak-aspirasi" href="#">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Kirim Aspirasi Sekarang</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 text-on-primary font-label-lg text-label-lg px-space-lg py-3.5 rounded-xl backdrop-blur-md transition-colors" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+<span>Hubungi Call Center WA</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Simple Script for Realtime Micro Countdown -->
+<script>
+    (function initCountdown() {
+      // Set target: 4 days from current moment
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 4);
+      targetDate.setHours(targetDate.getHours() + 16);
+
+      function update() {
+        const now = new Date().getTime();
+        const distance = targetDate.getTime() - now;
+
+        if (distance < 0) return;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const dEl = document.getElementById('cd-days');
+        const hEl = document.getElementById('cd-hours');
+        const mEl = document.getElementById('cd-minutes');
+        const sEl = document.getElementById('cd-seconds');
+
+        if (dEl) dEl.textContent = String(days).padStart(2, '0');
+        if (hEl) hEl.textContent = String(hours).padStart(2, '0');
+        if (mEl) mEl.textContent = String(minutes).padStart(2, '0');
+        if (sEl) sEl.textContent = String(seconds).padStart(2, '0');
+      }
+
+      setInterval(update, 1000);
+      update();
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface pt-space-2xl pb-space-lg"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl mb-space-2xl"><div><div class="flex items-center gap-space-sm mb-space-md"><img alt="Logo NU Ranting Banjaranyar" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI5hbWBChrmhDKxy7lin3hdm2BNe7kHiAeQ6mbBrqqssnB3cHFPEWslX1VTN4fFEpRTp4zywxk7hFUUPvCfqq3_c8wcZxOUtn4m3zAyMi9PqP9QV_04kXv-ZIk_iEiI0iRmcc2Fy3aveJtNpe9gnh2_Vr5TOq_UvBvQv1po8QA4k3IfFzrRDSM2xWZHlhZB-JzqEXFmawHfzaOj7PiE8OCpYN8VP_z2fRKWHuKNREk3axepX3sn84"/><span class="font-headline-sm text-headline-sm text-primary font-bold">PRNU Banjaranyar</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Menjaga Tradisi Ahlussunnah wal Jama'ah An-Nahdliyyah, Merajut Persaudaraan, Membangun Kemandirian Warga Desa Banjaranyar.</p><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-[18px]">language</span></div><div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-[18px]">mail</span></div><div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-[18px]">phone</span></div></div></div><div><h4 class="font-headline-sm text-headline-sm text-primary mb-space-md font-bold">Sekretariat &amp; Layanan</h4><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary shrink-0">location_on</span><span>Gedung MWC/Ranting NU Banjaranyar, Jl. Masjid Jami' No. 09, Desa Banjaranyar, Kec. Baureno, Kab. Bojonegoro, Jawa Timur 62192</span></p><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary shrink-0">call</span><span>+62 812-3456-7890 (Call Center)</span></p><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary shrink-0">mark_email_read</span><span>rantingnu.banjaranyar@gmail.com</span></p></div><div><h4 class="font-headline-sm text-headline-sm text-primary mb-space-md font-bold">Badan Otonom (BANOM)</h4><ul class="space-y-space-sm font-label-md text-label-md text-on-surface-variant"><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" data-path="banom-ansor" href="#"><span class="w-2 h-2 rounded-full bg-secondary-container"></span><span>Pimpinan Ranting GP Ansor</span></a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" data-path="banom-banser" href="#"><span class="w-2 h-2 rounded-full bg-primary"></span><span>Satkorkel Banser Banjaranyar</span></a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" data-path="banom-fatayat" href="#"><span class="w-2 h-2 rounded-full bg-primary-fixed-dim"></span><span>Pimpinan Ranting Fatayat NU</span></a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" data-path="banom-ipnu" href="#"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>PR IPNU Desa Banjaranyar</span></a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" data-path="banom-ippnu" href="#"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span>PR IPPNU Desa Banjaranyar</span></a></li></ul></div><div><h4 class="font-headline-sm text-headline-sm text-primary mb-space-md font-bold">Layanan Digital &amp; ZISWAF</h4><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Salurkan infaq, shadaqah, dan zakat melalui Lazisnu Ranting Banjaranyar untuk kemaslahatan dhuafa dan dakwah ranting.</p><a class="w-full inline-flex items-center justify-center gap-space-xs bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg py-2.5 px-space-md rounded-lg transition-colors font-semibold" data-path="kotak-aspirasi" href="#"><span class="material-symbols-outlined text-[18px]">volunteer_activism</span><span>Salurkan ZISWAF Ranting</span></a></div></div><div class="max-w-7xl mx-auto px-margin-mobile lg:px-gutter pt-space-lg text-center font-label-sm text-label-sm text-on-surface-variant flex flex-col md:flex-row items-center justify-between gap-space-sm"><div>© 2025 Pengurus Ranting Nahdlatul Ulama (PRNU) Banjaranyar. Khidmah Untuk Umat.</div><div class="flex items-center gap-space-md"><a class="hover:text-primary" data-path="profil" href="#">Tentang Ranting</a><span>•</span><a class="hover:text-primary" data-path="kotak-aspirasi" href="#">Aspirasi Warga</a><span>•</span><a class="hover:text-primary" data-path="admin-portal-login" href="#">Masuk SIMNU</a></div></div></footer></body></html>

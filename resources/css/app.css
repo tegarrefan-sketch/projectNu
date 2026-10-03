@@ -1,0 +1,100 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    
+    /* Khadim Ummah Design System Colors */
+    --color-primary: #004125;
+    --color-primary-container: #0c5a37;
+    --color-on-primary: #ffffff;
+    --color-on-primary-container: #88cfa3;
+    --color-primary-fixed: #aaf2c4;
+    --color-primary-fixed-dim: #8fd6a9;
+    --color-on-primary-fixed: #002110;
+    --color-on-primary-fixed-variant: #005230;
+
+    --color-secondary: #904d00;
+    --color-secondary-container: #fe932c;
+    --color-on-secondary: #ffffff;
+    --color-on-secondary-container: #663500;
+    --color-secondary-fixed: #ffdcc3;
+    --color-secondary-fixed-dim: #ffb77d;
+    --color-on-secondary-fixed: #2f1500;
+    --color-on-secondary-fixed-variant: #6e3900;
+
+    --color-tertiary: #123181;
+    --color-tertiary-container: #2f4999;
+    --color-on-tertiary: #ffffff;
+    --color-on-tertiary-container: #adbeff;
+    --color-tertiary-fixed: #dce1ff;
+    --color-tertiary-fixed-dim: #b6c4ff;
+    --color-on-tertiary-fixed: #00164e;
+    --color-on-tertiary-fixed-variant: #264191;
+
+    --color-surface: #f8f9ff;
+    --color-surface-dim: #d0dbed;
+    --color-surface-bright: #f8f9ff;
+    --color-surface-container-lowest: #ffffff;
+    --color-surface-container-low: #eff4ff;
+    --color-surface-container: #e6eeff;
+    --color-surface-container-high: #dee9fc;
+    --color-surface-container-highest: #d9e3f6;
+    --color-surface-tint: #236b46;
+    --color-on-surface: #121c2a;
+    --color-on-surface-variant: #404942;
+    --color-outline: #707971;
+    --color-outline-variant: #bfc9bf;
+
+    --color-error: #ba1a1a;
+    --color-error-container: #ffdad6;
+    --color-on-error: #ffffff;
+    --color-on-error-container: #93000a;
+
+    --spacing-gutter: 1.5rem;
+    --spacing-gutter-mobile: 1rem;
+    --spacing-space-xs: 0.25rem;
+    --spacing-space-sm: 0.5rem;
+    --spacing-space-md: 1rem;
+    --spacing-space-lg: 1.5rem;
+    --spacing-space-xl: 2rem;
+    --spacing-space-2xl: 3rem;
+    --spacing-space-3xl: 4.5rem;
+}
+
+/* Print Styles for KTA */
+@media print {
+    body {
+        background: transparent !important;
+        color: #000 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .no-print,
+    header,
+    nav,
+    aside,
+    footer,
+    button,
+    .btn-action {
+        display: none !important;
+    }
+
+    .printable-kta-container {
+        display: block !important;
+        margin: 0 auto !important;
+        page-break-inside: avoid;
+    }
+
+    .printable-kta-card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        box-shadow: none !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}

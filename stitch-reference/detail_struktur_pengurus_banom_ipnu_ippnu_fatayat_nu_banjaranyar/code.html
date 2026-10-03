@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary":"#ffffff","surface":"#f8f9ff","on-error":"#ffffff","on-secondary-fixed":"#2f1500","primary-fixed-dim":"#8fd6a9","tertiary-fixed-dim":"#b6c4ff","primary":"#004125","secondary-fixed-dim":"#ffb77d","tertiary-container":"#2f4999","error-container":"#ffdad6","on-surface-variant":"#404942","on-tertiary-container":"#adbeff","inverse-on-surface":"#eaf1ff","on-secondary-container":"#663500","on-primary-fixed":"#002110","surface-container-low":"#eff4ff","tertiary":"#123181","on-tertiary-fixed-variant":"#264191","secondary":"#904d00","surface-tint":"#236b46","on-primary-fixed-variant":"#005230","surface-container-high":"#dee9fc","on-secondary-fixed-variant":"#6e3900","primary-container":"#0c5a37","on-tertiary":"#ffffff","outline":"#707971","on-primary-container":"#88cfa3","surface-container-lowest":"#ffffff","on-background":"#121c2a","surface-dim":"#d0dbed","on-error-container":"#93000a","surface-container":"#e6eeff","background":"#f8f9ff","outline-variant":"#bfc9bf","error":"#ba1a1a","surface-bright":"#f8f9ff","secondary-fixed":"#ffdcc3","on-surface":"#121c2a","on-secondary":"#ffffff","surface-variant":"#d9e3f6","on-tertiary-fixed":"#00164e","tertiary-fixed":"#dce1ff","inverse-primary":"#8fd6a9","inverse-surface":"#27313f","secondary-container":"#fe932c","surface-container-highest":"#d9e3f6","primary-fixed":"#aaf2c4"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{gutter:"1.5rem","gutter-mobile":"1rem","margin-desktop":"3rem","space-lg":"1.5rem","space-md":"1rem","space-3xl":"4.5rem","space-xs":"0.25rem",margin:"2rem","space-2xl":"3rem","margin-mobile":"1rem","space-sm":"0.5rem","space-xl":"2rem"},fontFamily:{"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"]},fontSize:{"headline-xl":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"700"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"display-lg-mobile":["34px",{lineHeight:"42px",letterSpacing:"-0.02em",fontWeight:"800"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-md":["16px",{lineHeight:"26px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-sm":["18px",{lineHeight:"26px",letterSpacing:"-0.005em",fontWeight:"600"}],"headline-md":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"800"}],"body-sm":["14px",{lineHeight:"22px",letterSpacing:"0.005em",fontWeight:"400"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-on-primary py-space-xs px-margin-mobile lg:px-margin text-label-sm font-label-sm"><div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm"><div><span>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span><span class="mx-2 opacity-50">|</span><span>Pemberdayaan Umat &amp; Khidmah Ranting NU Banjaranyar</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">schedule</span><span>Jadwal Sholat Hari Ini: Ashar 15:18 WIB</span></div><span class="opacity-40">•</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">calendar_today</span><span>14 Syaban 1445 H / 24 Februari 2025</span></div></div></div></div><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="Logo NU Ranting Banjaranyar" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI5hbWBChrmhDKxy7lin3hdm2BNe7kHiAeQ6mbBrqqssnB3cHFPEWslX1VTN4fFEpRTp4zywxk7hFUUPvCfqq3_c8wcZxOUtn4m3zAyMi9PqP9QV_04kXv-ZIk_iEiI0iRmcc2Fy3aveJtNpe9gnh2_Vr5TOq_UvBvQv1po8QA4k3IfFzrRDSM2xWZHlhZB-JzqEXFmawHfzaOj7PiE8OCpYN8VP_z2fRKWHuKNREk3axepX3sn84"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">NU Ranting Banjaranyar</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Kecamatan Baureno, Kabupaten Bojonegoro</span></div></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg px-space-sm py-space-xs"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="beranda" href="#">Beranda</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="profil" href="#">Profil</a><div class="relative group py-space-sm"><button class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface flex items-center gap-space-xs transition-colors" type="button"><span>Badan Otonom</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button><div class="absolute top-full left-0 hidden group-hover:block bg-surface-container-lowest p-space-sm rounded-lg shadow-[0_8px_20px_-4px_rgba(12,90,55,0.08)] min-w-[200px] border-0 z-50"><a class="block px-space-md py-space-sm rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banom-ipnu" href="#">IPNU Banjaranyar</a><a class="block px-space-md py-space-sm rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banom-ippnu" href="#">IPPNU Banjaranyar</a><a class="block px-space-md py-space-sm rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banom-fatayat" href="#">Fatayat NU</a><a class="block px-space-md py-space-sm rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banom-ansor" href="#">GP Ansor</a><a class="block px-space-md py-space-sm rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banom-banser" href="#">Satkorkel Banser</a></div></div><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="struktur-organisasi" href="#">Struktur Organisasi</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="berita" href="#">Berita</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="agenda-terdekat" href="#">Agenda Terdekat</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="kotak-aspirasi" href="#">Kotak Aspirasi</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg px-space-md py-2.5 rounded-lg transition-colors" data-path="kotak-aspirasi" href="#"><span class="material-symbols-outlined text-[18px]">chat</span><span>Kirim Aspirasi</span></a><a class="inline-flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg px-space-md py-2.5 rounded-lg transition-colors" data-path="admin-portal-login" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">lock</span><span class="hidden md:inline">Admin Portal</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Top Ambient Banner & Breadcrumbs -->
+<section class="relative w-full bg-surface-container-low px-margin-mobile lg:px-margin-desktop py-space-xl overflow-hidden">
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-primary-fixed-dim/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 bottom-0 w-80 h-80 bg-secondary-fixed/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-space-md">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>Beranda</span>
+</a>
+<span class="opacity-40">/</span>
+<span class="text-on-surface-variant">Badan Otonom</span>
+<span class="opacity-40">/</span>
+<span class="text-primary font-bold">Struktur Kepengurusan BANOM</span>
+</nav>
+<!-- Header Content Split -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg mb-space-xl">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-space-xs bg-primary/10 text-primary px-3 py-1 rounded-full font-label-sm text-label-sm mb-space-sm font-semibold tracking-wide">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            PIMPINAN RANTING DESA BANJARANYAR • MASA KHIDMAT 2024–2026
+          </div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight font-extrabold mb-space-sm">
+            Struktur Organisasi &amp; Jajaran Kepengurusan BANOM
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Mengenal jajaran kepengurusan, divisi kaderisasi, dan pimpinan badan otonom penggerak kepemudaan serta kemuslimahan di lingkungan PRNU Desa Banjaranyar masa khidmat aktif.
+          </p>
+</div>
+<!-- Quick CTAs -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<a class="inline-flex items-center justify-center gap-space-xs bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-lg text-label-lg px-space-lg py-3 rounded-lg shadow-sm transition-all duration-200" href="#daftar-kader">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+<span>Daftar Jadi Kader</span>
+</a>
+<button class="inline-flex items-center justify-center gap-space-xs bg-surface-container-lowest hover:bg-surface-container text-primary font-label-lg text-label-lg px-space-lg py-3 rounded-lg shadow-sm transition-all duration-200" onclick="alert('Mengunduh Surat Keputusan Pengesahan Pimpinan Cabang...')" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">download</span>
+<span>Unduh SK BANOM (PDF)</span>
+</button>
+</div>
+</div>
+<!-- BANOM Switcher Nav Tabs -->
+<div class="flex items-center gap-2 p-1.5 bg-surface-container rounded-xl overflow-x-auto shadow-inner max-w-fit">
+<button class="banom-tab active-tab flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg font-label-lg text-label-lg transition-all duration-200 whitespace-nowrap bg-primary text-on-primary shadow-sm font-bold" id="tab-ipnu" onclick="switchBanom('ipnu')">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span>IPNU (Pelajar Putra NU)</span>
+<span class="ml-1 bg-surface-container-lowest/20 text-on-primary text-[10px] px-2 py-0.5 rounded-full">Aktif</span>
+</button>
+<button class="banom-tab flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg font-label-lg text-label-lg transition-all duration-200 whitespace-nowrap text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-semibold" id="tab-ippnu" onclick="switchBanom('ippnu')">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span>IPPNU (Pelajar Putri NU)</span>
+</button>
+<button class="banom-tab flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg font-label-lg text-label-lg transition-all duration-200 whitespace-nowrap text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-semibold" id="tab-fatayat" onclick="switchBanom('fatayat')">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-fixed-dim"></span>
+<span>Fatayat NU (Pemudi Muslimah)</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Dynamic Wrapper -->
+<main class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop py-space-2xl flex flex-col gap-space-3xl">
+<!-- 1. BANOM LEGALITY & HERO BANNER (IPNU ACTIVE STATE) -->
+<div class="flex flex-col gap-space-2xl" id="banom-view-ipnu">
+<!-- Identity Hero Card -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-xl lg:p-space-2xl shadow-md relative overflow-hidden">
+<div class="absolute -right-10 top-0 w-80 h-80 opacity-5 pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[300px] text-primary">school</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<!-- Left: Insignia and Legal Credential -->
+<div class="lg:col-span-8 flex flex-col sm:flex-row items-start sm:items-center gap-space-lg">
+<div class="w-24 h-24 lg:w-28 lg:h-28 rounded-2xl bg-gradient-to-br from-primary via-primary-container to-secondary flex flex-col items-center justify-center text-on-primary shadow-lg p-2 shrink-0">
+<span class="material-symbols-outlined text-[44px] text-secondary-fixed">workspace_premium</span>
+<span class="font-headline-sm text-headline-sm font-extrabold tracking-widest text-secondary-fixed">IPNU</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="bg-primary/10 text-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-md font-bold uppercase tracking-wider">SK Resmi PC IPNU</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Nomor: 088/PC/IPNU/SK/XI/2024</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-extrabold tracking-tight">
+                Pimpinan Ranting IPNU Desa Banjaranyar
+              </h2>
+<div class="mt-2 flex items-center gap-2 text-secondary font-headline-sm text-headline-sm font-bold">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+<span class="italic">"Belajar, Berjuang, Bertaqwa"</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-xl">
+                Wadah keterpelajaran pemuda Nahdlatul Ulama dalam menanamkan nilai Ahlussunnah wal Jama'ah An-Nahdliyyah, intelektualitas, dan loyalitas pengabdian masyarakat Banjaranyar.
+              </p>
+</div>
+</div>
+<!-- Right: Key Cadre Statistics Metrics -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl p-space-md grid grid-cols-3 gap-2 text-center">
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-headline-lg text-headline-lg font-extrabold text-primary">45</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium leading-tight mt-1">Kader Aktif Ranting</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-headline-lg text-headline-lg font-extrabold text-secondary">08</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium leading-tight mt-1">Peserta Makesta</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-headline-lg text-headline-lg font-extrabold text-tertiary">04</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium leading-tight mt-1">Majelis Santri</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. HIERARCHICAL STRUCTURAL CHART -->
+<section class="flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="text-secondary font-label-md text-label-md font-bold uppercase tracking-wider">Struktur Inti Organisasi</span>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold">Bagan Kepengurusan Harian (BPH) IPNU</h3>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm bg-surface-container px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>Terverifikasi Rapat Anggota Ranting Banjaranyar</span>
+</div>
+</div>
+<!-- Tier 1: Majelis Pembina & Alumni -->
+<div class="w-full flex flex-col items-center">
+<div class="text-center mb-space-sm">
+<span class="bg-surface-container-high text-on-surface font-label-md text-label-md px-3 py-1 rounded-full uppercase tracking-wider font-bold">Majelis Pembina &amp; Alumni Ranting</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md w-full max-w-2xl">
+<!-- Pembina 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md hover:shadow-md transition-all">
+<img class="w-14 h-14 rounded-full object-cover shrink-0 shadow-inner" data-alt="Potret wajah K. Ahmad Subhan pembina IPNU Desa Banjaranyar memakai kopiah hitam khas santri dan sorban hijau dengan senyum bijaksana latar musholla" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPk_PPMiDOflD9WCZQheCpcpD9lHs4kF2KPnYjT9CUQcY2ofngBl9QTsY7zJ25nfLYvZbQShAX7GMlnDKTMRHAu2het5aC1P-BQDuwfeAKI2jnrBd3eEF8J1EYCVNcSHg24FdayrRgsWOMtEom3d6FCZ_q9lDeON5WqSYeyyg6rLnxIwuWvY7Xfzn6Va695jVoTkev8V5GM4QqNqsPUqHLtOr5Twa7Y_7WixQ9dL-TpHKEOBMCpJ0"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-primary font-bold truncate">K. Ahmad Subhan</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Majelis Pembina Ranting</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium mt-0.5">Pengasuh TPQ Al-Ikhlas Banjaranyar</span>
+</div>
+</div>
+<!-- Pembina 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md hover:shadow-md transition-all">
+<img class="w-14 h-14 rounded-full object-cover shrink-0 shadow-inner" data-alt="Potret wajah Sahabat Budi Wahyono tokoh senior alumni IPNU dengan baju koko putih bersih dan pin Nahdlatul Ulama tersenyum hangat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVDJlS3p4d9u0TxhYklwIFDN9n0XpxbbrWRG2tTu6qB0VPsGwcBDOsJZ9QpeUrnCt2xglM-tulGS_-jkktjJ2_IiZIalKbY1S7wfW7GVx38lwZp-F1msJUKPADOH-VtjliJ9n0XBIFV0CxyqqZXSg9iA9iZ3Iy9fJUnx788n3mtqpJGlPzbiqlyFauIN8o-Wktz_jpfQKPuEmGGpFnXfXDl_7jOUNPM0NeslfFft9NNdlqsE8c3qU"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-primary font-bold truncate">Sahabat Budi Wahyono</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Majelis Alumni Banom</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium mt-0.5">Demisioner Ketua IPNU 2018</span>
+</div>
+</div>
+</div>
+<!-- Connector line -->
+<div class="w-0.5 h-8 bg-primary/20 my-1"></div>
+</div>
+<!-- Tier 2: Ketua Ranting (Centerpiece Card) -->
+<div class="w-full flex justify-center">
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-md w-full max-w-md text-center flex flex-col items-center relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-secondary to-primary"></div>
+<div class="relative mb-space-sm mt-2">
+<img class="w-20 h-20 rounded-full object-cover shadow-md" data-alt="Foto potret resmi Rekan M. Bagus Pratama Ketua Ranting IPNU Banjaranyar mengenakan seragam jas hijau IPNU berdasi rapi dengan latar belakang hijau NU minimalis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt0oEcLdgtwvfzBnKCrNpSn6vQ-t7Z66Vw-KSSmloQpuRozMzz8h8Bd_KQ-M3OEe0QqN10seTRCkneeVfTwB95EEusa9VjplTzrRbIVyMWfOHSd4PBNaXJCPlHMnANvAn_e3kVxoLSQwY_LiuAHJwt4q-264ut6w5FbAj7ZGJpH6JJIdWDingfxxfxn6X_PGnrnlSAkOKKb_QZk6Vr3FF3clTIPk9ERujz-TGDKDc_iqo0n0Eb7no"/>
+<span class="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center font-bold text-xs shadow">
+                ★
+              </span>
+</div>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-3 py-0.5 rounded-full font-bold mb-1">KETUA UMUM RANTING</span>
+<h4 class="font-headline-md text-headline-md text-primary font-extrabold tracking-tight">Rekan M. Bagus Pratama</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Santri Ponpes Baureno &amp; Mahasiswa Teknik Informatika</p>
+<div class="flex items-center gap-2 mt-3 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="bg-secondary-fixed/50 px-2 py-0.5 rounded">Kader Makesta 2021</span>
+<span>•</span>
+<span class="bg-secondary-fixed/50 px-2 py-0.5 rounded">Alumni LAKMUD PC 2023</span>
+</div>
+</div>
+</div>
+<!-- Connector line split -->
+<div class="w-full flex justify-center">
+<div class="w-0.5 h-6 bg-primary/20"></div>
+</div>
+<!-- Tier 3: Pengurus Harian (Wakil, Sekretaris, Bendahara) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Col 1: Wakil Ketua -->
+<div class="flex flex-col gap-space-md">
+<div class="bg-surface-container p-2.5 rounded-lg text-center font-label-md text-label-md font-bold text-primary">
+              JAJARAN WAKIL KETUA
+            </div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-sm shrink-0">
+                FR
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Wakil Ketua I (Kaderisasi)</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Rekan Fahrul Rozi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px]">Instruktur Makesta Desa</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-sm shrink-0">
+                DP
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Wakil Ketua II (Dakwah &amp; Minat)</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Rekan Dimas Prasetyo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px]">Koordinator Hadrah Syubban</span>
+</div>
+</div>
+</div>
+<!-- Col 2: Sekretariat -->
+<div class="flex flex-col gap-space-md">
+<div class="bg-surface-container p-2.5 rounded-lg text-center font-label-md text-label-md font-bold text-primary">
+              KESTARI &amp; ADMINISTRASI
+            </div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center font-bold text-sm shrink-0">
+                ZF
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-bold">Sekretaris Ranting</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Rekan Ahmad Zaki Fanani</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px]">Verifikator Database Anggota</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center font-bold text-sm shrink-0">
+                CA
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-bold">Wakil Sekretaris</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Rekan Choirul Anam</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px]">Dokumentasi &amp; Arsip Surat</span>
+</div>
+</div>
+</div>
+<!-- Col 3: Kebendaharaan -->
+<div class="flex flex-col gap-space-md">
+<div class="bg-surface-container p-2.5 rounded-lg text-center font-label-md text-label-md font-bold text-primary">
+              KEBENDAHARAAN &amp; KAS
+            </div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-bold text-sm shrink-0">
+                IK
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Bendahara Ranting</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Rekan Ilham Kurniawan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px]">Pengelola Koin Pelajar Infaq</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-bold text-sm shrink-0">
+                DS
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Wakil Bendahara</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Rekan Dani Saputra</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px]">Unit Usaha Seragam &amp; Merchandise</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. DEPARTMENTS & LEMBAGA KHUSUS (PROGRAM KERJA UNGGULAN) -->
+<section class="flex flex-col gap-space-xl">
+<div class="flex flex-col">
+<span class="text-secondary font-label-md text-label-md font-bold uppercase tracking-wider">Divisi &amp; Program Kerja</span>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold">Departemen &amp; Lembaga Otonom IPNU</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fokus pengabdian santri milenial di ranah intelektual, dakwah ahlussunnah wal jamaah, literasi media, dan olahraga jasmani.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Dept 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Departemen 01</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 mb-2">Kaderisasi &amp; Pengembangan SDM</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Gerbang utama pembentukan karakter santri &amp; pelajar militan Aswaja.
+              </p>
+<ul class="space-y-2 text-body-sm text-on-surface font-medium mb-space-md">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Masa Kesetiaan Anggota (MAKESTA) Tahunan</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Mentoring Santri TPQ Masuk Jenjang MTs/Madrasah</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Pelatihan Kepemimpinan Dasar Ranting</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-sm bg-surface-container-low p-2 rounded-lg text-center font-label-sm text-label-sm text-primary font-semibold">
+              Kader Target: 25 Anggota Baru / Th
+            </div>
+</div>
+<!-- Dept 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Departemen 02</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 mb-2">Dakwah &amp; Syiar Pelajar</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Membumikan tradisi sholawat dan kajian kitab kuning bagi generasi muda desa.
+              </p>
+<ul class="space-y-2 text-body-sm text-on-surface font-medium mb-space-md">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Rutinan Maulid Simthudduror Malam Jumat Manis</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Kajian Kitab Al-Washoya &amp; Akhlaq Lil Banin</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Safari Tarawih &amp; Tadarus Pelajar Ramadan</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-sm bg-surface-container-low p-2 rounded-lg text-center font-label-sm text-label-sm text-secondary font-semibold">
+              Jadwal Rutin: Tiap Selapanan
+            </div>
+</div>
+<!-- Dept 3 (Lembaga Pers) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[24px]">newspaper</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Lembaga Otonom</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 mb-2">Pers &amp; Penerbitan Pelajar</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Kreativitas digital dan penyebaran konten positif kontra hoaks di ranah desa.
+              </p>
+<ul class="space-y-2 text-body-sm text-on-surface font-medium mb-space-md">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Pengelolaan Buletin Dinding 3 Masjid Jami'</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Konten Dakwah IG @ipnupelajarbanjaranyar</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Pelatihan Desain Canva Santri Desa</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-sm bg-surface-container-low p-2 rounded-lg text-center font-label-sm text-label-sm text-tertiary font-semibold">
+              Instagram: 1.2k Pengikut Santri
+            </div>
+</div>
+<!-- Dept 4 (Lembaga Olahraga) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container/15 text-secondary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[24px]">sports_soccer</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Lembaga Seni &amp; Bakat</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 mb-2">Olahraga, Seni &amp; Budaya (LSPB)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Pengembangan jasmani yang sehat dan pelestarian seni rebana hadrah klasik.
+              </p>
+<ul class="space-y-2 text-body-sm text-on-surface font-medium mb-space-md">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Liga Futsal Antar-Dusun Santri Banjaranyar</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Latihan Tenis Meja di Serambi Gedung PRNU</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Grup Rebana 'Ahbabul Musthofa Banjaranyar'</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-sm bg-surface-container-low p-2 rounded-lg text-center font-label-sm text-label-sm text-on-surface-variant font-semibold">
+              Latihan Hadrah: Setiap Ahad Sore
+            </div>
+</div>
+</div>
+</section>
+</div>
+<!-- 2. IPPNU CONTENT VIEW (HIDDEN INITIALLY) -->
+<div class="hidden flex flex-col gap-space-2xl" id="banom-view-ippnu">
+<!-- IPPNU Identity Card -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-xl lg:p-space-2xl shadow-md relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<div class="lg:col-span-8 flex flex-col sm:flex-row items-start sm:items-center gap-space-lg">
+<div class="w-24 h-24 lg:w-28 lg:h-28 rounded-2xl bg-gradient-to-br from-tertiary via-tertiary-container to-primary flex flex-col items-center justify-center text-on-tertiary shadow-lg p-2 shrink-0">
+<span class="material-symbols-outlined text-[44px] text-tertiary-fixed">diversity_1</span>
+<span class="font-headline-sm text-headline-sm font-extrabold tracking-widest text-tertiary-fixed">IPPNU</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="bg-tertiary/10 text-tertiary font-label-sm text-label-sm px-2.5 py-0.5 rounded-md font-bold uppercase tracking-wider">SK Resmi PC IPPNU</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Nomor: 092/PC/IPPNU/SK/XI/2024</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-tertiary font-extrabold tracking-tight">
+                Pimpinan Ranting IPPNU Desa Banjaranyar
+              </h2>
+<div class="mt-2 flex items-center gap-2 text-secondary font-headline-sm text-headline-sm font-bold">
+<span class="material-symbols-outlined text-[20px]">psychology_alt</span>
+<span class="italic">"Belajar, Berjuang, Bertaqwa"</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-xl">
+                Organisasi kaderisasi santriwati dan pelajar putri Nahdlatul Ulama yang berdedikasi melahirkan cendekia muslimah yang berakhlakul karimah dan mandiri.
+              </p>
+</div>
+</div>
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl p-space-md grid grid-cols-3 gap-2 text-center">
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-headline-lg text-headline-lg font-extrabold text-tertiary">52</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium leading-tight mt-1">Kader Pelajar Putri</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-headline-lg text-headline-lg font-extrabold text-secondary">12</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium leading-tight mt-1">Anggota Makesta</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-headline-lg text-headline-lg font-extrabold text-primary">05</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium leading-tight mt-1">Halaqah Putri</span>
+</div>
+</div>
+</div>
+</section>
+<!-- IPPNU Key Executive -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm text-center flex flex-col items-center">
+<img class="w-20 h-20 rounded-full object-cover shadow-md mb-space-sm" data-alt="Potret Rekanita Riska Aulia Ketua IPPNU Ranting Banjaranyar mengenakan jilbab hijau tosca dengan seragam resmi IPPNU senyum ramah dan anggun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc9bAw69DZ6nOWWAIZSZ8zjA8CoNcV5Fv7yApayrRhSjd4iqPcTZS5PDypGO9oqabQNnouD0n6kquYDGC7HcY3Hd_btYi-Itzo6FZaGN9UoM2fck9wwBd3_3AB5KsBJv7X41RF6Re_Ak9siYJOfCGfaGCqQpBoDH5r2g69HTtEtLkRH6QbQ5Gaz6R46VKJZbEmfh66rxXrKFebY87Y_G5p47lHOcBPlFboJ9j0GzbvGQ7w-MqbuM0"/>
+<span class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-3 py-0.5 rounded-full font-bold mb-1">KETUA RANTING</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">Rekanita Riska Aulia</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Mahasiswi Tarbiyah &amp; Hafidzah 10 Juz</span>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm text-center flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold text-xl mb-space-sm shadow-md">
+            NA
+          </div>
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-3 py-0.5 rounded-full font-bold mb-1">SEKRETARIS</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">Rekanita Nur Anifatul</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Koordinator Bank Data Pelajar Putri</span>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm text-center flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-xl mb-space-sm shadow-md">
+            LM
+          </div>
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-3 py-0.5 rounded-full font-bold mb-1">BENDAHARA</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">Rekanita Lailatul Maghfiroh</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Inisiator Kotak Kas Infaq Jumatan Putri</span>
+</div>
+</section>
+<!-- IPPNU Departments Overview -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<h4 class="font-headline-sm text-headline-sm text-tertiary font-bold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined">auto_stories</span>
+<span>Divisi Keputrian &amp; Fiqih Ibadah Santriwati</span>
+</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Program rutin bulanan kajian Kitab Risalatul Mahid, fiqih wanita muslimah, serta tata cara sholat khusyu bagi remaja putri desa.
+          </p>
+<span class="text-secondary font-label-md text-label-md font-semibold">Pelaksana: Majelis An-Nisa Santriwati</span>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<h4 class="font-headline-sm text-headline-sm text-tertiary font-bold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined">draw</span>
+<span>Divisi Literasi Digital &amp; Kriya Pelajar</span>
+</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Pelatihan keterampilan kerajinan tangan, rajut suvenir santri, serta penulisan cerpen &amp; puisi islami dalam mading bulanan ranting.
+          </p>
+<span class="text-secondary font-label-md text-label-md font-semibold">Produk: Souvenir Mukena Ranting</span>
+</div>
+</section>
+</div>
+<!-- 3. FATAYAT NU CONTENT VIEW (HIDDEN INITIALLY) -->
+<div class="hidden flex flex-col gap-space-2xl" id="banom-view-fatayat">
+<!-- Fatayat Identity Card -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-xl lg:p-space-2xl shadow-md relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<div class="lg:col-span-8 flex flex-col sm:flex-row items-start sm:items-center gap-space-lg">
+<div class="w-24 h-24 lg:w-28 lg:h-28 rounded-2xl bg-gradient-to-br from-primary via-primary-fixed-dim to-secondary-container flex flex-col items-center justify-center text-on-primary shadow-lg p-2 shrink-0">
+<span class="material-symbols-outlined text-[44px] text-on-primary">groups_3</span>
+<span class="font-headline-sm text-headline-sm font-extrabold tracking-widest text-on-primary">FATAYAT</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="bg-primary-container text-on-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-md font-bold uppercase tracking-wider">SK PC Fatayat NU Bojonegoro</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Nomor: 045/PC/FNU/SK/VII/2024</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-extrabold tracking-tight">
+                Pimpinan Ranting Fatayat NU Banjaranyar
+              </h2>
+<div class="mt-2 flex items-center gap-2 text-secondary font-headline-sm text-headline-sm font-bold">
+<span class="material-symbols-outlined text-[20px]">spa</span>
+<span class="italic">"Merawat Tradisi Menuju Kemandirian Perempuan"</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-xl">
+                Organisasi pemudi dan ibu muda Nahdlatul Ulama yang bergiat di pos kesehatan keluarga, pemberdayaan ekonomi perempuan, dan pembinaan anak shaleh.
+              </p>
+</div>
+</div>
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl p-space-md grid grid-cols-3 gap-2 text-center">
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-headline-lg text-headline-lg font-extrabold text-primary">68</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium leading-tight mt-1">Pemudi Aktif</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-headline-lg text-headline-lg font-extrabold text-secondary">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium leading-tight mt-1">Posbindu Sehat</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-headline-lg text-headline-lg font-extrabold text-tertiary">1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium leading-tight mt-1">Koperasi Annisa</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Fatayat Key Officers -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm text-center flex flex-col items-center">
+<img class="w-20 h-20 rounded-full object-cover shadow-md mb-space-sm" data-alt="Potret Sahabat Hj. Siti Aminah S.Pd Ketua Fatayat NU Banjaranyar berbusana gamis hijau tua berkerudung rapi berwibawa dengan latar belakang aula serbaguna NU" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA9Z4oLt86d-ZIz35o8FSYK2xZcBcIOq-xfjoZyj8EHjeZq4bzfPMLrhvp8rwtCSdGqKPfHyerr7P7a0n2obH9HxEtn1_oW8wQqQbzhd-O3Yp3J0w6Ily1AQxZFAmvoPcxzqcKLbxTyIM-_2t1b7IIPWDKirEo7lKErlZ1sdwdvmEpy6z4FGmIr9qUyGbWj_tmH4PVmjbMm1uRJzt4Q4__RlNMC-6J3FVD2PgGF9AVudYlwvc8BKQ"/>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-3 py-0.5 rounded-full font-bold mb-1">KETUA RANTING</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">Sahabat Hj. Siti Aminah, S.Pd</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Praktisi Pendidikan &amp; Tokoh Muslimah Baureno</span>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm text-center flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-primary-fixed-dim text-on-primary-fixed-variant flex items-center justify-center font-bold text-xl mb-space-sm shadow-md">
+            SN
+          </div>
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-3 py-0.5 rounded-full font-bold mb-1">SEKRETARIS</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">Sahabat Sri Nurhayati, S.E</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Pamong Desa &amp; Manajer Administrasi</span>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm text-center flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-xl mb-space-sm shadow-md">
+            EM
+          </div>
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-3 py-0.5 rounded-full font-bold mb-1">BENDAHARA</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">Sahabat Eni Mulyani</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Pengelola Koperasi Simpan Pinjam Annisa</span>
+</div>
+</section>
+<!-- Fatayat Core Focus -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold mb-1">Posyandu &amp; Posbindu NU</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Layanan pemeriksaan tensi darah, penimbangan balita, dan pencegahan stunting balita di 3 dusun desa Banjaranyar.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined">storefront</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold mb-1">Koperasi Wanita Annisa</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Penguatan UMKM olahan pangan lokal, keripik pisang, dan beras zakat produktif dhuafa binaan Fatayat.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold mb-1">Halaqah Fiqih An-Nisa</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kajian hukum keluarga sakinah, parenting islami, dan pembacaan Diba'iyah mingguan di rumah warga secara bergilir.</p>
+</div>
+</section>
+</div>
+<!-- 4. COMPARISON QUICK CARDS (Tandem Sinergi Antar BANOM) -->
+<section class="bg-surface-container p-space-xl rounded-2xl flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="text-secondary font-label-md text-label-md font-bold uppercase tracking-wider">Sinergi Tiga Pilar</span>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold">Kolaborasi Banom Muda NU Banjaranyar</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Ketiga badan otonom berkolaborasi secara sinergis dalam kaderisasi berjenjang, menjaga amaliyah Ahlussunnah Wal Jamaah dari usia dini hingga berkeluarga.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary font-bold px-2 py-0.5 rounded">IPNU</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Pelajar Usia 12–25 Th</span>
+</div>
+<h5 class="font-headline-sm text-headline-sm text-primary font-bold">Kader Pelajar Putra</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Gerakan pelajar di madrasah, masjid, dan kampus. Fokus karakter kepemimpinan &amp; dakwah santri milenial.</p>
+</div>
+<button class="mt-space-md text-left font-label-md text-label-md text-primary font-bold hover:underline flex items-center gap-1" onclick="switchBanom('ipnu')">
+<span>Buka Struktur Lengkap</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm bg-tertiary/10 text-tertiary font-bold px-2 py-0.5 rounded">IPPNU</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Pelajar Putri 12–25 Th</span>
+</div>
+<h5 class="font-headline-sm text-headline-sm text-tertiary font-bold">Kader Pelajar Putri</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Membina keputrian santriwati, ketrampilan literasi, dan adab islami di lingkungan sosial kemasyarakatan.</p>
+</div>
+<button class="mt-space-md text-left font-label-md text-label-md text-tertiary font-bold hover:underline flex items-center gap-1" onclick="switchBanom('ippnu')">
+<span>Buka Struktur Lengkap</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm bg-secondary/15 text-secondary font-bold px-2 py-0.5 rounded">FATAYAT NU</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Pemudi Usia 20–45 Th</span>
+</div>
+<h5 class="font-headline-sm text-headline-sm text-primary font-bold">Kader Ibu &amp; Pemudi</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Penggerak kesehatan keluarga, posyandu santri, dan kemandirian wirausaha ekonomi ibu rumah tangga nahdliyyin.</p>
+</div>
+<button class="mt-space-md text-left font-label-md text-label-md text-secondary font-bold hover:underline flex items-center gap-1" onclick="switchBanom('fatayat')">
+<span>Buka Struktur Lengkap</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 5. CALL TO ACTION & CADRE RECRUITMENT BANNER -->
+<section class="bg-primary text-on-primary rounded-3xl p-space-xl lg:p-space-2xl shadow-xl relative overflow-hidden" id="daftar-kader">
+<!-- Decorative Backdrop Graphic -->
+<div class="absolute -right-16 -bottom-16 w-96 h-96 bg-primary-container rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute right-12 top-6 opacity-10 text-on-primary">
+<span class="material-symbols-outlined text-[200px]">diversity_3</span>
+</div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left: Copywriting -->
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-2 bg-on-primary/10 text-primary-fixed-dim px-3 py-1 rounded-full font-label-sm text-label-sm font-semibold max-w-fit">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">assignment_ind</span>
+<span>Pendaftaran Kaderisasi Santri &amp; Pemudi Banjaranyar</span>
+</div>
+<h3 class="font-headline-xl text-headline-xl font-extrabold tracking-tight leading-tight">
+            Mari Berkhidmah Bersama Banom Nahdlatul Ulama Banjaranyar!
+          </h3>
+<p class="font-body-md text-body-md text-on-primary/90 leading-relaxed max-w-xl">
+            Ikuti prosesi pengkaderan resmi: <strong>MAKESTA (Masa Kesetiaan Anggota) IPNU-IPPNU</strong> bagi pelajar putra-putri, atau <strong>LKD (Latihan Kader Dasar) Fatayat NU</strong>. Perluas wawasan keislaman, asah jiwa kepemimpinan, dan dapatkan sanad perjuangan ulama Ahlussunnah wal Jama'ah.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs text-label-md font-label-md">
+<div class="flex items-center gap-1.5 text-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Sertifikat Resmi Terakreditasi PC</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span>Mentoring Beasiswa Santri</span>
+</div>
+</div>
+</div>
+<!-- Right: Registration Form Card -->
+<div class="lg:col-span-5 bg-surface-container-lowest text-on-surface rounded-2xl p-space-lg shadow-lg">
+<div class="flex items-center justify-between mb-space-md">
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">Formulir Pendaftaran Kader</h4>
+<span class="text-secondary font-label-sm text-label-sm font-semibold">Tahun 2025</span>
+</div>
+<form class="flex flex-col gap-space-sm" onsubmit="handleCadreSubmit(event)">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1" for="cadre-name">Nama Lengkap Santri/Warga</label>
+<input class="w-full h-11 px-3 bg-surface rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" id="cadre-name" placeholder="Contoh: Muhammad Ihsan" required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1" for="cadre-banom">Pilihan BANOM</label>
+<select class="w-full h-11 px-3 bg-surface rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="cadre-banom">
+<option value="IPNU">IPNU (Pelajar Putra)</option>
+<option value="IPPNU">IPPNU (Pelajar Putri)</option>
+<option value="FATAYAT">Fatayat NU (Pemudi)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1" for="cadre-dusun">Dusun Asal</label>
+<select class="w-full h-11 px-3 bg-surface rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="cadre-dusun">
+<option value="Dusun Krajan">Krajan RT 01-04</option>
+<option value="Dusun Balun">Balun RT 05-08</option>
+<option value="Dusun Glagah">Glagah RT 09-12</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1" for="cadre-whatsapp">Nomor WhatsApp Aktif</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 text-on-surface-variant font-label-sm text-label-sm">+62</span>
+<input class="w-full h-11 pl-12 pr-3 bg-surface rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" id="cadre-whatsapp" placeholder="812-3456-7890" required="" type="tel"/>
+</div>
+</div>
+<div class="pt-space-xs">
+<button class="w-full h-11 bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg font-bold flex items-center justify-center gap-space-xs transition-colors shadow" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Kirim Formulir Pengkaderan</span>
+</button>
+</div>
+<div class="text-center mt-1">
+<a class="font-label-sm text-label-sm text-secondary hover:underline inline-flex items-center gap-1" href="https://wa.me/6281234567890?text=Halo%20Admin%20Kaderisasi%20BANOM%20NU%20Banjaranyar" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>Atau hubungi Koordinator Kaderisasi via WhatsApp</span>
+</a>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Interactive JavaScript Controller -->
+<script>
+    function switchBanom(banomKey) {
+      // List of BANOM views and tabs
+      const banoms = ['ipnu', 'ippnu', 'fatayat'];
+      
+      banoms.forEach(function(item) {
+        const viewEl = document.getElementById('banom-view-' + item);
+        const tabEl = document.getElementById('tab-' + item);
+
+        if (item === banomKey) {
+          if (viewEl) viewEl.classList.remove('hidden');
+          if (tabEl) {
+            tabEl.className = 'banom-tab active-tab flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg font-label-lg text-label-lg transition-all duration-200 whitespace-nowrap bg-primary text-on-primary shadow-sm font-bold';
+          }
+        } else {
+          if (viewEl) viewEl.classList.add('hidden');
+          if (tabEl) {
+            tabEl.className = 'banom-tab flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg font-label-lg text-label-lg transition-all duration-200 whitespace-nowrap text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-semibold';
+          }
+        }
+      });
+    }
+
+    function handleCadreSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('cadre-name').value;
+      const banom = document.getElementById('cadre-banom').value;
+      const dusun = document.getElementById('cadre-dusun').value;
+      alert('Alhamdulillah! Pendaftaran atas nama ' + name + ' untuk ' + banom + ' (' + dusun + ') telah kami terima. Koordinator kaderisasi akan segera menghubungi via WhatsApp.');
+      event.target.reset();
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface pt-space-2xl pb-space-lg"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl mb-space-2xl"><div><div class="flex items-center gap-space-sm mb-space-md"><img alt="Logo NU Ranting Banjaranyar" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI5hbWBChrmhDKxy7lin3hdm2BNe7kHiAeQ6mbBrqqssnB3cHFPEWslX1VTN4fFEpRTp4zywxk7hFUUPvCfqq3_c8wcZxOUtn4m3zAyMi9PqP9QV_04kXv-ZIk_iEiI0iRmcc2Fy3aveJtNpe9gnh2_Vr5TOq_UvBvQv1po8QA4k3IfFzrRDSM2xWZHlhZB-JzqEXFmawHfzaOj7PiE8OCpYN8VP_z2fRKWHuKNREk3axepX3sn84"/><span class="font-headline-sm text-headline-sm text-primary font-bold">PRNU Banjaranyar</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Menjaga Tradisi Ahlussunnah wal Jama'ah An-Nahdliyyah, Merajut Persaudaraan, Membangun Kemandirian Warga Desa Banjaranyar.</p><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-[18px]">language</span></div><div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-[18px]">mail</span></div><div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-[18px]">phone</span></div></div></div><div><h4 class="font-headline-sm text-headline-sm text-primary mb-space-md font-bold">Sekretariat &amp; Layanan</h4><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary shrink-0">location_on</span><span>Gedung MWC/Ranting NU Banjaranyar, Jl. Masjid Jami' No. 09, Desa Banjaranyar, Kec. Baureno, Kab. Bojonegoro, Jawa Timur 62192</span></p><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary shrink-0">call</span><span>+62 812-3456-7890 (Call Center)</span></p><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary shrink-0">mark_email_read</span><span>rantingnu.banjaranyar@gmail.com</span></p></div><div><h4 class="font-headline-sm text-headline-sm text-primary mb-space-md font-bold">Badan Otonom (BANOM)</h4><ul class="space-y-space-sm font-label-md text-label-md text-on-surface-variant"><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" data-path="banom-ansor" href="#"><span class="w-2 h-2 rounded-full bg-secondary-container"></span><span>Pimpinan Ranting GP Ansor</span></a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" data-path="banom-banser" href="#"><span class="w-2 h-2 rounded-full bg-primary"></span><span>Satkorkel Banser Banjaranyar</span></a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" data-path="banom-fatayat" href="#"><span class="w-2 h-2 rounded-full bg-primary-fixed-dim"></span><span>Pimpinan Ranting Fatayat NU</span></a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" data-path="banom-ipnu" href="#"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>PR IPNU Desa Banjaranyar</span></a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" data-path="banom-ippnu" href="#"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span>PR IPPNU Desa Banjaranyar</span></a></li></ul></div><div><h4 class="font-headline-sm text-headline-sm text-primary mb-space-md font-bold">Layanan Digital &amp; ZISWAF</h4><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Salurkan infaq, shadaqah, dan zakat melalui Lazisnu Ranting Banjaranyar untuk kemaslahatan dhuafa dan dakwah ranting.</p><a class="w-full inline-flex items-center justify-center gap-space-xs bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg py-2.5 px-space-md rounded-lg transition-colors font-semibold" data-path="kotak-aspirasi" href="#"><span class="material-symbols-outlined text-[18px]">volunteer_activism</span><span>Salurkan ZISWAF Ranting</span></a></div></div><div class="max-w-7xl mx-auto px-margin-mobile lg:px-gutter pt-space-lg text-center font-label-sm text-label-sm text-on-surface-variant flex flex-col md:flex-row items-center justify-between gap-space-sm"><div>© 2025 Pengurus Ranting Nahdlatul Ulama (PRNU) Banjaranyar. Khidmah Untuk Umat.</div><div class="flex items-center gap-space-md"><a class="hover:text-primary" data-path="profil" href="#">Tentang Ranting</a><span>•</span><a class="hover:text-primary" data-path="kotak-aspirasi" href="#">Aspirasi Warga</a><span>•</span><a class="hover:text-primary" data-path="admin-portal-login" href="#">Masuk SIMNU</a></div></div></footer></body></html>

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed-variant": "#6e3900", "on-surface-variant": "#404942", "primary-fixed-dim": "#8fd6a9", "on-primary-fixed": "#002110", "tertiary-fixed-dim": "#b6c4ff", "primary-fixed": "#aaf2c4", "on-tertiary-fixed": "#00164e", "surface-container-lowest": "#ffffff", "primary-container": "#0c5a37", "on-secondary-container": "#663500", "on-primary-container": "#88cfa3", "surface-container-high": "#dee9fc", "error": "#ba1a1a", "outline-variant": "#bfc9bf", "surface-tint": "#236b46", "inverse-primary": "#8fd6a9", "surface-dim": "#d0dbed", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "secondary": "#904d00", "surface-container-highest": "#d9e3f6", "on-surface": "#121c2a", "tertiary": "#123181", "on-primary": "#ffffff", "on-tertiary-container": "#adbeff", "secondary-fixed": "#ffdcc3", "tertiary-fixed": "#dce1ff", "on-tertiary-fixed-variant": "#264191", "on-error": "#ffffff", "primary": "#004125", "secondary-fixed-dim": "#ffb77d", "surface-container-low": "#eff4ff", "outline": "#707971", "surface-bright": "#f8f9ff", "surface": "#f8f9ff", "background": "#f8f9ff", "on-error-container": "#93000a", "inverse-surface": "#27313f", "inverse-on-surface": "#eaf1ff", "secondary-container": "#fe932c", "on-secondary-fixed": "#2f1500", "on-background": "#121c2a", "on-secondary": "#ffffff", "surface-container": "#e6eeff", "tertiary-container": "#2f4999", "surface-variant": "#d9e3f6", "on-primary-fixed-variant": "#005230" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "margin-desktop": "3rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-3xl": "4.5rem", "space-xl": "2rem", "margin": "2rem", "gutter-mobile": "1rem", "space-2xl": "3rem", "margin-mobile": "1rem" }, "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-lg-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-md": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["14px", { "lineHeight": "22px", "letterSpacing": "0.005em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-on-primary"><div class="max-w-7xl mx-auto px-gutter flex flex-wrap items-center justify-between py-space-xs text-label-sm font-label-sm"><div class="flex items-center gap-space-md"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">calendar_today</span> 14 Sya'ban 1446 H / 13 Februari 2025</span><span class="hidden sm:inline opacity-40">|</span><span class="hidden sm:flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> Desa Banjaranyar, Baureno, Bojonegoro</span></div><div class="flex items-center gap-space-sm"><span class="opacity-80">Jadwal Sholat Hari Ini:</span><span class="bg-primary-container text-on-primary-container px-2 py-0.5 rounded-full text-label-sm font-label-sm">Dzuhur 11:58 WIB</span><span class="hidden md:inline text-label-sm opacity-80">Ashar 15:12 • Maghrib 18:05</span></div></div></div><div class="h-20 max-w-7xl mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Official modern emblem logo for Nahdlatul Ulama (NU) Ranting Banjaranyar, featuring the iconic crescent globe globe motif surrounded by stars and rope cord in emerald green and radiant gold accents, clean vector styling suitable for government and Islamic organization portal. Design context: - Primary color: #0c5a37
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-md
+. The logo should be visually consistent with these brand tokens." class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Uj5kX7ZxbEhqqy8hILgaxJ5AVhnFi_uflFtwG6NqAzRk4FVYwaMlNeu4RlRRwgXwB7yTk54mx4UJs1KPjA__Ush6iUKrnbwXnQ3yFEASt6FXjQSnixGBx6bfQwH4JyLPZYpRwcxZT7bz1rz5LCC2Q50SMYZFXqegF8t6OPHqRfTUPwIoiC0-xQhCIHHtcVtzd1eIGvVbN96tgg_zfrkgIRrNWQv-LpQFYTb6TueKygjbq83tjcu-4T"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight font-bold">PRNU BANJARANYAR</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Kec. Baureno - Kab. Bojonegoro</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-lg"><a class="px-3 py-2 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="beranda" href="#">Beranda</a><a class="px-3 py-2 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="profil" href="#">Profil</a><div class="relative group"><button class="flex items-center gap-1 px-3 py-2 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" type="button">Badan Otonom <span class="material-symbols-outlined text-[16px]">expand_more</span></button><div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50 w-52"><div class="bg-surface-container-lowest rounded-xl p-space-xs shadow-[0_8px_20px_-4px_rgba(12,90,55,0.12)] border border-outline-variant/30 flex flex-col"><a class="px-3 py-2 text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors flex items-center justify-between" data-path="ipnu-banjaranyar" href="#">IPNU <span class="text-[10px] text-on-surface-variant/60">Pelajar Putra</span></a><a class="px-3 py-2 text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors flex items-center justify-between" data-path="ippnu-banjaranyar" href="#">IPPNU <span class="text-[10px] text-on-surface-variant/60">Pelajar Putri</span></a><a class="px-3 py-2 text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors flex items-center justify-between" data-path="fatayat-nu" href="#">Fatayat NU <span class="text-[10px] text-on-surface-variant/60">Pemudi NU</span></a><a aria-current="page" class="px-3 py-2 transition-colors flex items-center justify-between bg-primary-container text-on-primary-container font-label-lg rounded-lg" data-path="gp-ansor" href="#">GP Ansor <span class="text-[10px] text-on-surface-variant/60">Pemuda NU</span></a><a class="px-3 py-2 text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors flex items-center justify-between" data-path="satkorkel-banser" href="#">Banser <span class="text-[10px] text-on-surface-variant/60">Satkorkel</span></a></div></div></div><a class="px-3 py-2 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="struktur-organisasi" href="#">Struktur</a><a class="px-3 py-2 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="warta-ranting" href="#">Berita</a><a class="px-3 py-2 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="agenda-kegiatan" href="#">Agenda</a><a class="px-3 py-2 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="kotak-aspirasi" href="#">Aspirasi</a></nav><div class="flex items-center gap-space-sm"><a class="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg shadow-sm hover:opacity-95 transition-opacity" data-path="layanan-ziswaf" href="#">Bayar ZISWAF</a><a class="hidden sm:inline-flex items-center justify-center px-3.5 py-2 rounded-lg border border-outline-variant text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="admin-portal" href="#">Admin Portal</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- BANOM Top Switcher Strip -->
+<div class="w-full bg-surface-container-low py-space-xs shadow-sm">
+<div class="max-w-7xl mx-auto px-gutter flex items-center justify-between overflow-x-auto">
+<div class="flex items-center gap-space-xs min-w-max py-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mr-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">family_history</span>
+          Badan Otonom NU:
+        </span>
+<a class="px-3 py-1.5 rounded-full text-label-md font-label-md bg-surface text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1.5 shadow-sm" data-path="ipnu-banjaranyar" href="#">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim"></span> IPNU Pelajar Putra
+        </a>
+<a class="px-3 py-1.5 rounded-full text-label-md font-label-md bg-surface text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1.5 shadow-sm" data-path="ippnu-banjaranyar" href="#">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span> IPPNU Pelajar Putri
+        </a>
+<a class="px-3 py-1.5 rounded-full text-label-md font-label-md bg-surface text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1.5 shadow-sm" data-path="fatayat-nu" href="#">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span> Fatayat NU
+        </a>
+<a class="px-3.5 py-1.5 rounded-full text-label-md font-label-md bg-primary text-on-primary flex items-center gap-1.5 shadow-md" data-path="gp-ansor" href="#">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span> GP Ansor Banjaranyar
+          <span class="material-symbols-outlined text-[14px]">check</span>
+</a>
+<a class="px-3 py-1.5 rounded-full text-label-md font-label-md bg-surface text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1.5 shadow-sm" data-path="satkorkel-banser" href="#">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span> Banser Satkorkel
+        </a>
+</div>
+<div class="hidden lg:flex items-center gap-2 pl-4 text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+        Ranting Mandiri Berbasis Khidmat
+      </div>
+</div>
+</div>
+<!-- Hero BANOM Section -->
+<section class="relative w-full bg-primary text-on-primary py-space-3xl overflow-hidden">
+<div class="absolute -right-24 -bottom-24 w-96 h-96 bg-primary-container rounded-full blur-3xl opacity-40 pointer-events-none"></div>
+<div class="absolute -left-12 -top-12 w-80 h-80 bg-secondary-container rounded-full blur-3xl opacity-20 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-gutter relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Hero Left Column -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm tracking-wide">
+              BADAN OTONOM PEMUDA NAHDLIYIN
+            </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest/15 backdrop-blur-sm text-on-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary-container">verified</span>
+              SK PC GP Ansor Bojonegoro: No. 104/SK/PC-GP-ANSOR/X/2023
+            </span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-lg text-label-lg text-secondary-fixed uppercase tracking-widest">Masa Khidmat 2023 – 2026</span>
+<h1 class="font-display-lg text-display-lg font-extrabold tracking-tight text-on-primary leading-tight">
+              Pimpinan Ranting Gerakan Pemuda Ansor Desa Banjaranyar
+            </h1>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary-fixed italic font-normal leading-relaxed">
+            “Darah Juang Pemuda Aswaja: Tegakkan Agama, Jaga Martabat Bangsa”
+          </p>
+<p class="font-body-md text-body-md text-on-primary/80 max-w-2xl">
+            Wadah konsolidasi dan benteng pertahanan pemuda Nahdlatul Ulama di tingkat akar rumput Desa Banjaranyar. Berperan aktif memperkuat akidah Ahlussunnah wal Jama'ah an-Nahdliyyah, pemberdayaan ekonomi kreatif, serta aksi kesiapsiagaan sosial bagi kemaslahatan warga.
+          </p>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<a class="px-5 py-3 rounded-lg bg-secondary-container text-on-secondary-container font-label-lg text-label-lg font-bold shadow-md hover:opacity-90 transition-opacity flex items-center gap-2" href="#pendaftaran-pkd">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span> Gabung Kaderisasi PKD Ansor
+            </a>
+<a class="px-5 py-3 rounded-lg bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 backdrop-blur-sm text-on-primary font-label-lg text-label-lg transition-colors flex items-center gap-2" href="#" onclick="alert('Salinan SK Resmi Masa Khidmat 2023-2026 sedang diunduh dalam format PDF.'); return false;">
+<span class="material-symbols-outlined text-[18px]">download</span> Unduh Salinan SK Pengurus (PDF)
+            </a>
+</div>
+</div>
+<!-- Hero Right Column: Institutional Trust Card -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest text-on-surface rounded-xl p-space-lg shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant tracking-wider">Status Validasi Ranting</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">stars</span> Akreditasi A
+              </span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Induk Pimpinan Anak Cabang</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">PAC GP Ansor Baureno</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kabupaten Bojonegoro, Jatim</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">handshake</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Afiliasi Teritorial NU</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">PRNU Banjaranyar</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gedung Bersama Jl. Raya Banjaranyar No. 19</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-space-sm text-on-surface flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Kepatuhan Laporan Organisasi:</span>
+<span class="font-bold text-primary">100% Tertib Administrasi</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden mt-1">
+<div class="bg-primary h-full rounded-full w-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant pt-1 text-right">Audit Tahunan PAC Baureno 2024</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Statistics & Cadre Potential Metrics -->
+<section class="w-full max-w-7xl mx-auto px-gutter -mt-8 relative z-20">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md flex items-center gap-space-md hover:shadow-lg transition-shadow">
+<div class="w-14 h-14 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">badge</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg text-display-lg font-extrabold text-primary leading-none">42</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface mt-1">Anggota Aktif</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Terverifikasi e-KTA Digital</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md flex items-center gap-space-md hover:shadow-lg transition-shadow">
+<div class="w-14 h-14 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">auto_stories</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg text-display-lg font-extrabold text-secondary leading-none">1</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface mt-1">Majelis MDS RA</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Rutin Selapanan Malam Jumat</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md flex items-center gap-space-md hover:shadow-lg transition-shadow">
+<div class="w-14 h-14 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg text-display-lg font-extrabold text-primary leading-none">15</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface mt-1">Alumni PKD 2024</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kader Inti Angkatan Baru</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md flex items-center gap-space-md hover:shadow-lg transition-shadow">
+<div class="w-14 h-14 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">storefront</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg text-display-lg font-extrabold text-on-secondary-container leading-none">2</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface mt-1">Unit Usaha Kader</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Koperasi & Sablon Santri</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision, Mission & 4 Movement Pillars -->
+<section class="w-full max-w-7xl mx-auto px-gutter py-space-3xl">
+<div class="flex flex-col gap-space-2xl">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto gap-space-xs">
+<span class="px-3.5 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold uppercase tracking-wider">
+          Arah Khidmat Pemuda
+        </span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold">Visi & 4 Pilar Gerakan GP Ansor</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Pijakan moral, ideologis, dan aksi nyata dalam membina generasi muda Nahdliyin menyongsong kemandirian desa.
+        </p>
+</div>
+<!-- Big Vision Card -->
+<div class="bg-surface-container-low rounded-2xl p-space-xl lg:p-space-2xl shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 w-64 h-64 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col md:flex-row items-start md:items-center gap-space-lg">
+<div class="w-16 h-16 rounded-2xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[36px]">visibility</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold">Visi Resmi Ranting 2023–2026</span>
+<p class="font-headline-md text-headline-md font-semibold text-on-surface leading-snug">
+              “Membentuk pemuda nahdliyin yang berakhlakul karimah, berilmu amaliah, mandiri secara ekonomi, tangguh membentengi ajaran Ahlussunnah wal Jama'ah an-Nahdliyyah, serta proaktif dalam pembangunan desa.”
+            </p>
+</div>
+</div>
+</div>
+<!-- 4 Pillars Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Pillar 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">mosque</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm font-bold text-primary uppercase">Pilar I</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Revitalisasi Tradisi Keagamaan</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Menghidupkan sholawat, tahlil, rotib, dan kajian kitab turats kuning di surau maupun musholla desa guna menjaga sanad keilmuan para muassis NU.
+            </p>
+</div>
+<div class="pt-space-xs text-label-sm font-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> MDS Rijalul Ansor
+          </div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">payments</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm font-bold text-secondary uppercase">Pilar II</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Kemandirian Ekonomi Kreatif</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Membangun unit usaha bersama, pelatihan kewirausahaan digital, dan jejaring pasar antar santri agar kader tegak mandiri secara finansial.
+            </p>
+</div>
+<div class="pt-space-xs text-label-sm font-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Inkubasi Usaha Banom
+          </div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">model_training</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm font-bold text-primary uppercase">Pilar III</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Kaderisasi Berkelanjutan (PKD)</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Penjaringan dan pembinaan ideologis rutin melalui Pelatihan Kepemimpinan Dasar (PKD) untuk melahirkan aktivis militan penerus estafet organisasi.
+            </p>
+</div>
+<div class="pt-space-xs text-label-sm font-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Sistem e-KTA Nasional
+          </div>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">volunteer_activism</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm font-bold text-secondary uppercase">Pilar IV</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Kepedulian Sosial Warga</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Tanggap bencana lokal, posko siaga gotong royong bedah rumah, penyaluran santunan dhuafa bekerja sama erat dengan Lazisnu Ranting Banjaranyar.
+            </p>
+</div>
+<div class="pt-space-xs text-label-sm font-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Tanggap Sigap Pemuda
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Feature & Field Activities Highlight -->
+<section class="w-full bg-surface-container-low py-space-3xl">
+<div class="max-w-7xl mx-auto px-gutter flex flex-col gap-space-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Visual Presentation Left -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="relative rounded-2xl overflow-hidden shadow-lg h-80 lg:h-96">
+<img class="w-full h-full object-cover" data-alt="Indonesian young men in traditional songkok peci and smart green batik uniforms holding an earnest discussion during GP Ansor Nahdlatul Ulama organizational conference in East Java village hall, bright ambient morning sunlight, dignified institutional atmosphere, emerald green accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1suKxcKJWFTBnXJXnqNzP_tBq77UTa1OORb6Js4Z30UVpTfoG3LlkOzxtFNB7BuvL0A6ssIqbKMydiZ8Eqyl1oRObsrW46BA07X-_5awEML_JvUwDV7HBawmKpLcPQYDZIJjR5x8dueyqfsvD6R_jbSCLQOpgGuZmuUdEVsGkQgPn8Nd5SjZsx24iE2DDDAIA4AGdvUVSuOD76X1FMp2oTfo_8ylrCuGfzJlnZ4YP3f1QGBRwL_w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent flex flex-col justify-end p-space-lg text-on-primary">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Konsolidasi Ranting</span>
+<h4 class="font-headline-md text-headline-md font-bold">Militansi Kader di Tingkat Akar Rumput</h4>
+<p class="font-body-sm text-body-sm text-on-primary/80">Sinergi pengurus ranting Banjaranyar bersama sesepuh NU menjaga kerukunan kampung.</p>
+</div>
+</div>
+</div>
+<!-- Visual Presentation Right: 2 Ongoing Flagship Programs -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm font-bold text-primary uppercase tracking-wider">Khidmat Berkesinambungan</span>
+<h2 class="font-headline-xl text-headline-xl font-bold text-on-surface">Agenda & Program Unggulan Berjalan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Dua program terintegrasi yang senantiasa hadir menyapa warga dan musholla se-Desa Banjaranyar.</p>
+</div>
+<!-- Agenda Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-primary text-on-primary flex flex-col items-center justify-center shrink-0">
+<span class="font-label-sm text-label-sm uppercase font-bold">Malam</span>
+<span class="font-headline-sm text-headline-sm font-extrabold leading-none">Pahing</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Rutin Selapanan</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Pukul 19.30 WIB</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Rijalul Ansor Keliling 4 Dusun</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Pembacaan Maulid Simthudduror, istighotsah, dan kajian ringkas fiqih amaliyah secara bergilir di Dusun Banjar, Anyar Kulon, Krajan, dan Sumberan.
+              </p>
+</div>
+</div>
+<!-- Agenda Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-secondary text-on-secondary flex flex-col items-center justify-center shrink-0">
+<span class="font-label-sm text-label-sm uppercase font-bold">Siaga</span>
+<span class="material-symbols-outlined text-[24px]">home_repair_service</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Bakti Sosial</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Aksi Tanggap Gotong Royong</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-secondary">Posko Siaga Sosial Pemuda</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Inisiatif kepemudaan gotong royong renovasi musholla tua, pembersihan saluran air saat musim hujan, serta aksi bedah rumah warga dhuafa.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Structure of Daily Board (BPH PR GP Ansor 2023-2026) -->
+<section class="w-full max-w-7xl mx-auto px-gutter py-space-3xl">
+<div class="flex flex-col gap-space-2xl">
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto gap-space-xs">
+<span class="px-3.5 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold uppercase tracking-wider">
+          Struktur Kepengurusan
+        </span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold">Badan Pengurus Harian (BPH)</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Pimpinan Ranting Gerakan Pemuda Ansor Desa Banjaranyar Masa Khidmat 2023 – 2026 yang mengemban amanah musyawarah ranting.
+        </p>
+</div>
+<!-- Advisory Council Strip -->
+<div class="bg-surface-container rounded-2xl p-space-lg shadow-sm">
+<div class="flex items-center gap-2 mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">supervised_user_circle</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Dewan Penasihat Ranting</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-headline-sm">
+              BW
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Sahabat Budi Wahyono</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ketua Demisioner / Tokoh Pemuda Desa Banjaranyar</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-headline-sm">
+              AF
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Ust. Ahmad Fauzi, S.Pd.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tokoh Pendidik & Dai Muda Nahdlatul Ulama</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Leader (Ketua Ranting) Spotlight Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-4 flex flex-col items-center text-center">
+<div class="w-32 h-32 rounded-2xl overflow-hidden shadow-md mb-space-xs">
+<img class="w-full h-full object-cover" data-alt="Charismatic 30-year-old Indonesian Muslim youth leader wearing black velvet songkok peci and sharp dark green formal blazer with Ansor GP pin emblem, confident expression, neutral modern studio backdrop, clean portrait photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAs5kda_9KUdbOke2p7dIkPy4U2mW3-vuqvKyBXS40NZHt_0GUaxSdbYHvNeT8zBQh5pu8jO_pwFd5qqwsiN6c9yqrNSI4XevWPv0wPFWjnH069e2IoAMtEsKvKDTQKpOw9UyfEkDmYeIU9ftyJ_rPW23NPwpSEaTnG6vqmLya7ifOzQW1Afb6oL-QD_XSMDy_RztYFvnUV7-KgARdChAVvuopGU-hxjU8UQKJBao87BwadnYXykc"/>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+              Ketua Pimpinan Ranting
+            </span>
+</div>
+<div class="md:col-span-8 flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Mandataris Konferensi Ranting 2023</span>
+<h3 class="font-headline-xl text-headline-xl font-extrabold text-primary">Sahabat Wahyu Prasetyo, S.Sos</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Aktivis pemuda desa yang berpengalaman dalam pendampingan kemasyarakatan, alumnus Pelatihan Kepemimpinan Lanjutan (PKL) Ansor Bojonegoro. Memimpin konsolidasi organisasi, sinkronisasi program ke-NU-an ranting, dan penguatan kemandirian pemuda santri.
+            </p>
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Alumnus PKL Ansor
+              </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Penggerak BUMDes
+              </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">call</span> Narahubung Pemuda
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Vice Chairmen (Wakil Ketua) Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Waket I -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="px-2.5 py-1 rounded-md bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold w-fit">
+              Wakil Ketua I
+            </span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Sahabat Dani Saputra</h4>
+<span class="font-label-sm text-label-sm text-primary font-bold">Bidang Kaderisasi & Keorganisasian</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Koordinator penyelenggaraan PKD, pemutakhiran e-KTA terintegrasi, dan pemetaan potensi anggota baru di seluruh dusun Banjaranyar.
+            </p>
+</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1 pt-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">database</span> Penataan Database Kader
+          </div>
+</div>
+<!-- Waket II -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="px-2.5 py-1 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold w-fit">
+              Wakil Ketua II
+            </span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Sahabat M. Ridwan</h4>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Bidang MDS Rijalul Ansor</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Pembina Diba'iyyah, tahlil keliling malam Jumat Pahing, dan fasilitator kajian kitab kuning amaliyah Aswaja antar musholla ranting.
+            </p>
+</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1 pt-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">menu_book</span> Kajian Fiqih & Diba'
+          </div>
+</div>
+<!-- Waket III -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="px-2.5 py-1 rounded-md bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold w-fit">
+              Wakil Ketua III
+            </span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Sahabat Lukman Hakim</h4>
+<span class="font-label-sm text-label-sm text-primary font-bold">Bidang Ekonomi & UMKM</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Penggerak unit usaha sablon merchandise pemuda desa, kemitraan pemasaran produk pertanian, dan pemberdayaan santri mandiri.
+            </p>
+</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1 pt-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">store</span> Pembina UMKM Ranting
+          </div>
+</div>
+</div>
+<!-- Secretarial & Financial Columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Secretariat -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">assignment</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Jajaran Sekretariat Ranting</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">Sekretaris</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Sahabat Agus Riyanto</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tata Kelola Persuratan & Arsip</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">Wakil Sekretaris</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Sahabat Choirul Huda</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Registrasi & Dokumentasi Rapat</span>
+</div>
+</div>
+</div>
+<!-- Treasury -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">account_balance_wallet</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Jajaran Kebendaharaan</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Bendahara</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Sahabat Ilham Kurniawan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Anggaran Khidmat & Laporan Kas</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">Wakil Bendahara</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Sahabat Fathur Rozi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pencatatan Iuran Anggota & Logistik</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Special Institutions & Divisions -->
+<section class="w-full bg-surface-container-low py-space-3xl">
+<div class="max-w-7xl mx-auto px-gutter flex flex-col gap-space-2xl">
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto gap-space-xs">
+<span class="px-3.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+          Unit Khusus Ranting
+        </span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-extrabold">Lembaga & Divisi Khusus GP Ansor</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Pilar operasional taktis untuk merespons kebutuhan spiritual, advokasi warga, kemandirian ekonomi, dan dakwah digital.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Division 1: MDS RA -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">groups</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase">Lembaga Dakwah & Tradisi</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Majelis Dzikir & Sholawat Rijalul Ansor</h3>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Menyelenggarakan safari pengajian keliling antar musholla, pembacaan Maulid Simthudduror, dan penguatan benteng akidah pemuda Nahdliyin desa dari penetrasi paham transnasional atau radikal.
+          </p>
+<div class="bg-surface-container p-space-sm rounded-lg text-label-sm font-label-sm text-on-surface flex items-center justify-between">
+<span class="text-on-surface-variant">Penanggung Jawab:</span>
+<span class="font-bold text-primary">Ust. M. Ridwan & Tim Da'i Ansor</span>
+</div>
+</div>
+<!-- Division 2: LBH Ansor Ranting -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">gavel</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Advokasi & Edukasi</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Lembaga Bantuan Hukum (LBH) Ansor Ranting</h3>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Penyuluhan hukum gratis bagi warga pedesaan, pendampingan mediasi sengketa tanah/waris secara kekeluargaan, serta advokasi perlindungan hak-hak masyarakat marjinal di Kecamatan Baureno.
+          </p>
+<div class="bg-surface-container p-space-sm rounded-lg text-label-sm font-label-sm text-on-surface flex items-center justify-between">
+<span class="text-on-surface-variant">Layanan:</span>
+<span class="font-bold text-secondary">Konsultasi Mediasi Warga Desa</span>
+</div>
+</div>
+<!-- Division 3: Biro Usaha Mandiri -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">work</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-secondary-container font-bold uppercase">Inkubasi Bisnis Santri</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Biro Pengembangan Wirausaha Mandiri</h3>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Menjalankan unit produksi sablon kaos/seragam santri, budidaya kolam terpal ikan lele pemuda ranting, serta mengelola marketplace produk UMKM Nahdliyin Banjaranyar secara berkala.
+          </p>
+<div class="bg-surface-container p-space-sm rounded-lg text-label-sm font-label-sm text-on-surface flex items-center justify-between">
+<span class="text-on-surface-variant">Unit Aktif:</span>
+<span class="font-bold text-on-surface">Sablon Merchandise & Koperasi</span>
+</div>
+</div>
+<!-- Division 4: Tim Cyber & Media Kreatif -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">share</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase">Syiar Digital Aswaja</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Tim Cyber & Media Kreatif Ansor</h3>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Memproduksi konten dakwah Aswaja yang santun di TikTok & Instagram, mendokumentasikan kegiatan banom, serta secara proaktif mengikis peredaran disinformasi/hoaks di grup WhatsApp warga.
+          </p>
+<div class="bg-surface-container p-space-sm rounded-lg text-label-sm font-label-sm text-on-surface flex items-center justify-between">
+<span class="text-on-surface-variant">Kanal Publikasi:</span>
+<span class="font-bold text-primary">@ansorbanjaranyar.official</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cadre Recruitment Form (PKD GP Ansor) -->
+<section class="w-full max-w-7xl mx-auto px-gutter py-space-3xl scroll-mt-24" id="pendaftaran-pkd">
+<div class="bg-surface-container-lowest rounded-3xl p-space-xl lg:p-space-2xl shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Form Left Explainer -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<span class="px-3.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold uppercase tracking-wider w-fit">
+            Kaderisasi Angkatan 2025
+          </span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold">Formulir Rekrutmen Calon Kader PKD GP Ansor</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Pelatihan Kepemimpinan Dasar (PKD) merupakan pintu gerbang resmi menjadi anggota Gerakan Pemuda Ansor yang militan, terstruktur, dan memiliki integritas pengabdian kepada Ulama dan Negeri.
+          </p>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+              Syarat Calon Peserta:
+            </span>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1 pl-4 list-disc">
+<li>Pemuda Muslim berakidah Ahlussunnah wal Jama'ah an-Nahdliyyah.</li>
+<li>Berusia antara 20 hingga 40 tahun saat mendaftar.</li>
+<li>Domisili Desa Banjaranyar atau keturunan warga Banjaranyar.</li>
+<li>Bersedia mengikuti rangkaian materi PKD secara utuh (2 hari 1 malam).</li>
+</ul>
+</div>
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">info</span>
+            Biaya pendaftaran dan konsumsi difasilitasi oleh kas ranting & donatur.
+          </div>
+</div>
+<!-- Form Right Interactive Fields -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg lg:p-space-xl rounded-2xl shadow-sm">
+<form class="flex flex-col gap-space-md" id="form-pkd-ansor" onsubmit="event.preventDefault(); document.getElementById('pkd-success-alert').classList.remove('hidden'); this.reset();">
+<!-- Success Alert Placeholder -->
+<div class="hidden p-space-md rounded-xl bg-primary-fixed text-on-primary-fixed font-body-sm text-body-sm flex items-start gap-2 shadow-sm" id="pkd-success-alert">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">task_alt</span>
+<div>
+<strong>Alhamdulillah, formulir terkirim!</strong> Data sahabat telah diterima tim kaderisasi PR GP Ansor Banjaranyar. Sahabat Dani Saputra (Waket I) akan segera menghubungi via WhatsApp untuk konfirmasi berkas.
+              </div>
+</div>
+<!-- Field 1: Nama Lengkap -->
+<div class="flex flex-col gap-1">
+<label class="font-label-lg text-label-lg font-bold text-on-surface" for="nama_lengkap">Nama Lengkap Sesuai KTP <span class="text-error">*</span></label>
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="nama_lengkap" placeholder="Contoh: Ahmad Zainuri" required="" type="text"/>
+</div>
+<!-- Field 2: Dusun/RT & Usia (2 cols) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-lg text-label-lg font-bold text-on-surface" for="dusun_rt">Dusun / RT-RW <span class="text-error">*</span></label>
+<select class="w-full h-11 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="dusun_rt" required="">
+<option disabled="" selected="" value="">Pilih Dusun Domisili</option>
+<option value="Dusun Krajan">Dusun Krajan (RT 01 - RT 04)</option>
+<option value="Dusun Banjar">Dusun Banjar (RT 05 - RT 08)</option>
+<option value="Dusun Anyar Kulon">Dusun Anyar Kulon (RT 09 - RT 12)</option>
+<option value="Dusun Sumberan">Dusun Sumberan (RT 13 - RT 15)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-lg text-label-lg font-bold text-on-surface" for="usia_kader">Usia Saat Ini <span class="text-error">*</span></label>
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="usia_kader" max="40" min="19" placeholder="23" required="" type="number"/>
+</div>
+</div>
+<!-- Field 3: No. WhatsApp -->
+<div class="flex flex-col gap-1">
+<label class="font-label-lg text-label-lg font-bold text-on-surface" for="no_wa">Nomor WhatsApp Aktif <span class="text-error">*</span></label>
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="no_wa" placeholder="Contoh: 081234567890" required="" type="tel"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pastikan nomor aktif untuk dimasukkan ke grup pra-kaderisasi.</span>
+</div>
+<!-- Field 4: Riwayat Berorganisasi -->
+<div class="flex flex-col gap-1">
+<label class="font-label-lg text-label-lg font-bold text-on-surface" for="riwayat_org">Latar Belakang / Riwayat Pengkaderan <span class="text-error">*</span></label>
+<select class="w-full h-11 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="riwayat_org" required="">
+<option disabled="" selected="" value="">Pilih Riwayat</option>
+<option value="Alumni MAKESTA IPNU Banjaranyar">Alumni MAKESTA IPNU Banjaranyar</option>
+<option value="Alumni Santri Pondok Pesantren">Alumni Santri Pondok Pesantren</option>
+<option value="Karang Taruna / Remaja Masjid">Aktivis Karang Taruna / Remaja Masjid</option>
+<option value="Umum / Belum Pernah Kaderisasi NU">Warga Nahdliyin Umum</option>
+</select>
+</div>
+<!-- Field 5: Minat Pengabdian -->
+<div class="flex flex-col gap-1">
+<label class="font-label-lg text-label-lg font-bold text-on-surface">Minat Bidang Pengabdian di Ansor:</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-1">
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest cursor-pointer shadow-sm">
+<input checked="" class="text-primary focus:ring-primary" name="minat_bidang" type="radio" value="MDS Rijalul Ansor"/>
+<span class="font-body-sm text-body-sm text-on-surface">MDS Rijalul Ansor (Kajian & Dakwah)</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest cursor-pointer shadow-sm">
+<input class="text-primary focus:ring-primary" name="minat_bidang" type="radio" value="Wirausaha & UMKM"/>
+<span class="font-body-sm text-body-sm text-on-surface">Kewirausahaan & UMKM</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest cursor-pointer shadow-sm">
+<input class="text-primary focus:ring-primary" name="minat_bidang" type="radio" value="Cyber & Media"/>
+<span class="font-body-sm text-body-sm text-on-surface">Media Kreatif & Cyber</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest cursor-pointer shadow-sm">
+<input class="text-primary focus:ring-primary" name="minat_bidang" type="radio" value="Kesiapsiagaan Banser"/>
+<span class="font-body-sm text-body-sm text-on-surface">Kesiapsiagaan / Diklatsar Banser</span>
+</label>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full mt-space-xs py-3.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:opacity-95 transition-opacity flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span> Kirim Formulir Pendaftaran PKD
+            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footnote Callout: Interconnection to Satkorkel Banser -->
+<section class="w-full max-w-7xl mx-auto px-gutter pb-space-3xl">
+<div class="bg-primary-container text-on-primary-container rounded-2xl p-space-lg lg:p-space-xl shadow-lg relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 w-48 h-48 bg-primary rounded-full blur-2xl opacity-50 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-2xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[36px]">security</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold w-fit">
+              Tenaga Inti Pengamanan & Bela Negara
+            </span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-primary">
+              Mencari Informasi Satkorkel Banser Banjaranyar?
+            </h3>
+<p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed max-w-2xl">
+              Barisan Ansor Serbaguna (Banser) merupakan garda terdepan pengamanan Kyai, aset jam'iyyah NU, penanggulangan bencana, dan pertahanan NKRI di Desa Banjaranyar.
+            </p>
+</div>
+</div>
+<div class="shrink-0 w-full md:w-auto">
+<a class="w-full md:w-auto px-6 py-3 rounded-lg bg-surface-container-lowest text-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2" data-path="satkorkel-banser" href="#">
+            Kunjungi Profil Satkorkel Banser <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface mt-space-3xl"><div class="max-w-7xl mx-auto px-gutter pt-space-2xl pb-space-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm mb-space-xs"><img alt="Logo NU Ranting Banjaranyar" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Uj5kX7ZxbEhqqy8hILgaxJ5AVhnFi_uflFtwG6NqAzRk4FVYwaMlNeu4RlRRwgXwB7yTk54mx4UJs1KPjA__Ush6iUKrnbwXnQ3yFEASt6FXjQSnixGBx6bfQwH4JyLPZYpRwcxZT7bz1rz5LCC2Q50SMYZFXqegF8t6OPHqRfTUPwIoiC0-xQhCIHHtcVtzd1eIGvVbN96tgg_zfrkgIRrNWQv-LpQFYTb6TueKygjbq83tjcu-4T"/><span class="font-headline-sm text-headline-sm font-bold text-primary">PRNU Banjaranyar</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Pengurus Ranting Nahdlatul Ulama (PRNU) Desa Banjaranyar, Kecamatan Baureno, Kabupaten Bojonegoro. Mengabdi untuk agama, kemaslahatan umat, dan keutuhan NKRI berlandaskan Ahlussunnah wal Jama'ah An-Nahdliyyah.</p><div class="flex items-center gap-2 mt-space-xs text-label-sm font-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">verified</span> Akreditasi Ranting Mandiri 2024</div></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">Badan Otonom & Lembaga</span><div class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5" data-path="gp-ansor" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> GP Ansor Ranting Banjaranyar</a><a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5" data-path="satkorkel-banser" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Satkorkel Banser Banjaranyar</a><a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5" data-path="fatayat-nu" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Fatayat NU Ranting Banjaranyar</a><a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5" data-path="ipnu-banjaranyar" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Pimpinan Ranting IPNU Banjaranyar</a><a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5" data-path="ippnu-banjaranyar" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Pimpinan Ranting IPPNU Banjaranyar</a><a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5" data-path="layanan-ziswaf" href="#"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span> UPZIS Lazisnu Banjaranyar</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">Sekretariat & Layanan</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Gedung Sekretariat Bersama PRNU Banjaranyar<br/>Jl. Raya Banjaranyar No. 19, RT 04 / RW 02<br/>Kecamatan Baureno, Kabupaten Bojonegoro<br/>Jawa Timur, Kode Pos 62192</p><div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant mt-space-xs"><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">mail</span> sekretariat@nubanjaranyar.or.id</span><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">call</span> +62 812-3456-7890 (Call Center)</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">Kanal ZISWAF Banjaranyar</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Salurkan Zakat, Infaq, dan Shodaqoh melalui Kotak Koin NU Peduli atau Rekening Lazisnu Ranting Banjaranyar.</p><div class="p-space-sm bg-surface-container rounded-lg border border-outline-variant/40"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Bank Syariah Indonesia (BSI)</span><p class="font-headline-sm text-headline-sm font-bold text-primary tracking-wide">7123-4567-89</p><span class="font-label-sm text-label-sm text-on-surface-variant">a.n. Lazisnu Ranting Banjaranyar</span></div><a class="text-label-md font-label-md text-primary hover:underline flex items-center gap-1 mt-1" data-path="layanan-ziswaf" href="#">Konfirmasi Donasi ZISWAF <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div></div><div class="w-full border-t border-outline-variant/30 py-space-md bg-surface-container"><div class="max-w-7xl mx-auto px-gutter flex flex-col sm:flex-row items-center justify-between text-label-sm font-label-sm text-on-surface-variant gap-space-xs"><p>© 2025 Pengurus Ranting Nahdlatul Ulama Desa Banjaranyar. Khidmah untuk Umat.</p><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" data-path="kebijakan-privasi" href="#">Kebijakan Privasi</a><a class="hover:text-primary transition-colors" data-path="panduan-layanan" href="#">Panduan Warga</a><a class="hover:text-primary transition-colors" data-path="admin-portal" href="#">Login Pengurus</a></div></div></div></footer></body></html>

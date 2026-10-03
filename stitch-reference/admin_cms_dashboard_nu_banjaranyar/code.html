@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary":"#ffffff","surface":"#f8f9ff","on-error":"#ffffff","on-secondary-fixed":"#2f1500","primary-fixed-dim":"#8fd6a9","tertiary-fixed-dim":"#b6c4ff","primary":"#004125","secondary-fixed-dim":"#ffb77d","tertiary-container":"#2f4999","error-container":"#ffdad6","on-surface-variant":"#404942","on-tertiary-container":"#adbeff","inverse-on-surface":"#eaf1ff","on-secondary-container":"#663500","on-primary-fixed":"#002110","surface-container-low":"#eff4ff","tertiary":"#123181","on-tertiary-fixed-variant":"#264191","secondary":"#904d00","surface-tint":"#236b46","on-primary-fixed-variant":"#005230","surface-container-high":"#dee9fc","on-secondary-fixed-variant":"#6e3900","primary-container":"#0c5a37","on-tertiary":"#ffffff","outline":"#707971","on-primary-container":"#88cfa3","surface-container-lowest":"#ffffff","on-background":"#121c2a","surface-dim":"#d0dbed","on-error-container":"#93000a","surface-container":"#e6eeff","background":"#f8f9ff","outline-variant":"#bfc9bf","error":"#ba1a1a","surface-bright":"#f8f9ff","secondary-fixed":"#ffdcc3","on-surface":"#121c2a","on-secondary":"#ffffff","surface-variant":"#d9e3f6","on-tertiary-fixed":"#00164e","tertiary-fixed":"#dce1ff","inverse-primary":"#8fd6a9","inverse-surface":"#27313f","secondary-container":"#fe932c","surface-container-highest":"#d9e3f6","primary-fixed":"#aaf2c4"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{gutter:"1.5rem","gutter-mobile":"1rem","margin-desktop":"3rem","space-lg":"1.5rem","space-md":"1rem","space-3xl":"4.5rem","space-xs":"0.25rem",margin:"2rem","space-2xl":"3rem","margin-mobile":"1rem","space-sm":"0.5rem","space-xl":"2rem"},fontFamily:{"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"]},fontSize:{"headline-xl":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"700"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"display-lg-mobile":["34px",{lineHeight:"42px",letterSpacing:"-0.02em",fontWeight:"800"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-md":["16px",{lineHeight:"26px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-sm":["18px",{lineHeight:"26px",letterSpacing:"-0.005em",fontWeight:"600"}],"headline-md":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"800"}],"body-sm":["14px",{lineHeight:"22px",letterSpacing:"0.005em",fontWeight:"400"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-lg py-space-sm mb-space-md flex items-center gap-space-sm"><img alt="Logo NU Ranting Banjaranyar" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI5hbWBChrmhDKxy7lin3hdm2BNe7kHiAeQ6mbBrqqssnB3cHFPEWslX1VTN4fFEpRTp4zywxk7hFUUPvCfqq3_c8wcZxOUtn4m3zAyMi9PqP9QV_04kXv-ZIk_iEiI0iRmcc2Fy3aveJtNpe9gnh2_Vr5TOq_UvBvQv1po8QA4k3IfFzrRDSM2xWZHlhZB-JzqEXFmawHfzaOj7PiE8OCpYN8VP_z2fRKWHuKNREk3axepX3sn84"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary font-bold leading-tight">SIMNU Portal</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Ranting Banjaranyar</span></div></div><nav class="flex flex-col px-space-md space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold"><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-bold" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">space_dashboard</span><span>Ringkasan Ranting</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="admin-berita-cms" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">newspaper</span><span>Kelola Warta &amp; Berita</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="admin-agenda-cms" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">event_available</span><span>Agenda &amp; Istighotsah</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="admin-aspirasi-warga" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">inbox</span><span>Kotak Aspirasi Masuk</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="admin-lazisnu-infaq" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">volunteer_activism</span><span>Pencatatan ZISWAF</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="admin-data-jamaah" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">group</span><span>Database Warga NU</span></a></nav></div><div class="px-space-md"><div class="bg-surface-container p-space-sm rounded-lg mb-space-sm"><div class="font-label-md text-label-md text-on-surface font-bold">Status Server Ranting</div><div class="font-label-sm text-label-sm text-primary flex items-center gap-1 mt-1"><span class="w-2 h-2 rounded-full bg-primary"></span><span>Online &amp; Sinkron</span></div></div><a class="flex items-center px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-error hover:bg-error-container hover:text-on-error-container transition-colors" data-path="beranda" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">logout</span><span>Keluar Portal</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md z-40 flex items-center justify-between px-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><img alt="Logo NU Ranting Banjaranyar" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI5hbWBChrmhDKxy7lin3hdm2BNe7kHiAeQ6mbBrqqssnB3cHFPEWslX1VTN4fFEpRTp4zywxk7hFUUPvCfqq3_c8wcZxOUtn4m3zAyMi9PqP9QV_04kXv-ZIk_iEiI0iRmcc2Fy3aveJtNpe9gnh2_Vr5TOq_UvBvQv1po8QA4k3IfFzrRDSM2xWZHlhZB-JzqEXFmawHfzaOj7PiE8OCpYN8VP_z2fRKWHuKNREk3axepX3sn84"/><span class="font-label-lg text-label-lg text-on-surface-variant font-medium">Konsol Pengurus Ranting Nahdlatul Ulama Banjaranyar</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">verified_user</span><span>Petugas: Sekretariat PRNU</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-[calc(100vh-64px)] w-full px-space-xl py-space-lg"><div class="flex flex-col w-full space-y-space-lg pb-space-2xl">
+<!-- Top Welcome & Quick Actions Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full text-label-sm font-label-sm bg-primary-fixed text-on-primary-fixed">
+          Periode Khidmah 2023 - 2028
+        </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_month</span>
+          14 Sya'ban 1446 H / 14 Februari 2025
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary">Konsol Utama PRNU Banjaranyar</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Pusat kendali administrasi, publikasi warta banom, rekapitulasi anggota, serta respon tanggap aspirasi warga nahdliyin.
+      </p>
+</div>
+<!-- Quick Action Launchers -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="inline-flex items-center gap-2 px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all" onclick="document.getElementById('action-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Tambah Berita</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>Input Kader</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[20px]">view_carousel</span>
+<span>Kelola Banner</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span>Struktur SK</span>
+</button>
+</div>
+</div>
+<!-- Quick Stat Cards (6 Metrik Utama) -->
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-space-md">
+<!-- Card 1: BANOM -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-bold uppercase tracking-wider">Total Banom</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-xl text-headline-xl text-primary font-extrabold">5</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">IPNU, IPPNU, Fatayat, Ansor, Banser</div>
+</div>
+</div>
+<!-- Card 2: Pengurus Aktif -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-bold uppercase tracking-wider">Pengurus Aktif</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">groups_3</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-xl text-headline-xl text-on-surface font-extrabold">48</div>
+<div class="font-label-sm text-label-sm text-primary flex items-center gap-1 mt-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>100% SK Sah</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Anggota / Kader -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-bold uppercase tracking-wider">Kader Terdata</span>
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">id_card</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-xl text-headline-xl text-primary font-extrabold">320</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">trending_up</span>
+<span class="text-primary font-bold">+18</span> bulan ini
+        </div>
+</div>
+</div>
+<!-- Card 4: Berita Terbit -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-bold uppercase tracking-wider">Berita Terbit</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">newspaper</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-xl text-headline-xl text-on-surface font-extrabold">24</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">3 artikel draf siap tinjau</div>
+</div>
+</div>
+<!-- Card 5: Agenda Aktif -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-bold uppercase tracking-wider">Agenda Aktif</span>
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]">event</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-xl text-headline-xl text-on-surface font-extrabold">8</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">2 agenda minggu ini</div>
+</div>
+</div>
+<!-- Card 6: Aspirasi Warga -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute top-0 right-0 w-2 h-full bg-secondary-container"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-bold uppercase tracking-wider">Aspirasi Warga</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">mark_chat_unread</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<div class="font-headline-xl text-headline-xl text-on-surface font-extrabold">14</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary text-on-secondary font-bold">
+            3 Baru
+          </span>
+</div>
+<div class="font-label-sm text-label-sm text-secondary font-semibold mt-1">Perlu respon pengurus</div>
+</div>
+</div>
+</div>
+<!-- Bento Grid Row: Demografi BANOM Chart + Quick Activity Feed -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Chart Box: Distribusi Kader BANOM (8 Cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Distribusi Kader Badan Otonom (BANOM)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sebaran 320 kader aktif ranting berdasarkan entitas keorganisasian</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Update: Februari 2025</span>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Export Rekapitulasi">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Custom SVG & CSS Bar Visualization with Exact Theme Classes -->
+<div class="space-y-space-md my-space-sm">
+<!-- Fatayat (88) -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span> Fatayat NU
+            </span>
+<span class="font-label-md text-label-md font-bold text-primary">88 Kader <span class="font-normal text-on-surface-variant">(27.5%)</span></span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 27.5%;"></div>
+</div>
+</div>
+<!-- Banser (70) -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim"></span> Satkoryon Banser
+            </span>
+<span class="font-label-md text-label-md font-bold text-primary">70 Personel <span class="font-normal text-on-surface-variant">(21.8%)</span></span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-primary-fixed-dim" style="width: 21.8%;"></div>
+</div>
+</div>
+<!-- Ansor (65) -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span> Gerakan Pemuda Ansor
+            </span>
+<span class="font-label-md text-label-md font-bold text-secondary">65 Kader <span class="font-normal text-on-surface-variant">(20.3%)</span></span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-secondary-container" style="width: 20.3%;"></div>
+</div>
+</div>
+<!-- IPPNU (52) -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> IPPNU Banjaranyar
+            </span>
+<span class="font-label-md text-label-md font-bold text-tertiary">52 Pelajar <span class="font-normal text-on-surface-variant">(16.3%)</span></span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-tertiary" style="width: 16.3%;"></div>
+</div>
+</div>
+<!-- IPNU (45) -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span> IPNU Banjaranyar
+            </span>
+<span class="font-label-md text-label-md font-bold text-tertiary">45 Pelajar <span class="font-normal text-on-surface-variant">(14.1%)</span></span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-tertiary-fixed-dim" style="width: 14.1%;"></div>
+</div>
+</div>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-md mt-space-md border-t-0 bg-surface-container-low p-space-sm rounded-lg">
+<div class="text-center">
+<div class="font-label-sm text-label-sm text-on-surface-variant font-medium">Usia Muda (15-25)</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">30.4%</div>
+</div>
+<div class="text-center">
+<div class="font-label-sm text-label-sm text-on-surface-variant font-medium">Kader Putri / Banom</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">43.8%</div>
+</div>
+<div class="text-center">
+<div class="font-label-sm text-label-sm text-on-surface-variant font-medium">Tersertifikasi Kaderisasi</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">89.2%</div>
+</div>
+</div>
+</div>
+<!-- Right Box: Lazisnu & Agenda Kilat (4 Cols) -->
+<div class="lg:col-span-4 space-y-space-md flex flex-col justify-between">
+<!-- Agenda Dekat Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Agenda Terdekat</h3>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-primary-fixed text-on-primary-fixed font-bold">2 Minggu Ini</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Item 1 -->
+<div class="p-space-sm bg-surface rounded-lg flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-primary text-on-primary flex flex-col items-center justify-center shrink-0">
+<span class="font-label-sm text-label-sm font-bold uppercase leading-none">Ahad</span>
+<span class="font-headline-sm text-headline-sm font-extrabold leading-tight">16</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-lg text-label-lg font-bold text-on-surface truncate">Istighotsah Kubro Rutin</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 19:30 WIB - Masjid Jami'
+              </div>
+<span class="inline-block mt-1 px-1.5 py-0.5 rounded text-label-sm font-label-sm bg-surface-container text-primary font-medium">PRNU &amp; Majelis Warga</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-sm bg-surface rounded-lg flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex flex-col items-center justify-center shrink-0">
+<span class="font-label-sm text-label-sm font-bold uppercase leading-none">Jum</span>
+<span class="font-headline-sm text-headline-sm font-extrabold leading-tight">21</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-lg text-label-lg font-bold text-on-surface truncate">Rijalul Ansor &amp; Diba'an</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 20:00 WIB - Musholla Al-Huda
+              </div>
+<span class="inline-block mt-1 px-1.5 py-0.5 rounded text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed font-medium">GP Ansor</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-on-surface font-bold text-center transition-colors">
+          Buka Seluruh Kalender Agenda
+        </button>
+</div>
+<!-- Lazisnu Kotak Koin Banner -->
+<div class="bg-primary text-on-primary p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="space-y-1">
+<span class="text-label-sm font-label-sm bg-primary-container px-2 py-0.5 rounded-full">Koin NU Banjaranyar</span>
+<div class="font-headline-sm text-headline-sm font-bold">Rp 14.850.000</div>
+<p class="font-label-sm text-label-sm text-on-primary-container">Terhimpun Bulan Berjalan (92 Kaleng)</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">savings</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Aspirasi Warga Cepat CRUD Panel -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Kotak Aspirasi &amp; Layanan Warga</h2>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary text-on-secondary font-bold">
+            3 Masuk Hari Ini
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Laporan jamaah mengenai kegiatan keagamaan, permohonan tahlil/lelayu, santunan, dan usulan ranting.</p>
+</div>
+<div class="flex items-center gap-2">
+<div class="relative">
+<input class="h-9 pl-9 pr-3 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary w-48 lg:w-64 shadow-inner" placeholder="Cari nama warga / pesan..." type="text"/>
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-on-surface-variant text-[18px]">search</span>
+</div>
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+<span>Semua Status</span>
+</button>
+</div>
+</div>
+<!-- Responsive Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<th class="py-space-sm px-space-md rounded-l-lg">Tanggal &amp; Warga</th>
+<th class="py-space-sm px-space-md">Kategori / Dusun</th>
+<th class="py-space-sm px-space-md">Ringkasan Aspirasi</th>
+<th class="py-space-sm px-space-md">Status</th>
+<th class="py-space-sm px-space-md text-right rounded-r-lg">Aksi Pengurus</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 space-y-2">
+<!-- Row 1: Baru -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-label-lg text-label-lg font-bold text-on-surface">H. Ahmad Fauzi</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">14 Feb 2025 • 08:45 WIB</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">0812-3344-xxxx</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container font-semibold text-primary">
+                Layanan Duka &amp; Tahlil
+              </span>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">RT 03 / RW 01 Krajan</div>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<div class="font-body-sm text-body-sm text-on-surface font-medium truncate">Permohonan Imam Tahlil 7 Hari Almarhumah Ibu Hj. Siti Muniroh</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Keluarga memohon kesediaan petugas amaliyah NU Ranting Banjaranyar untuk memimpin jamaah ba'da Isya.</p>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-secondary text-on-secondary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                Baru
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right space-x-1">
+<button class="inline-flex items-center px-2.5 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-sm" onclick="openAspirasiDetail('H. Ahmad Fauzi', 'Layanan Duka &amp; Tahlil', 'Permohonan Imam Tahlil 7 Hari Almarhumah Ibu Hj. Siti Muniroh. Ba\'da Isya.', 'Baru')" title="Buka Detail">
+<span>Respon</span>
+</button>
+<button class="inline-flex items-center px-2 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm transition-colors" title="Catatan Internal">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Baru -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Ustadz M. Ridwan</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">13 Feb 2025 • 21:10 WIB</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">0857-9912-xxxx</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container font-semibold text-primary">
+                Program Madrasah Diniyah
+              </span>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">RT 01 / RW 02 Kedungpring</div>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<div class="font-body-sm text-body-sm text-on-surface font-medium truncate">Usulan Pengadaan Kitab Kuning Pegon untuk Santri TPQ/Madin</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Memohon dukungan Lazisnu Ranting untuk subsidi kitab Mabadi Fiqhiyah dan Aqidatul Awam santri pra-sejahtera.</p>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-secondary text-on-secondary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                Baru
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right space-x-1">
+<button class="inline-flex items-center px-2.5 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-sm" onclick="openAspirasiDetail('Ustadz M. Ridwan', 'Program Madin', 'Usulan Subsidi Kitab Pegon dari Lazisnu', 'Baru')">
+<span>Respon</span>
+</button>
+<button class="inline-flex items-center px-2 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Diproses -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Suparman (Koord. Banser Satkoryon)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">12 Feb 2025 • 14:02 WIB</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">0813-9002-xxxx</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-label-sm bg-primary-fixed text-on-primary-fixed font-semibold">
+                Keamanan &amp; Kebencanaan
+              </span>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">Posko Ranting</div>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<div class="font-body-sm text-body-sm text-on-surface font-medium truncate">Kesiapsiagaan Pos Pantau Debit Kali Banjaranyar</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Banser Bagana siap siaga 24 jam antisipasi curah hujan tinggi bersama relawan BPBD.</p>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Diproses
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right space-x-1">
+<button class="inline-flex items-center px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" onclick="openAspirasiDetail('Suparman', 'Keamanan &amp; Kebencanaan', 'Koordinasi Bagana pantau debit kali Banjaranyar.', 'Diproses')">
+<span>Detail</span>
+</button>
+<button class="inline-flex items-center px-2 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Selesai / Dibaca -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Kader Fatayat Banjaranyar</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">10 Feb 2025 • 10:20 WIB</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">0821-4433-xxxx</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container font-semibold text-primary">
+                Pemberdayaan Umat
+              </span>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">Bale RW 02</div>
+</td>
+<td class="py-space-md px-space-md max-w-xs">
+<div class="font-body-sm text-body-sm text-on-surface font-medium truncate">Peminjaman Sound System Ranting untuk Pelatihan Olahan Pangan</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Telah diverifikasi dan disetujui peminjaman perlengkapan inventaris sekretariat.</p>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                Selesai
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right space-x-1">
+<button class="inline-flex items-center px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" onclick="openAspirasiDetail('Kader Fatayat', 'Pemberdayaan Umat', 'Peminjaman sound system ranting.', 'Selesai')">
+<span>Detail</span>
+</button>
+<button class="inline-flex items-center px-2 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination / Footer -->
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between pt-space-md mt-space-md gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Menampilkan 4 dari 14 total aspirasi warga masuk</span>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface-variant disabled:opacity-50" disabled="">Sebelumnya</button>
+<button class="px-3 py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold">1</button>
+<button class="px-3 py-1 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface hover:bg-surface-container-high">2</button>
+<button class="px-3 py-1 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface hover:bg-surface-container-high">Selanjutnya</button>
+</div>
+</div>
+</div>
+<!-- Media Visual Section: Banner Publikasi Terpasang & Galeri Warta Terkini -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card Warta 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group">
+<div>
+<div class="h-44 w-full relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Suasana khidmat pengajian akbar dan istighotsah Nahdlatul Ulama Ranting Banjaranyar dengan jamaah mengenakan peci hitam, baju koko putih, dan seragam batik khas NU, duduk bersila di aula masjid dengan pencahayaan hangat dan syahdu bernuansa hijau botol dan emas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-_phUf_gqNxPoRx7Fq06yL8yozS0JXF_pjfP6lV43Mvq2q3sX-fORUWC24DNyx9aVYelIPob3ruKZQudT0-4InrqUGWTXuEsJDXTEniDfphrKmI2Kq4YVpuJyEHe5e1uYpKBi36_Ha4ve1lkNrZ9pj3FPqEB6vYk_x_yCRMo8iNOuqiTXpP7nuEdLHVYnYIpigJUHaNDnwO7liqH0NseGrPWxk39pxY_jss7DYtzeWPOoBCFjMAA"/>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-primary text-on-primary font-bold">
+            Warta Ranting
+          </span>
+</div>
+<div class="p-space-md">
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-1">12 Februari 2025 • PRNU Banjaranyar</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold line-clamp-2 hover:text-primary transition-colors">
+            Peringatan Harlah Ke-101 NU: Ranting Banjaranyar Gelar Santunan Dhuafa &amp; Bedah Musholla
+          </h4>
+</div>
+</div>
+<div class="px-space-md pb-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">Terbit Publik</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 font-label-sm text-label-sm">
+<span>Edit</span>
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Card Warta 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group">
+<div>
+<div class="h-44 w-full relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Kader muda Gerakan Pemuda Ansor dan anggota Banser Banjaranyar mengenakan baret hitam dan seragam loreng hijau khas Banser, melaksanakan apel siaga dan aksi bersih sungai desa, memperlihatkan kekompakan pemuda santri dengan pencahayaan sinar matahari pagi bernuansa sejuk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDips3PXePV7G7Wv76hQ9PnLhIkLgPZxQEjIu77Szh4mtPJes4kOec4j69SevDTdu3c_q9gQYHXNgRyUsGJJfMvKQCPuVLibK8UbAfCUAgph26tfLrFooB7RP0UyKXkfGGAt89HMXSGwovMtK5v28i7SLvQkZbAndz_aLMTG2eU5psHvyN7_401KcaQgbYPxiL5TZWH8Qn0nMONt2O3pISM0jHiXtwjKGEpcKnFJ_4N7Dz9D0894es"/>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary text-on-secondary font-bold">
+            GP Ansor &amp; Banser
+          </span>
+</div>
+<div class="p-space-md">
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-1">10 Februari 2025 • PAC &amp; Satkoryon</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold line-clamp-2 hover:text-primary transition-colors">
+            Tanggap Cuaca Ekstrem: Satkoryon Banser Banjaranyar Gelar Apel Pasukan Siaga Banjir
+          </h4>
+</div>
+</div>
+<div class="px-space-md pb-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">Terbit Publik</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 font-label-sm text-label-sm">
+<span>Edit</span>
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Card Warta 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group">
+<div>
+<div class="h-44 w-full relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Kegiatan pelatihan literasi digital dan pembuatan kerajinan tangan oleh Fatayat dan IPPNU Banjaranyar dengan ibu-ibu dan santriwati berkerudung hijau tosca dan putih di dalam madrasah desa dengan nuansa rapi, modern, dan penuh antusiasme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbhuA1Fc9A8cuPZVRM5PlkiNcNXbtJ8PICFz0DPpVV-FVSudMUFDy1Xx74ERWqp0GSNWxxBNkmPYtixC9nzFo8xVYBVbp4XmTdIecgDjrm84RpCJlreU8YIwNe1Jy8vImSZBipGbEij7KrLGmlP1rjMop5Xe8ghlomSKxLpCpSDsHp2bTUqcXqF5uTKMFqzy-uao2K4OUlAK8unTKT6e3hS_DTyfOYiErFfemlyAtgy2dfr1lQk-Y"/>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-primary-container text-on-primary font-bold">
+            Fatayat &amp; IPPNU
+          </span>
+</div>
+<div class="p-space-md">
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-1">08 Februari 2025 • Bidang Kaderisasi</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold line-clamp-2 hover:text-primary transition-colors">
+            Kemandirian Ekonomi Jamaah: Fatayat NU Banjaranyar Buka Kelas Pelatihan Produk Olahan Pangan
+          </h4>
+</div>
+</div>
+<div class="px-space-md pb-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">Terbit Publik</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 font-label-sm text-label-sm">
+<span>Edit</span>
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Modal Drawer: Tindak Lanjut Aspirasi (Hidden by default, triggered by JS) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-background/40 backdrop-blur-sm hidden" id="aspirasi-modal">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-xl shadow-xl p-space-lg space-y-space-md animate-in fade-in zoom-in-95 duration-150">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">quick_reference_all</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tindak Lanjut Aspirasi Warga</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="closeAspirasiModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-space-sm bg-surface rounded-lg space-y-1">
+<div class="font-label-lg text-label-lg font-bold text-on-surface" id="modal-warga">H. Ahmad Fauzi</div>
+<div class="font-label-sm text-label-sm text-primary font-medium" id="modal-kategori">Layanan Duka &amp; Tahlil</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant pt-1" id="modal-ringkasan">Permohonan petugas amaliyah NU Ranting.</div>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface block">Status Penanganan</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-inner">
+<option value="proses">Sedang Diproses Pengurus</option>
+<option value="selesai">Telah Ditindaklanjuti &amp; Selesai</option>
+<option value="arsip">Arsipkan Sebagai Catatan</option>
+</select>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface block">Catatan Internal / Petugas Terpilih</label>
+<textarea class="w-full p-3 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="Contoh: Telah dikoordinasikan dengan Ustadz Zainal untuk memimpin tahlil..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-end gap-2 pt-space-xs">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors" onclick="closeAspirasiModal()">
+          Batal
+        </button>
+<button class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors shadow-sm" onclick="saveAspirasiStatus()">
+          Simpan Pembaruan
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Modal Drawer: Tambah Berita Cepat (Hidden by default) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-background/40 backdrop-blur-sm hidden" id="action-modal">
+<div class="bg-surface-container-lowest w-full max-w-xl rounded-xl shadow-xl p-space-lg space-y-space-md animate-in fade-in zoom-in-95 duration-150">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">post_add</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Buat Warta / Artikel Ranting Baru</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="document.getElementById('action-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<div>
+<label class="font-label-lg text-label-lg text-on-surface block mb-1">Judul Artikel / Warta</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="Masukkan judul warta resmi..." type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="font-label-lg text-label-lg text-on-surface block mb-1">Penerbit / Banom</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-inner">
+<option>PRNU Banjaranyar (Utama)</option>
+<option>GP Ansor</option>
+<option>Fatayat NU</option>
+<option>Satkoryon Banser</option>
+<option>IPNU Banjaranyar</option>
+<option>IPPNU Banjaranyar</option>
+<option>Lazisnu</option>
+</select>
+</div>
+<div>
+<label class="font-label-lg text-label-lg text-on-surface block mb-1">Kategori</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-inner">
+<option>Warta &amp; Amaliyah</option>
+<option>Kaderisasi</option>
+<option>Sosial Kemasyarakatan</option>
+<option>Tausiyah &amp; Kajian</option>
+<option>Kabar Lelayu</option>
+</select>
+</div>
+</div>
+<div>
+<label class="font-label-lg text-label-lg text-on-surface block mb-1">Ringkasan Berita</label>
+<textarea class="w-full p-3 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="Tuliskan pembuka berita secara ringkas..." rows="3"></textarea>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 pt-space-xs">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors" onclick="document.getElementById('action-modal').classList.add('hidden')">
+          Batal
+        </button>
+<button class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors shadow-sm" onclick="document.getElementById('action-modal').classList.add('hidden')">
+          Simpan Draf &amp; Lanjutkan Redaksi
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function openAspirasiDetail(warga, kategori, ringkasan, status) {
+    document.getElementById('modal-warga').innerText = warga;
+    document.getElementById('modal-kategori').innerText = kategori;
+    document.getElementById('modal-ringkasan').innerText = ringkasan;
+    document.getElementById('aspirasi-modal').classList.remove('hidden');
+  }
+
+  function closeAspirasiModal() {
+    document.getElementById('aspirasi-modal').classList.add('hidden');
+  }
+
+  function saveAspirasiStatus() {
+    closeAspirasiModal();
+  }
+</script></main></div></body></html>

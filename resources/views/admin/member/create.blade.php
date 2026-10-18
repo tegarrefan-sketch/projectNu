@@ -6,7 +6,7 @@
 <div class="max-w-4xl mx-auto space-y-6">
 
     <!-- Top Navigation -->
-    <div class="flex items-center justify-between">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
             <nav class="flex items-center gap-2 text-xs text-gray-500 mb-1">
                 <a href="{{ route('admin.dashboard') }}" class="hover:text-emerald-800">Admin</a>
@@ -19,7 +19,7 @@
             <p class="text-xs text-[#526350]">Masukkan identitas lengkap anggota untuk didaftarkan ke dalam database resmi PRNU Banjaranyar.</p>
         </div>
 
-        <a href="{{ route('admin.anggota.index') }}" class="px-3.5 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 text-gray-700 text-xs font-bold transition flex items-center gap-1.5">
+        <a href="{{ route('admin.anggota.index') }}" class="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-gray-300 hover:bg-gray-100 text-gray-700 text-xs font-bold transition flex items-center justify-center gap-1.5 min-h-[44px]">
             <span class="material-symbols-outlined text-[16px]">arrow_back</span>
             <span>Kembali</span>
         </a>
@@ -138,11 +138,15 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div class="space-y-1">
-                        <label for="jabatan" class="block text-xs font-bold uppercase text-[#004125]">
-                            Jabatan / Amanah <span class="text-red-500">*</span>
+                        <label for="status_keanggotaan" class="block text-xs font-bold uppercase text-[#004125]">
+                            Status Keanggotaan <span class="text-red-500">*</span>
                         </label>
-                        <input type="text" name="jabatan" id="jabatan" value="{{ old('jabatan', 'Kader / Anggota') }}" required placeholder="Contoh: Ketua, Sekretaris, Anggota"
-                            class="w-full py-2.5 px-3 text-xs rounded-xl border border-gray-200 focus:border-[#0c5a37]">
+                        <select name="status_keanggotaan" id="status_keanggotaan" required class="w-full py-2.5 px-3 text-xs rounded-xl border border-gray-200 focus:border-[#0c5a37]">
+                            <option value="Anggota" {{ old('status_keanggotaan', 'Anggota') == 'Anggota' ? 'selected' : '' }}>Anggota</option>
+                            <option value="Kader" {{ old('status_keanggotaan') == 'Kader' ? 'selected' : '' }}>Kader</option>
+                            <option value="Simpatisan" {{ old('status_keanggotaan') == 'Simpatisan' ? 'selected' : '' }}>Simpatisan</option>
+                        </select>
+                        <p class="text-[10px] text-gray-500">Jabatan struktural resmi dikelola melalui menu <strong>Pengurus</strong>.</p>
                     </div>
 
                     <div class="space-y-1">
@@ -155,7 +159,7 @@
 
                     <div class="space-y-1">
                         <label for="status" class="block text-xs font-bold uppercase text-[#004125]">
-                            Status Keanggotaan <span class="text-red-500">*</span>
+                            Status Keaktifan <span class="text-red-500">*</span>
                         </label>
                         <select name="status" id="status" required class="w-full py-2.5 px-3 text-xs rounded-xl border border-gray-200 focus:border-[#0c5a37]">
                             <option value="Aktif" {{ old('status', 'Aktif') == 'Aktif' ? 'selected' : '' }}>Aktif</option>
@@ -197,11 +201,11 @@
             </div>
 
             <!-- Submit Buttons -->
-            <div class="pt-4 border-t border-gray-100 flex items-center justify-end gap-3">
-                <a href="{{ route('admin.anggota.index') }}" class="px-5 py-2.5 rounded-xl border border-gray-300 hover:bg-gray-100 text-gray-700 text-xs font-bold transition">
+            <div class="pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-3">
+                <a href="{{ route('admin.anggota.index') }}" class="px-5 py-2.5 rounded-xl border border-gray-300 hover:bg-gray-100 text-gray-700 text-xs font-bold transition text-center min-h-[44px] flex items-center justify-center">
                     Batal
                 </a>
-                <button type="submit" class="px-6 py-2.5 rounded-xl bg-[#004125] hover:bg-[#0c5a37] text-white text-xs font-extrabold transition flex items-center gap-1.5 shadow-md">
+                <button type="submit" class="px-6 py-2.5 rounded-xl bg-[#004125] hover:bg-[#0c5a37] text-white text-xs font-extrabold transition flex items-center justify-center gap-1.5 shadow-md min-h-[44px]">
                     <span class="material-symbols-outlined text-[16px]">save</span>
                     <span>Simpan & Daftarkan Kader</span>
                 </button>

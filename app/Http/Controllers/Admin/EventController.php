@@ -81,13 +81,13 @@ class EventController extends Controller
         return redirect()->route('admin.agenda.index')->with('success', 'Agenda kegiatan berhasil ditambahkan.');
     }
 
-    public function edit(Event $agendum)
+    public function edit(Event $agenda)
     {
         $banoms = Banom::where('status', 'Aktif')->orderBy('urutan')->get();
-        return view('admin.event.edit', ['event' => $agendum, 'banoms' => $banoms]);
+        return view('admin.event.edit', ['event' => $agenda, 'banoms' => $banoms]);
     }
 
-    public function update(Request $request, Event $agendum)
+    public function update(Request $request, Event $agenda)
     {
         $validated = $request->validate([
             'banom_id' => 'nullable|exists:banoms,id',
@@ -99,23 +99,31 @@ class EventController extends Controller
             'lokasi' => 'required|string|max:255',
             'status' => 'required|in:Akan Datang,Selesai,Dibatalkan',
             'thumbnail' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:3072',
+        ], [
+            'title.required' => 'Nama/Judul agenda wajib diisi.',
+            'tanggal.required' => 'Tanggal agenda wajib diisi.',
+            'lokasi.required' => 'Lokasi kegiatan wajib diisi.',
+            'status.required' => 'Status kegiatan wajib dipilih.',
         ]);
 
         if ($request->hasFile('thumbnail')) {
-            if ($agendum->thumbnail && Storage::disk('public')->exists($agendum->thumbnail)) {
-                Storage::disk('public')->delete($agendum->thumbnail);
+            if ($agenda->thumbnail && Storage::disk('public')->exists($agenda->thumbnail)) {
+                Storage::disk('public')->delete($agenda->thumbnail);
             }
             $validated['thumbnail'] = $request->file('thumbnail')->store('events', 'public');
         }
 
-        $agendum->update($validated);
+        $agenda->update($validated);
 
         return redirect()->route('admin.agenda.index')->with('success', 'Agenda kegiatan berhasil diperbarui.');
     }
 
-    public function destroy(Event $agendum)
+    public function destroy(Event $agenda)
     {
-        $agendum->delete();
+        if ($agenda->thumbnail && Storage::disk('public')->exists($agenda->thumbnail)) {
+            Storage::disk('public')->delete($agenda->thumbnail);
+        }
+        $agenda->delete();
         return redirect()->route('admin.agenda.index')->with('success', 'Agenda kegiatan berhasil dihapus.');
     }
 }

@@ -5,7 +5,7 @@
 @section('content')
 <div class="max-w-4xl mx-auto space-y-6">
 
-    <div class="flex items-center justify-between">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
             <nav class="flex items-center gap-2 text-xs text-gray-500 mb-1">
                 <a href="{{ route('admin.dashboard') }}" class="hover:text-emerald-800">Admin</a>
@@ -18,7 +18,7 @@
             <p class="text-xs text-[#526350]">Perbarui tanggal pelaksanaan, lokasi, status kegiatan, atau poster acara.</p>
         </div>
 
-        <a href="{{ route('admin.agenda.index') }}" class="px-3.5 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 text-gray-700 text-xs font-bold transition flex items-center gap-1.5">
+        <a href="{{ route('admin.agenda.index') }}" class="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-gray-300 hover:bg-gray-100 text-gray-700 text-xs font-bold transition flex items-center justify-center gap-1.5 min-h-[44px]">
             <span class="material-symbols-outlined text-[16px]">arrow_back</span>
             <span>Kembali</span>
         </a>

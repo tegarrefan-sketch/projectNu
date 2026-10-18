@@ -47,8 +47,11 @@ class ExampleTest extends TestCase
     public function test_banom_index_and_detail(): void
     {
         $response = $this->get('/banom');
-        $response->assertStatus(200);
-        $response->assertSee('IPNU');
+        $response->assertRedirect('/struktur?tab=banom');
+
+        $tabResponse = $this->get('/struktur?tab=banom');
+        $tabResponse->assertStatus(200);
+        $tabResponse->assertSee('IPNU');
 
         $ipnuResponse = $this->get('/banom/ipnu');
         $ipnuResponse->assertStatus(200);
@@ -206,5 +209,77 @@ class ExampleTest extends TestCase
         $this->assertNotNull($newMember->kta);
         $this->assertStringStartsWith('IPNU-2026-', $newMember->kta->nomor_kta);
         $this->assertNotEmpty($newMember->kta->qr_code_svg);
+    }
+
+    /**
+     * Test kta pages return 200 even when an orphaned KTA exists without an associated member.
+     */
+    public function test_kta_pages_return_200_when_kta_has_no_member(): void
+    {
+        $banom = Banom::first();
+        $member = Member::create([
+            'banom_id' => $banom->id,
+            'nomor_anggota' => 'TEST-00999',
+            'nama_lengkap' => 'Anggota Terhapus Test',
+            'jenis_kelamin' => 'Laki-laki',
+            'status' => 'Aktif',
+            'status_keanggotaan' => 'Anggota',
+            'tahun_masuk' => 2026,
+            'tanggal_lahir' => '1990-01-01',
+        ]);
+
+        $orphanKta = Kta::create([
+            'member_id' => $member->id,
+            'nomor_kta' => 'ORPHAN-2026-99999',
+            'status' => 'Aktif',
+            'tanggal_terbit' => now()->toDateString(),
+            'tanggal_berlaku' => now()->addYears(3)->toDateString(),
+        ]);
+
+        // Soft delete member
+        $member->delete();
+
+        $publicSearchResponse = $this->get('/kta/verifikasi');
+        $publicSearchResponse->assertStatus(200);
+
+        $searchResponse = $this->get('/kta/verifikasi?nomor_kta=ORPHAN-2026-99999&tanggal_lahir=1990-01-01');
+        $searchResponse->assertStatus(200);
+        $searchResponse->assertSee('Data tidak ditemukan');
+
+        $admin = User::first();
+        $adminIndexResponse = $this->actingAs($admin)->get('/admin/kta');
+        $adminIndexResponse->assertStatus(200);
+
+        $adminShowResponse = $this->actingAs($admin)->get("/admin/kta/{$orphanKta->id}");
+        $adminShowResponse->assertStatus(200);
+
+        $adminPrintResponse = $this->actingAs($admin)->get("/admin/kta/{$orphanKta->id}/print");
+        $adminPrintResponse->assertStatus(200);
+
+        $adminDownloadResponse = $this->actingAs($admin)->get("/admin/kta/{$orphanKta->id}/download");
+        $adminDownloadResponse->assertStatus(200);
+    }
+
+    /**
+     * Test public KTA search requires both nomor_kta and tanggal_lahir (2-factor verification).
+     */
+    public function test_public_kta_search_with_valid_dob_succeeds(): void
+    {
+        $kta = Kta::whereHas('member')->first();
+        $this->assertNotNull($kta);
+        $dob = $kta->member->tanggal_lahir ? $kta->member->tanggal_lahir->format('Y-m-d') : '2005-01-01';
+
+        if (!$kta->member->tanggal_lahir) {
+            $kta->member->update(['tanggal_lahir' => $dob]);
+        }
+
+        $wrongDobResponse = $this->get("/kta/verifikasi?nomor_kta={$kta->nomor_kta}&tanggal_lahir=1970-01-01");
+        $wrongDobResponse->assertStatus(200);
+        $wrongDobResponse->assertSee('Data tidak ditemukan');
+
+        $correctResponse = $this->get("/kta/verifikasi?nomor_kta={$kta->nomor_kta}&tanggal_lahir={$dob}");
+        $correctResponse->assertStatus(200);
+        $correctResponse->assertSee($kta->nomor_kta);
+        $correctResponse->assertSee($kta->member->nama_lengkap);
     }
 }

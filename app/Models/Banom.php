@@ -24,8 +24,32 @@ class Banom extends Model
         'status',
         'warna_primer',
         'warna_sekunder',
+        'kategori',
+        'rentang_usia',
+        'label_bagian',
         'urutan',
+        'is_active',
     ];
+
+    protected $casts = [
+        'is_active' => 'boolean',
+        'urutan' => 'integer',
+    ];
+
+    public function divisions(): HasMany
+    {
+        return $this->hasMany(Division::class)->orderBy('urutan');
+    }
+
+    public function banomOfficers(): HasMany
+    {
+        return $this->hasMany(BanomOfficer::class)->orderBy('urutan');
+    }
+
+    public function officers(): HasMany
+    {
+        return $this->hasMany(BanomOfficer::class)->orderBy('urutan');
+    }
 
     public function members(): HasMany
     {
@@ -50,5 +74,21 @@ class Banom extends Model
     public function getActiveMembersCountAttribute(): int
     {
         return $this->members()->where('status', 'Aktif')->count();
+    }
+
+    public function resolveRouteBinding($value, $field = null)
+    {
+        if ($field) {
+            return $this->where($field, $value)->first();
+        }
+
+        if (is_numeric($value)) {
+            return $this->where('id', $value)->first();
+        }
+
+        return $this->where('slug', $value)
+            ->orWhereRaw('LOWER(singkatan) = ?', [strtolower($value)])
+            ->orWhere('id', $value)
+            ->first();
     }
 }

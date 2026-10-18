@@ -24,6 +24,19 @@ class BanomController extends Controller
             }])
             ->firstOrFail();
 
+        $officers = $banom->officers()
+            ->where('is_active', true)
+            ->with(['position', 'member'])
+            ->join('positions', 'banom_officers.position_id', '=', 'positions.id')
+            ->orderBy('positions.urutan')
+            ->orderBy('banom_officers.urutan')
+            ->select('banom_officers.*')
+            ->get();
+
+        $groupedOfficers = $officers->groupBy(function ($officer) {
+            return $officer->position->nama ?? 'Pengurus';
+        });
+
         $structures = $banom->organizationStructures()
             ->where('status', 'Aktif')
             ->orderBy('urutan')
@@ -46,6 +59,6 @@ class BanomController extends Controller
             ->take(4)
             ->get();
 
-        return view('banom.show', compact('banom', 'structures', 'members', 'posts', 'events'));
+        return view('banom.show', compact('banom', 'officers', 'groupedOfficers', 'structures', 'members', 'posts', 'events'));
     }
 }

@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Masuk Portal Admin — SIMNU Ranting Banjaranyar</title>
 
     <!-- Google Fonts & Material Symbols -->
@@ -22,6 +22,14 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             display: inline-block;
             vertical-align: middle;
+        }
+        @media (max-width: 768px) {
+            input {
+                font-size: 16px !important;
+            }
+            button, a {
+                min-height: 44px;
+            }
         }
     </style>
 </head>

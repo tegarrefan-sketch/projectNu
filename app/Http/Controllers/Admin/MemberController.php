@@ -17,9 +17,10 @@ class MemberController extends Controller
         $banoms = Banom::orderBy('urutan')->get();
         $banomId = $request->query('banom_id');
         $status = $request->query('status');
+        $statusKeanggotaan = $request->query('status_keanggotaan');
         $search = $request->query('q');
 
-        $query = Member::with(['banom', 'kta'])->latest();
+        $query = Member::with(['banom', 'kta', 'activeOfficer.position', 'activeOfficer.banom'])->latest();
 
         if ($banomId) {
             $query->where('banom_id', $banomId);
@@ -27,6 +28,10 @@ class MemberController extends Controller
 
         if ($status) {
             $query->where('status', $status);
+        }
+
+        if ($statusKeanggotaan) {
+            $query->where('status_keanggotaan', $statusKeanggotaan);
         }
 
         if ($search) {
@@ -48,7 +53,7 @@ class MemberController extends Controller
             'has_kta' => Kta::count(),
         ];
 
-        return view('admin.member.index', compact('members', 'banoms', 'banomId', 'status', 'search', 'stats'));
+        return view('admin.member.index', compact('members', 'banoms', 'banomId', 'status', 'statusKeanggotaan', 'search', 'stats'));
     }
 
     public function create()
@@ -59,6 +64,16 @@ class MemberController extends Controller
 
     public function store(Request $request)
     {
+        if (!$request->filled('status_keanggotaan')) {
+            $legacyJabatan = $request->input('jabatan', 'Anggota');
+            $mappedStatus = match (strtolower((string) $legacyJabatan)) {
+                'simpatisan', 'warga' => 'Simpatisan',
+                'kader', 'kader aktif', 'kader pratama' => 'Kader',
+                default => 'Anggota',
+            };
+            $request->merge(['status_keanggotaan' => $mappedStatus]);
+        }
+
         $validated = $request->validate([
             'banom_id' => 'required|exists:banoms,id',
             'nomor_anggota' => 'nullable|string|max:50|unique:members,nomor_anggota',
@@ -70,7 +85,7 @@ class MemberController extends Controller
             'nomor_telepon' => 'nullable|string|max:30',
             'email' => 'nullable|email|max:100',
             'status' => 'required|in:Aktif,Tidak Aktif,Alumni',
-            'jabatan' => 'required|string|max:100',
+            'status_keanggotaan' => 'required|in:Anggota,Kader,Simpatisan',
             'tahun_masuk' => 'nullable|integer|min:1950|max:2050',
             'keterangan' => 'nullable|string',
             'foto' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
@@ -79,20 +94,22 @@ class MemberController extends Controller
             'banom_id.required' => 'Pilih Badan Otonom.',
             'nama_lengkap.required' => 'Nama lengkap kader wajib diisi.',
             'jenis_kelamin.required' => 'Pilih jenis kelamin.',
-            'jabatan.required' => 'Jabatan/Amanah wajib diisi (misal: Anggota, Pengurus).',
+            'status_keanggotaan.required' => 'Pilih status keanggotaan (Anggota, Kader, Simpatisan).',
         ]);
 
         $banom = Banom::findOrFail($validated['banom_id']);
 
         if (empty($validated['nomor_anggota'])) {
-            $year = $validated['tahun_masuk'] ?? date('Y');
-            $count = Member::where('banom_id', $banom->id)->count() + 1;
-            $validated['nomor_anggota'] = sprintf('NIA-%s-%s-%04d', strtoupper($banom->singkatan), $year, $count);
+            $year = isset($validated['tahun_masuk']) ? (int) $validated['tahun_masuk'] : (int) date('Y');
+            $validated['nomor_anggota'] = Member::generateMemberNumber($banom, $year);
         }
 
         if ($request->hasFile('foto')) {
             $validated['foto'] = $request->file('foto')->store('members', 'public');
         }
+
+        // Sinkronkan kolom lama jabatan untuk kompatibilitas data
+        $validated['jabatan'] = $validated['status_keanggotaan'];
 
         $member = Member::create($validated);
 
@@ -116,6 +133,21 @@ class MemberController extends Controller
         return redirect()->route('admin.anggota.index')->with('success', 'Data kader berhasil ditambahkan.');
     }
 
+    public function show(Member $anggotum)
+    {
+        $anggotum->load([
+            'banom',
+            'kta',
+            'activeOfficer.position',
+            'activeOfficer.banom',
+            'activeOfficer.division',
+            'officers.position',
+            'officers.banom',
+        ]);
+
+        return view('admin.member.show', ['member' => $anggotum]);
+    }
+
     public function edit(Member $anggotum)
     {
         $banoms = Banom::where('status', 'Aktif')->orderBy('urutan')->get();
@@ -124,6 +156,16 @@ class MemberController extends Controller
 
     public function update(Request $request, Member $anggotum)
     {
+        if (!$request->filled('status_keanggotaan')) {
+            $legacyJabatan = $request->input('jabatan', $anggotum->status_keanggotaan ?? 'Anggota');
+            $mappedStatus = match (strtolower((string) $legacyJabatan)) {
+                'simpatisan', 'warga' => 'Simpatisan',
+                'kader', 'kader aktif', 'kader pratama' => 'Kader',
+                default => 'Anggota',
+            };
+            $request->merge(['status_keanggotaan' => $mappedStatus]);
+        }
+
         $validated = $request->validate([
             'banom_id' => 'required|exists:banoms,id',
             'nomor_anggota' => 'required|string|max:50|unique:members,nomor_anggota,' . $anggotum->id,
@@ -135,7 +177,7 @@ class MemberController extends Controller
             'nomor_telepon' => 'nullable|string|max:30',
             'email' => 'nullable|email|max:100',
             'status' => 'required|in:Aktif,Tidak Aktif,Alumni',
-            'jabatan' => 'required|string|max:100',
+            'status_keanggotaan' => 'required|in:Anggota,Kader,Simpatisan',
             'tahun_masuk' => 'nullable|integer|min:1950|max:2050',
             'keterangan' => 'nullable|string',
             'foto' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
@@ -148,6 +190,9 @@ class MemberController extends Controller
             $validated['foto'] = $request->file('foto')->store('members', 'public');
         }
 
+        // Sinkronkan kolom lama jabatan untuk kompatibilitas data
+        $validated['jabatan'] = $validated['status_keanggotaan'];
+
         $anggotum->update($validated);
 
         return redirect()->route('admin.anggota.index')->with('success', 'Data kader berhasil diperbarui.');
@@ -157,5 +202,37 @@ class MemberController extends Controller
     {
         $anggotum->delete();
         return redirect()->route('admin.anggota.index')->with('success', 'Data kader berhasil dihapus.');
+    }
+
+    public function search(Request $request)
+    {
+        $q = trim($request->query('q', ''));
+        if ($q === '') {
+            return response()->json([]);
+        }
+
+        $members = Member::with(['banom', 'activeOfficer.position'])
+            ->where('status', 'Aktif')
+            ->where(function ($query) use ($q) {
+                $query->where('nomor_anggota', 'LIKE', "%{$q}%")
+                      ->orWhere('nama_lengkap', 'LIKE', "%{$q}%");
+            })
+            ->orderBy('nama_lengkap')
+            ->take(10)
+            ->get();
+
+        $results = $members->map(function ($m) {
+            $jabatan = $m->activeOfficer?->position?->nama ?? $m->jabatan ?? $m->status_keanggotaan;
+            return [
+                'id' => $m->id,
+                'nomor_anggota' => $m->nomor_anggota,
+                'nama_lengkap' => $m->nama_lengkap,
+                'banom' => $m->banom?->singkatan ?? $m->banom?->nama ?? 'PRNU',
+                'jabatan' => $jabatan,
+                'foto' => $m->foto ? asset('storage/' . $m->foto) : null,
+            ];
+        });
+
+        return response()->json($results);
     }
 }

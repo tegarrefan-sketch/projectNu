@@ -17,10 +17,16 @@
             <p class="text-xs text-[#526350]">Kelola jadwal pengajian rutin, rapat koordinasi, diklat kaderisasi BANOM, dan peringatan hari besar Islam (PHBI).</p>
         </div>
 
-        <a href="{{ route('admin.agenda.create') }}" class="px-4 py-2.5 rounded-xl bg-[#004125] hover:bg-[#0c5a37] text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
-            <span class="material-symbols-outlined text-[16px]">add_circle</span>
-            <span>Tambah Agenda Baru</span>
-        </a>
+        <div class="flex flex-wrap items-center gap-2.5">
+            <a href="{{ route('event.index') }}" target="_blank" class="px-3.5 py-2.5 rounded-xl border border-gray-300 hover:bg-gray-100 text-gray-700 text-xs font-bold transition flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px]">visibility</span>
+                <span>Lihat Portal Publik</span>
+            </a>
+            <a href="{{ route('admin.agenda.create') }}" class="px-4 py-2.5 rounded-xl bg-[#004125] hover:bg-[#0c5a37] text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                <span class="material-symbols-outlined text-[16px]">add_circle</span>
+                <span>Tambah Agenda Baru</span>
+            </a>
+        </div>
     </div>
 
     <!-- 3 Metrics Cards -->
@@ -76,9 +82,94 @@
         </form>
     </div>
 
-    <!-- Events Table -->
+    <!-- Events Table & Mobile Cards -->
     <div class="bg-white rounded-3xl border border-[#e6eeff] shadow-sm overflow-hidden">
-        <div class="overflow-x-auto">
+        <!-- Mobile Stacked Card View (sm:hidden) -->
+        <div class="sm:hidden p-4 space-y-3 bg-[#fbfcfe]">
+            @forelse($events as $ev)
+                <div class="bg-white rounded-2xl p-4 border border-[#e6eeff] shadow-xs space-y-3">
+                    <div class="flex items-start justify-between gap-2">
+                        <div class="min-w-0 flex-1">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-emerald-50 text-[#004125] border border-emerald-200">
+                                    {{ $ev->tanggal->translatedFormat('d M Y') }}
+                                </span>
+                                <span class="text-[11px] text-gray-500 font-medium">
+                                    {{ $ev->waktu_mulai ? substr($ev->waktu_mulai, 0, 5) : '08:00' }} WIB
+                                </span>
+                            </div>
+                            <h3 class="font-extrabold text-gray-900 text-sm mt-2 hover:text-[#004125] break-words">
+                                {{ $ev->title }}
+                            </h3>
+                            <p class="text-[11px] text-gray-500 line-clamp-2 mt-0.5">
+                                {{ $ev->description ?? 'Tidak ada deskripsi rinci' }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Details (label di kiri, isi di kanan) -->
+                    <div class="bg-[#f8f9ff] rounded-xl p-3 border border-[#dee9fc] divide-y divide-gray-100 text-xs">
+                        <div class="flex items-center justify-between py-1.5">
+                            <span class="text-gray-500 font-medium">Lokasi Tempat:</span>
+                            <span class="font-bold text-gray-800 text-right flex items-center gap-1 justify-end">
+                                <span class="material-symbols-outlined text-[14px] text-emerald-600">location_on</span>
+                                <span>{{ $ev->lokasi }}</span>
+                            </span>
+                        </div>
+                        <div class="flex items-center justify-between py-1.5">
+                            <span class="text-gray-500 font-medium">Penyelenggara:</span>
+                            <span>
+                                @if($ev->banom)
+                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-gray-100 text-gray-800">
+                                        {{ $ev->banom->singkatan }}
+                                    </span>
+                                @else
+                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-[#004125] border border-emerald-200">
+                                        PRNU Ranting
+                                    </span>
+                                @endif
+                            </span>
+                        </div>
+                        <div class="flex items-center justify-between py-1.5">
+                            <span class="text-gray-500 font-medium">Status:</span>
+                            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold
+                                {{ $ev->status === 'Akan Datang' ? 'bg-emerald-100 text-emerald-800' : '' }}
+                                {{ $ev->status === 'Selesai' ? 'bg-gray-100 text-gray-700' : '' }}
+                                {{ $ev->status === 'Dibatalkan' ? 'bg-rose-100 text-rose-800' : '' }}">
+                                <span>{{ $ev->status }}</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="grid grid-cols-3 gap-2 pt-1">
+                        <a href="{{ route('event.show', $ev->slug) }}" target="_blank" class="min-h-[44px] rounded-xl bg-gray-100 hover:bg-emerald-100 text-[#004125] font-bold text-xs flex items-center justify-center gap-1 border border-gray-200 transition">
+                            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                            <span>Publik</span>
+                        </a>
+
+                        <a href="{{ route('admin.agenda.edit', $ev->id) }}" class="min-h-[44px] rounded-xl bg-emerald-50 hover:bg-emerald-100 text-[#004125] font-bold text-xs flex items-center justify-center gap-1 border border-emerald-200 transition">
+                            <span class="material-symbols-outlined text-[16px]">edit</span>
+                            <span>Edit</span>
+                        </a>
+
+                        <form action="{{ route('admin.agenda.destroy', $ev->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus agenda ini?')" class="w-full">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="w-full min-h-[44px] rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-xs flex items-center justify-center gap-1 border border-rose-200 transition">
+                                <span class="material-symbols-outlined text-[16px]">delete</span>
+                                <span>Hapus</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            @empty
+                <div class="text-center py-10 text-gray-400 font-semibold text-xs">Belum ada agenda kegiatan yang sesuai kriteria.</div>
+            @endforelse
+        </div>
+
+        <!-- Desktop & Tablet Table (hidden sm:block) -->
+        <div class="hidden sm:block overflow-x-auto">
             <table class="w-full text-left text-xs">
                 <thead>
                     <tr class="border-b border-gray-100 text-[#526350] font-bold uppercase tracking-wider text-[10px] bg-gray-50/50">
@@ -100,7 +191,7 @@
                                 </div>
                             </td>
                             <td class="py-3 px-3">
-                                <div class="font-bold text-gray-900 text-sm hover:text-[#004125] line-clamp-1">
+                                <div class="font-bold text-gray-900 text-sm hover:text-[#004125] line-clamp-1 break-words">
                                     {{ $ev->title }}
                                 </div>
                                 <div class="text-[10px] text-gray-400 line-clamp-1">

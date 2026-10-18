@@ -42,8 +42,8 @@
         </div>
     </div>
 
-    <!-- 6 Key Performance Metric Cards -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5">
+    <!-- 6 Key Performance Metric Cards: 1 col on mobile, 2 on tablet, 3-6 on desktop -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4">
         
         <!-- Total Anggota -->
         <div class="bg-white rounded-2xl p-4 sm:p-5 border border-[#e6eeff] shadow-sm hover:border-emerald-300 transition-all flex flex-col justify-between">
@@ -149,7 +149,7 @@
                 </h2>
                 <p class="text-xs text-[#526350]">Ringkasan jumlah kader dan pencapaian KTA terbit pada masing-masing sayap organisasi</p>
             </div>
-            <a href="{{ route('admin.banom.index') }}" class="text-xs font-bold text-[#0c5a37] hover:underline flex items-center gap-1">
+            <a href="{{ route('admin.banoms.index') }}" class="text-xs font-bold text-[#0c5a37] hover:underline flex items-center gap-1">
                 <span>Kelola BANOM</span>
                 <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
             </a>
@@ -221,7 +221,8 @@
                 </a>
             </div>
 
-            <div class="overflow-x-auto">
+            <!-- Table for Desktop / Tablet -->
+            <div class="hidden sm:block overflow-x-auto">
                 <table class="w-full text-left text-xs">
                     <thead>
                         <tr class="border-b border-gray-100 text-[#526350] font-bold uppercase tracking-wider text-[10px]">
@@ -260,14 +261,14 @@
                                 </td>
                                 <td class="py-3 px-3 text-right">
                                     @if($m->kta)
-                                        <a href="{{ route('admin.kta.show', $m->kta->id) }}" class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 hover:text-emerald-900 bg-emerald-50 px-2 py-1 rounded-lg">
+                                        <a href="{{ route('admin.kta.show', $m->kta->id) }}" class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 hover:text-emerald-900 bg-emerald-50 px-2.5 py-1.5 rounded-lg">
                                             <span class="material-symbols-outlined text-[14px]">id_card</span>
                                             <span>Lihat KTA</span>
                                         </a>
                                     @else
                                         <form action="{{ route('admin.kta.generate', $m->id) }}" method="POST" class="inline">
                                             @csrf
-                                            <button type="submit" class="inline-flex items-center gap-1 text-[11px] font-bold text-white bg-[#0c5a37] hover:bg-[#004125] px-2.5 py-1 rounded-lg shadow-sm">
+                                            <button type="submit" class="inline-flex items-center gap-1 text-[11px] font-bold text-white bg-[#0c5a37] hover:bg-[#004125] px-2.5 py-1.5 rounded-lg shadow-sm">
                                                 <span class="material-symbols-outlined text-[14px]">auto_fix_high</span>
                                                 <span>Generate</span>
                                             </button>
@@ -282,6 +283,53 @@
                         @endforelse
                     </tbody>
                 </table>
+            </div>
+
+            <!-- Stacked Cards for Mobile (< sm) -->
+            <div class="sm:hidden space-y-3">
+                @forelse($recentMembers as $m)
+                    <div class="p-3.5 rounded-2xl bg-[#f8f9ff] border border-gray-100 space-y-2">
+                        <div class="flex items-start justify-between gap-2">
+                            <div class="min-w-0">
+                                <h4 class="font-bold text-gray-900 text-xs truncate">{{ $m->nama_lengkap }}</h4>
+                                <span class="font-mono text-[10px] text-gray-400">{{ $m->nomor_anggota }}</span>
+                            </div>
+                            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-[#004125] shrink-0">
+                                {{ $m->banom->singkatan ?? '-' }}
+                            </span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs pt-1 border-t border-gray-100">
+                            <div>
+                                @if($m->kta)
+                                    <span class="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-800">
+                                        <span class="material-symbols-outlined text-[12px] text-emerald-600">check_circle</span>
+                                        <span>{{ $m->kta->nomor_kta }}</span>
+                                    </span>
+                                @else
+                                    <span class="text-[10px] text-gray-400">Belum Ada KTA</span>
+                                @endif
+                            </div>
+                            <div>
+                                @if($m->kta)
+                                    <a href="{{ route('admin.kta.show', $m->kta->id) }}" class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1.5 rounded-xl border border-emerald-200">
+                                        <span class="material-symbols-outlined text-[14px]">id_card</span>
+                                        <span>KTA</span>
+                                    </a>
+                                @else
+                                    <form action="{{ route('admin.kta.generate', $m->id) }}" method="POST" class="inline">
+                                        @csrf
+                                        <button type="submit" class="inline-flex items-center gap-1 text-[11px] font-bold text-white bg-[#0c5a37] px-2.5 py-1.5 rounded-xl shadow-xs">
+                                            <span class="material-symbols-outlined text-[14px]">auto_fix_high</span>
+                                            <span>Generate</span>
+                                        </button>
+                                    </form>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                    <p class="text-xs text-gray-400 text-center py-4">Belum ada data anggota yang terdaftar.</p>
+                @endforelse
             </div>
         </div>
 

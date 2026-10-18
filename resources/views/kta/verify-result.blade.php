@@ -58,10 +58,18 @@
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-3 w-full md:w-auto">
-                        <a href="{{ route('kta.verify.search') }}" class="w-full md:w-auto text-center px-4 py-2.5 rounded-xl border border-emerald-300 text-emerald-900 bg-white hover:bg-emerald-100 text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm">
-                            <span class="material-symbols-outlined text-[16px]">qr_code_scanner</span>
-                            <span>Verifikasi Lainnya</span>
+                    <div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
+                        <a href="{{ route('kta.public.print', $kta->nomor_kta) }}" target="_blank" class="w-full sm:w-auto text-center px-5 py-3 rounded-2xl bg-[#004125] hover:bg-[#0c5a37] text-white text-xs sm:text-sm font-black transition flex items-center justify-center gap-2 shadow-md">
+                            <span class="material-symbols-outlined text-[20px] text-[#fe932c]">print</span>
+                            <span>Cetak Kartu Tanda Anggota</span>
+                        </a>
+                        <a href="{{ route('kta.public.download', $kta->nomor_kta) }}" target="_blank" class="w-full sm:w-auto text-center px-4 py-3 rounded-2xl bg-[#fe932c] hover:bg-[#ff8000] text-[#2f1500] text-xs sm:text-sm font-black transition flex items-center justify-center gap-2 shadow-md">
+                            <span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+                            <span>Unduh PDF</span>
+                        </a>
+                        <a href="{{ route('kta.verify.search') }}" class="w-full sm:w-auto text-center px-4 py-3 rounded-2xl border border-emerald-300 text-emerald-900 bg-white hover:bg-emerald-100 text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm">
+                            <span class="material-symbols-outlined text-[18px]">qr_code_scanner</span>
+                            <span>Pindai Lainnya</span>
                         </a>
                     </div>
                 </div>
@@ -83,7 +91,7 @@
                             <div class="py-3.5 sm:grid sm:grid-cols-3 sm:gap-4 items-center">
                                 <dt class="text-xs font-bold uppercase text-[#526350] tracking-wider">Nama Lengkap</dt>
                                 <dd class="mt-1 font-bold text-gray-900 sm:col-span-2 sm:mt-0 text-base flex items-center gap-2">
-                                    <span>{{ $kta->member->nama_lengkap }}</span>
+                                    <span>{{ $kta->member?->nama_lengkap ?? 'Anggota' }}</span>
                                     <span class="material-symbols-outlined text-emerald-600 text-[18px]">verified_user</span>
                                 </dd>
                             </div>
@@ -92,9 +100,9 @@
                                 <dt class="text-xs font-bold uppercase text-[#526350] tracking-wider">Badan Otonom (BANOM)</dt>
                                 <dd class="mt-1 text-gray-900 sm:col-span-2 sm:mt-0 flex items-center gap-2">
                                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-[#004125]">
-                                        {{ $kta->member->banom->singkatan ?? 'NU' }}
+                                        {{ $kta->member?->banom?->singkatan ?? 'NU' }}
                                     </span>
-                                    <span class="text-xs text-[#526350]">({{ $kta->member->banom->nama ?? 'Nahdlatul Ulama' }})</span>
+                                    <span class="text-xs text-[#526350]">({{ $kta->member?->banom?->nama ?? 'Nahdlatul Ulama' }})</span>
                                 </dd>
                             </div>
 
@@ -106,18 +114,27 @@
                             </div>
 
                             <div class="py-3.5 sm:grid sm:grid-cols-3 sm:gap-4 items-center">
-                                <dt class="text-xs font-bold uppercase text-[#526350] tracking-wider">Amanah / Jabatan</dt>
-                                <dd class="mt-1 text-gray-900 font-medium sm:col-span-2 sm:mt-0">
-                                    {{ $kta->member->jabatan ?? 'Kader / Anggota Aktif' }}
+                                <dt class="text-xs font-bold uppercase text-[#526350] tracking-wider">Amanah / Jabatan KTA</dt>
+                                <dd class="mt-1 text-gray-900 font-bold sm:col-span-2 sm:mt-0 text-[#004125]">
+                                    {{ $kta->member?->jabatan_kta ?? 'Anggota' }}
                                 </dd>
                             </div>
 
                             <div class="py-3.5 sm:grid sm:grid-cols-3 sm:gap-4 items-center">
                                 <dt class="text-xs font-bold uppercase text-[#526350] tracking-wider">Status Keanggotaan</dt>
                                 <dd class="mt-1 sm:col-span-2 sm:mt-0">
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300">
+                                        {{ $kta->member?->status_keanggotaan ?? 'Anggota' }}
+                                    </span>
+                                </dd>
+                            </div>
+
+                            <div class="py-3.5 sm:grid sm:grid-cols-3 sm:gap-4 items-center">
+                                <dt class="text-xs font-bold uppercase text-[#526350] tracking-wider">Status Keaktifan KTA</dt>
+                                <dd class="mt-1 sm:col-span-2 sm:mt-0">
                                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-500 text-white shadow-sm shadow-emerald-500/20">
                                         <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-                                        <span>Aktif</span>
+                                        <span>{{ $kta->status ?? 'Aktif' }}</span>
                                     </span>
                                 </dd>
                             </div>
@@ -173,8 +190,8 @@
                                 <div class="relative z-10 flex items-center justify-between border-b border-white/15 pb-2">
                                     <div class="flex items-center gap-2">
                                         <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center p-1 border border-white/20">
-                                            @if($kta->member->banom && $kta->member->banom->logo)
-                                                <img src="{{ asset('storage/' . $kta->member->banom->logo) }}" alt="Logo" class="w-full h-full object-contain">
+                                            @if($kta->member?->banom && $kta->member?->banom?->logo)
+                                                <img src="{{ asset('storage/' . $kta->member?->banom?->logo) }}" alt="Logo" class="w-full h-full object-contain">
                                             @else
                                                 <span class="material-symbols-outlined text-emerald-200 text-lg">mosque</span>
                                             @endif
@@ -185,7 +202,7 @@
                                         </div>
                                     </div>
                                     <span class="text-[9px] font-black uppercase px-2 py-0.5 rounded bg-white/15 border border-white/20 text-[#aaf2c4]">
-                                        {{ $kta->member->banom->singkatan ?? 'NU' }}
+                                        {{ $kta->member?->banom?->singkatan ?? 'NU' }}
                                     </span>
                                 </div>
 
@@ -194,8 +211,8 @@
                                     <!-- Photo -->
                                     <div class="col-span-4 flex justify-center">
                                         <div class="w-16 h-20 sm:w-18 sm:h-22 rounded-xl bg-emerald-950/60 border-2 border-emerald-400/50 overflow-hidden shadow-md flex items-center justify-center">
-                                            @if($kta->member->foto)
-                                                <img src="{{ asset('storage/' . $kta->member->foto) }}" alt="{{ $kta->member->nama_lengkap }}" class="w-full h-full object-cover">
+                                            @if($kta->member?->foto)
+                                                <img src="{{ asset('storage/' . $kta->member?->foto) }}" alt="{{ $kta->member?->nama_lengkap ?? 'Foto' }}" class="w-full h-full object-cover">
                                             @else
                                                 <span class="material-symbols-outlined text-emerald-300/40 text-4xl">person</span>
                                             @endif
@@ -205,14 +222,14 @@
                                     <!-- Personal Data -->
                                     <div class="col-span-8 space-y-1">
                                         <div class="text-[12px] sm:text-[13px] font-black text-white leading-tight line-clamp-1">
-                                            {{ $kta->member->nama_lengkap }}
+                                            {{ $kta->member?->nama_lengkap ?? 'Anggota' }}
                                         </div>
                                         <div class="text-[9px] font-mono text-[#fe932c] font-bold">
                                             {{ $kta->nomor_kta }}
                                         </div>
                                         <div class="text-[8px] text-emerald-100 flex items-center gap-1">
                                             <span class="material-symbols-outlined text-[10px] text-emerald-300">work</span>
-                                            <span class="truncate">{{ $kta->member->jabatan ?? 'Kader / Anggota' }}</span>
+                                            <span class="truncate">{{ $kta->member?->jabatan_kta ?? 'Anggota' }}</span>
                                         </div>
                                         <div class="text-[8px] text-emerald-200/80">
                                             Berlaku: {{ $kta->tanggal_berlaku ? $kta->tanggal_berlaku->format('Y') : 'Seumur Hidup' }}
@@ -246,7 +263,9 @@
 
                                     <!-- QR Code Image -->
                                     <div class="w-16 h-16 bg-white p-1 rounded-lg shrink-0 flex items-center justify-center shadow">
-                                        @if($kta->qr_code)
+                                        @if($kta->qr_code_svg)
+                                            <img src="{{ $kta->qr_code_svg }}" alt="QR" class="w-full h-full object-contain">
+                                        @elseif($kta->qr_code)
                                             <img src="{{ $kta->qr_code }}" alt="QR" class="w-full h-full object-contain">
                                         @else
                                             <span class="material-symbols-outlined text-gray-400 text-3xl">qr_code</span>
@@ -258,6 +277,18 @@
                                     <span>https://nu-banjaranyar.or.id</span>
                                     <span>SIMNU VERIFIED</span>
                                 </div>
+                            </div>
+
+                            <!-- Buttons below virtual card -->
+                            <div class="pt-3 grid grid-cols-2 gap-3">
+                                <a href="{{ route('kta.public.print', $kta->nomor_kta) }}" target="_blank" class="px-4 py-3 rounded-2xl bg-[#004125] hover:bg-[#0c5a37] text-white font-extrabold text-xs text-center flex items-center justify-center gap-2 shadow-md transition-all">
+                                    <span class="material-symbols-outlined text-[18px] text-[#fe932c]">print</span>
+                                    <span>Cetak KTA</span>
+                                </a>
+                                <a href="{{ route('kta.public.download', $kta->nomor_kta) }}" target="_blank" class="px-4 py-3 rounded-2xl bg-[#fe932c] hover:bg-[#ff8000] text-[#2f1500] font-black text-xs text-center flex items-center justify-center gap-2 shadow-md transition-all">
+                                    <span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                                    <span>Unduh PDF</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -279,7 +310,7 @@
                             {{ $isKadaluarsa ? 'KTA KADALUARSA' : 'KTA TIDAK AKTIF' }}
                         </h2>
                         <p class="text-sm text-amber-800 leading-relaxed max-w-lg mx-auto">
-                            Nomor KTA <span class="font-mono font-bold">{{ $nomor_kta }}</span> atas nama <strong>{{ $kta->member->nama_lengkap }}</strong> tercatat pada sistem kami, namun status kartu saat ini adalah <strong>{{ strtoupper($kta->status) }}</strong>.
+                            Nomor KTA <span class="font-mono font-bold">{{ $nomor_kta }}</span> atas nama <strong>{{ $kta->member?->nama_lengkap ?? 'Anggota' }}</strong> tercatat pada sistem kami, namun status kartu saat ini adalah <strong>{{ strtoupper($kta->status) }}</strong>.
                         </p>
                     </div>
 

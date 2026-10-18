@@ -40,4 +40,12 @@ class Event extends Model
             ->orderBy('tanggal')
             ->orderBy('waktu_mulai');
     }
+
+    public function scopePast(Builder $query): Builder
+    {
+        return $query->where('tanggal', '<', now()->toDateString())
+            ->where('status', '!=', 'Dibatalkan')
+            ->orderByDesc('tanggal')
+            ->orderByDesc('waktu_mulai');
+    }
 }

@@ -17,7 +17,7 @@
             <p class="text-xs text-[#526350]">Kelola jajaran Mustasyar, Syuriyah, Tanfidziyah, Lembaga, serta pimpinan 5 Badan Otonom.</p>
         </div>
 
-        <a href="{{ route('admin.struktur.create') }}" class="px-4 py-2.5 rounded-xl bg-[#004125] hover:bg-[#0c5a37] text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+        <a href="{{ route('admin.struktur.create') }}" class="w-full sm:w-auto min-h-[44px] px-4 py-2.5 rounded-xl bg-[#004125] hover:bg-[#0c5a37] text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm">
             <span class="material-symbols-outlined text-[16px]">person_add</span>
             <span>Tambah Pengurus</span>
         </a>
@@ -28,7 +28,7 @@
         <form action="{{ route('admin.struktur.index') }}" method="GET" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 items-center">
             
             <div class="lg:col-span-5">
-                <select name="banom_id" class="w-full py-2 px-3 text-xs rounded-xl border border-gray-200 focus:border-[#0c5a37] text-gray-800">
+                <select name="banom_id" class="w-full py-2.5 px-3 text-xs sm:text-sm rounded-xl border border-gray-200 focus:border-[#0c5a37] text-gray-800">
                     <option value="">Semua Tingkatan (PRNU & BANOM)</option>
                     <option value="prnu" {{ request('banom_id') === 'prnu' ? 'selected' : '' }}>Pengurus Ranting NU (Pusat Ranting)</option>
                     @foreach($banoms as $b)
@@ -40,7 +40,7 @@
             </div>
 
             <div class="lg:col-span-4">
-                <select name="hierarki" class="w-full py-2 px-3 text-xs rounded-xl border border-gray-200 focus:border-[#0c5a37] text-gray-800">
+                <select name="hierarki" class="w-full py-2.5 px-3 text-xs sm:text-sm rounded-xl border border-gray-200 focus:border-[#0c5a37] text-gray-800">
                     <option value="">Semua Kategori Hierarki</option>
                     <option value="mustasyar" {{ request('hierarki') === 'mustasyar' ? 'selected' : '' }}>Mustasyar (Penasihat)</option>
                     <option value="syuriyah" {{ request('hierarki') === 'syuriyah' ? 'selected' : '' }}>Syuriyah (Pimpinan Tertinggi)</option>
@@ -51,12 +51,12 @@
             </div>
 
             <div class="lg:col-span-3 flex items-center gap-2">
-                <button type="submit" class="flex-1 py-2 px-3 rounded-xl bg-[#004125] hover:bg-[#0c5a37] text-white text-xs font-bold transition flex items-center justify-center gap-1">
+                <button type="submit" class="flex-1 min-h-[44px] py-2 px-3 rounded-xl bg-[#004125] hover:bg-[#0c5a37] text-white text-xs font-bold transition flex items-center justify-center gap-1">
                     <span class="material-symbols-outlined text-[16px]">filter_list</span>
                     <span>Terapkan</span>
                 </button>
                 @if(request()->anyFilled(['banom_id', 'hierarki']))
-                    <a href="{{ route('admin.struktur.index') }}" class="py-2 px-2.5 rounded-xl border border-gray-200 hover:bg-gray-50 text-gray-600 text-xs font-semibold" title="Reset">
+                    <a href="{{ route('admin.struktur.index') }}" class="min-h-[44px] px-3.5 rounded-xl border border-gray-200 hover:bg-gray-50 text-gray-600 text-xs font-semibold flex items-center justify-center" title="Reset">
                         <span class="material-symbols-outlined text-[16px]">restart_alt</span>
                     </a>
                 @endif

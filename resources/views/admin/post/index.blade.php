@@ -88,9 +88,96 @@
         </form>
     </div>
 
-    <!-- Posts Table -->
+    <!-- Posts Table & Mobile Cards -->
     <div class="bg-white rounded-3xl border border-[#e6eeff] shadow-sm overflow-hidden">
-        <div class="overflow-x-auto">
+        <!-- Mobile Stacked Card View (sm:hidden) -->
+        <div class="sm:hidden p-4 space-y-3 bg-[#fbfcfe]">
+            @forelse($posts as $index => $p)
+                <div class="bg-white rounded-2xl p-4 border border-[#e6eeff] shadow-xs space-y-3">
+                    <div class="flex items-start gap-3">
+                        <div class="w-16 h-14 rounded-xl bg-gray-100 overflow-hidden shrink-0 flex items-center justify-center border border-gray-200">
+                            @if($p->thumbnail)
+                                <img src="{{ asset('storage/' . $p->thumbnail) }}" alt="{{ $p->title }}" class="w-full h-full object-cover">
+                            @else
+                                <span class="material-symbols-outlined text-gray-400 text-xl">image</span>
+                            @endif
+                        </div>
+                        <div class="min-w-0 flex-1">
+                            <a href="{{ route('admin.berita.edit', $p->id) }}" class="font-extrabold text-gray-900 text-sm hover:text-[#004125] line-clamp-2 break-words">
+                                {{ $p->title }}
+                            </a>
+                            <div class="text-[11px] text-gray-400 line-clamp-1 mt-0.5">
+                                {{ $p->excerpt ?? Str::limit(strip_tags($p->content), 60) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Details (label di kiri, isi di kanan) -->
+                    <div class="bg-[#f8f9ff] rounded-xl p-3 border border-[#dee9fc] divide-y divide-gray-100 text-xs">
+                        <div class="flex items-center justify-between py-1.5">
+                            <span class="text-gray-500 font-medium">Kategori / BANOM:</span>
+                            <span class="font-bold text-gray-800 text-right">
+                                {{ $p->kategori }}
+                                @if($p->banom)
+                                    <span class="text-[10px] text-emerald-700">({{ $p->banom->singkatan }})</span>
+                                @endif
+                            </span>
+                        </div>
+                        <div class="flex items-center justify-between py-1.5">
+                            <span class="text-gray-500 font-medium">Penulis / Redaksi:</span>
+                            <span class="font-bold text-gray-700 text-right">{{ $p->author }}</span>
+                        </div>
+                        <div class="flex items-center justify-between py-1.5">
+                            <span class="text-gray-500 font-medium">Status Publikasi:</span>
+                            <form action="{{ route('admin.berita.toggle-publish', $p->id) }}" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <button type="submit" class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase transition min-h-[36px]
+                                    {{ $p->status === 'published' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800' }}">
+                                    <span class="w-2 h-2 rounded-full {{ $p->status === 'published' ? 'bg-emerald-600' : 'bg-amber-500' }}"></span>
+                                    <span>{{ $p->status }}</span>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="flex items-center justify-between py-1.5">
+                            <span class="text-gray-500 font-medium">Dilihat / Pembaca:</span>
+                            <span class="font-mono text-gray-700 text-right">{{ number_format($p->views) }}x dibaca</span>
+                        </div>
+                        <div class="flex items-center justify-between py-1.5">
+                            <span class="text-gray-500 font-medium">Waktu Terbit:</span>
+                            <span class="text-gray-700 text-right text-[11px]">{{ $p->published_at ? $p->published_at->format('d/m/Y H:i') : 'Belum Terbit' }}</span>
+                        </div>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="grid grid-cols-3 gap-2 pt-1">
+                        <a href="{{ route('post.show', $p->slug) }}" target="_blank" class="min-h-[44px] rounded-xl bg-gray-100 hover:bg-emerald-100 text-[#004125] font-bold text-xs flex items-center justify-center gap-1 border border-gray-200 transition">
+                            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                            <span>Publik</span>
+                        </a>
+
+                        <a href="{{ route('admin.berita.edit', $p->id) }}" class="min-h-[44px] rounded-xl bg-emerald-50 hover:bg-emerald-100 text-[#004125] font-bold text-xs flex items-center justify-center gap-1 border border-emerald-200 transition">
+                            <span class="material-symbols-outlined text-[16px]">edit</span>
+                            <span>Edit</span>
+                        </a>
+
+                        <form action="{{ route('admin.berita.destroy', $p->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus warta ini?')" class="w-full">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="w-full min-h-[44px] rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-xs flex items-center justify-center gap-1 border border-rose-200 transition">
+                                <span class="material-symbols-outlined text-[16px]">delete</span>
+                                <span>Hapus</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            @empty
+                <div class="text-center py-10 text-gray-400 font-semibold text-xs">Belum ada warta berita yang sesuai filter.</div>
+            @endforelse
+        </div>
+
+        <!-- Desktop & Tablet Table (hidden sm:block) -->
+        <div class="hidden sm:block overflow-x-auto">
             <table class="w-full text-left text-xs">
                 <thead>
                     <tr class="border-b border-gray-100 text-[#526350] font-bold uppercase tracking-wider text-[10px] bg-gray-50/50">
@@ -120,7 +207,7 @@
                                         @endif
                                     </div>
                                     <div class="min-w-0 max-w-sm">
-                                        <div class="font-bold text-gray-900 text-sm line-clamp-1 hover:text-[#004125]">
+                                        <div class="font-bold text-gray-900 text-sm line-clamp-1 hover:text-[#004125] break-words">
                                             {{ $p->title }}
                                         </div>
                                         <div class="text-[10px] text-gray-400 line-clamp-1">

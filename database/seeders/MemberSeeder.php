@@ -175,6 +175,7 @@ class MemberSeeder extends Seeder
         ];
 
         foreach ($members as $data) {
+            $data['status_keanggotaan'] = $data['status_keanggotaan'] ?? 'Kader';
             Member::updateOrCreate(
                 ['nomor_anggota' => $data['nomor_anggota']],
                 $data

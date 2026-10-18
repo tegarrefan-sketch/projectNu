@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banom;
+use App\Models\Donation;
 use App\Models\Event;
+use App\Models\GalleryPhoto;
 use App\Models\Kta;
 use App\Models\Member;
 use App\Models\OrganizationStructure;
@@ -23,10 +25,20 @@ class HomeController extends Controller
         $totalMembers = Member::count();
         $totalKta = Kta::where('status', 'Aktif')->count();
         $totalBanom = $banoms->count();
+        $totalInfaqTerkumpul = Donation::where('status', 'Terverifikasi')->sum('nominal');
 
         $structures = OrganizationStructure::where('status', 'Aktif')
             ->whereIn('kategori_hierarki', ['syuriyah', 'tanfidziyah'])
             ->orderBy('urutan')
+            ->take(6)
+            ->get();
+
+        // 4-6 latest gallery photos for home preview
+        $latestPhotos = GalleryPhoto::with('gallery')
+            ->whereHas('gallery', function ($q) {
+                $q->where('status', 'Publik');
+            })
+            ->latest('created_at')
             ->take(6)
             ->get();
 
@@ -38,7 +50,9 @@ class HomeController extends Controller
             'totalMembers',
             'totalKta',
             'totalBanom',
-            'structures'
+            'totalInfaqTerkumpul',
+            'structures',
+            'latestPhotos'
         ));
     }
 }

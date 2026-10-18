@@ -12,7 +12,7 @@
                 <span>Beranda</span>
             </a>
             <span>/</span>
-            <a href="{{ route('banom.index') }}" class="hover:underline">Badan Otonom</a>
+            <a href="{{ route('structure.index', ['tab' => 'banom']) }}" class="hover:underline">Badan Otonom</a>
             <span>/</span>
             <span class="text-white font-semibold">{{ $banom->singkatan }}</span>
         </nav>
@@ -79,24 +79,7 @@
             <h2 class="text-2xl font-extrabold text-[#004125] tracking-tight">Pengurus Pimpinan Ranting {{ $banom->singkatan }}</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            @forelse ($structures as $item)
-                <div class="bg-white rounded-2xl p-5 border border-[#e6eeff] shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white shrink-0 font-bold shadow-sm" style="background-color: {{ $banom->warna_primer ?? '#004125' }};">
-                        <span class="material-symbols-outlined text-[24px]">person</span>
-                    </div>
-                    <div>
-                        <h3 class="text-sm font-bold text-[#121c2a]">{{ $item->nama }}</h3>
-                        <p class="text-xs font-semibold text-[#0c5a37] mt-0.5">{{ $item->jabatan }}</p>
-                        <p class="text-[11px] text-[#707971] mt-1">{{ $item->deskripsi }}</p>
-                    </div>
-                </div>
-            @empty
-                <div class="col-span-4 p-6 text-center bg-white rounded-2xl border border-[#e6eeff] text-xs text-[#404942]">
-                    Belum ada data pengurus yang dimasukkan.
-                </div>
-            @endforelse
-        </div>
+        @include('partials.banom_pyramid', ['officers' => $officers, 'structures' => $structures, 'banom' => $banom])
     </div>
 
     <!-- 3. Berita & Warta BANOM -->

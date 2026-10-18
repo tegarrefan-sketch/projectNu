@@ -5,7 +5,7 @@
 @section('content')
 <div class="max-w-4xl mx-auto space-y-6">
 
-    <div class="flex items-center justify-between">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
             <nav class="flex items-center gap-2 text-xs text-gray-500 mb-1">
                 <a href="{{ route('admin.dashboard') }}" class="hover:text-emerald-800">Admin</a>
@@ -18,7 +18,7 @@
             <p class="text-xs text-[#526350]">Tinjau isi pesan masyarakat dan perbarui status penanganan oleh pengurus ranting.</p>
         </div>
 
-        <a href="{{ route('admin.aspirasi.index') }}" class="px-3.5 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 text-gray-700 text-xs font-bold transition flex items-center gap-1.5">
+        <a href="{{ route('admin.aspirasi.index') }}" class="w-full sm:w-auto min-h-[44px] px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 text-gray-700 text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm">
             <span class="material-symbols-outlined text-[16px]">arrow_back</span>
             <span>Kembali</span>
         </a>
@@ -111,7 +111,7 @@
                             class="w-full py-2.5 px-3 text-xs rounded-xl border border-gray-200 focus:border-[#0c5a37] leading-relaxed">{{ old('catatan_admin', $aspiration->catatan_admin) }}</textarea>
                     </div>
 
-                    <button type="submit" class="w-full py-2.5 px-4 rounded-xl bg-[#004125] hover:bg-[#0c5a37] text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-md">
+                    <button type="submit" class="w-full min-h-[44px] py-2.5 px-4 rounded-xl bg-[#004125] hover:bg-[#0c5a37] text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-md">
                         <span class="material-symbols-outlined text-[16px]">save</span>
                         <span>Simpan Status & Tanggapan</span>
                     </button>
@@ -119,7 +119,7 @@
             </div>
 
             <!-- Delete Danger Zone -->
-            <div class="p-4 rounded-2xl bg-rose-50 border border-rose-200 flex items-center justify-between">
+            <div class="p-4 rounded-2xl bg-rose-50 border border-rose-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div>
                     <span class="text-xs font-bold text-rose-950 block">Hapus Aspirasi</span>
                     <span class="text-[11px] text-rose-800">Tindakan ini tidak dapat dibatalkan</span>
@@ -127,7 +127,7 @@
                 <form action="{{ route('admin.aspirasi.destroy', $aspiration->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data aspirasi ini?')">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="px-3 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold transition">
+                    <button type="submit" class="w-full sm:w-auto min-h-[44px] px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold transition flex items-center justify-center">
                         Hapus
                     </button>
                 </form>

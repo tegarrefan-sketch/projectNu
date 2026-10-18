@@ -12,7 +12,9 @@ class AspirationController extends Controller
     {
         $status = $request->query('status');
         $kategori = $request->query('kategori');
-        $search = $request->query('q');
+        $search = trim($request->query('q', ''));
+        $searchWa = trim($request->query('whatsapp', ''));
+        $searchNama = trim($request->query('nama', ''));
 
         $query = Aspiration::latest();
 
@@ -24,12 +26,31 @@ class AspirationController extends Controller
             $query->where('kategori', $kategori);
         }
 
-        if ($search) {
-            $query->where(function ($q) use ($search) {
+        if ($searchWa !== '') {
+            $cleanWa = Aspiration::cleanPhoneNumber($searchWa);
+            $query->where(function ($q) use ($searchWa, $cleanWa) {
+                $q->where('kontak', 'LIKE', "%{$searchWa}%");
+                if ($cleanWa !== '') {
+                    $q->orWhere('kontak', 'LIKE', "%{$cleanWa}%");
+                }
+            });
+        }
+
+        if ($searchNama !== '') {
+            $query->where('nama', 'LIKE', "%{$searchNama}%");
+        }
+
+        if ($search !== '') {
+            $cleanSearch = Aspiration::cleanPhoneNumber($search);
+            $query->where(function ($q) use ($search, $cleanSearch) {
                 $q->where('kode_tiket', 'LIKE', "%{$search}%")
                   ->orWhere('nama', 'LIKE', "%{$search}%")
+                  ->orWhere('kontak', 'LIKE', "%{$search}%")
                   ->orWhere('subjek', 'LIKE', "%{$search}%")
                   ->orWhere('pesan', 'LIKE', "%{$search}%");
+                if ($cleanSearch !== '') {
+                    $q->orWhere('kontak', 'LIKE', "%{$cleanSearch}%");
+                }
             });
         }
 

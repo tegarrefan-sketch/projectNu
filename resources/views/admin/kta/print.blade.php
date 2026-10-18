@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cetak KTA — {{ $kta->nomor_kta }} — {{ $kta->member->nama_lengkap }}</title>
+    <title>Cetak KTA — {{ $kta->nomor_kta }} — {{ $kta->member?->nama_lengkap ?? 'Anggota' }}</title>
 
     <!-- Google Fonts & Material Symbols -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,8 +107,8 @@
                     <div class="relative z-10 flex items-center justify-between border-b border-white/20 pb-1.5">
                         <div class="flex items-center gap-1.5">
                             <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center p-0.5 border border-white/20">
-                                @if($kta->member->banom && $kta->member->banom->logo)
-                                    <img src="{{ asset('storage/' . $kta->member->banom->logo) }}" alt="Logo" class="w-full h-full object-contain">
+                                @if($kta->member?->banom && $kta->member?->banom?->logo)
+                                    <img src="{{ asset('storage/' . $kta->member?->banom?->logo) }}" alt="Logo" class="w-full h-full object-contain">
                                 @else
                                     <span class="material-symbols-outlined text-emerald-200 text-xs">mosque</span>
                                 @endif
@@ -119,7 +119,7 @@
                             </div>
                         </div>
                         <span class="text-[7.5px] font-black uppercase px-1.5 py-0.5 rounded bg-white/15 border border-white/20 text-[#aaf2c4]">
-                            {{ $kta->member->banom->singkatan ?? 'NU' }}
+                            {{ $kta->member?->banom?->singkatan ?? 'NU' }}
                         </span>
                     </div>
 
@@ -128,8 +128,8 @@
                         <!-- Photo -->
                         <div class="col-span-4 flex justify-center">
                             <div class="w-14 h-18 rounded-lg bg-emerald-950/70 border border-emerald-400/50 overflow-hidden shadow flex items-center justify-center">
-                                @if($kta->member->foto)
-                                    <img src="{{ asset('storage/' . $kta->member->foto) }}" alt="{{ $kta->member->nama_lengkap }}" class="w-full h-full object-cover">
+                                @if($kta->member?->foto)
+                                    <img src="{{ asset('storage/' . $kta->member?->foto) }}" alt="{{ $kta->member?->nama_lengkap ?? 'Foto' }}" class="w-full h-full object-cover">
                                 @else
                                     <span class="material-symbols-outlined text-emerald-300/40 text-3xl">person</span>
                                 @endif
@@ -139,14 +139,14 @@
                         <!-- Data -->
                         <div class="col-span-8 space-y-0.5 pl-0.5">
                             <div class="text-[10px] font-black text-white leading-tight line-clamp-1">
-                                {{ $kta->member->nama_lengkap }}
+                                {{ $kta->member?->nama_lengkap ?? 'Anggota' }}
                             </div>
                             <div class="text-[7.5px] font-mono text-[#fe932c] font-bold tracking-wide">
                                 {{ $kta->nomor_kta }}
                             </div>
                             <div class="text-[6.5px] text-emerald-100 flex items-center gap-1">
                                 <span class="material-symbols-outlined text-[8px] text-emerald-300">work</span>
-                                <span class="truncate">{{ $kta->member->jabatan ?? 'Kader / Anggota Aktif' }}</span>
+                                <span class="truncate">{{ $kta->member?->jabatan_kta ?? 'Anggota' }}</span>
                             </div>
                             <div class="text-[6.5px] text-emerald-200/90">
                                 Masa Berlaku: <strong>{{ $kta->tanggal_berlaku ? $kta->tanggal_berlaku->format('Y') : 'Seumur Hidup' }}</strong>

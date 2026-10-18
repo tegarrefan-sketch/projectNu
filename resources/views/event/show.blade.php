@@ -19,8 +19,27 @@
     </div>
 </div>
 
-<div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 space-y-8">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-10 space-y-6">
     
+    @auth
+    <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs shadow-sm">
+        <div class="flex items-center gap-2 text-emerald-800 font-semibold">
+            <span class="material-symbols-outlined text-emerald-700 text-lg">admin_panel_settings</span>
+            <span>Anda sedang melihat pratinjau publik agenda ini.</span>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+            <a href="{{ route('admin.agenda.edit', $event->id) }}" class="px-3.5 py-1.5 rounded-xl bg-white border border-emerald-300 hover:bg-emerald-100 text-emerald-900 font-bold transition flex items-center gap-1 shadow-xs">
+                <span class="material-symbols-outlined text-[15px]">edit</span>
+                <span>Edit Agenda</span>
+            </a>
+            <a href="{{ route('admin.agenda.index') }}" class="px-3.5 py-1.5 rounded-xl bg-[#004125] hover:bg-[#0c5a37] text-white font-bold transition flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[15px]">arrow_back</span>
+                <span>Kembali ke Manajemen</span>
+            </a>
+        </div>
+    </div>
+    @endauth
+
     <div class="bg-white rounded-3xl p-6 sm:p-10 border border-[#e6eeff] shadow-sm space-y-6">
         <div class="flex items-center gap-2">
             <span class="px-3 py-1 rounded-full text-xs font-bold text-white bg-[#004125]">

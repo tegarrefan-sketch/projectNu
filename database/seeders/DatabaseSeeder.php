@@ -15,12 +15,15 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             ProfileSeeder::class,
             BanomSeeder::class,
+            DivisionSeeder::class,
             OrganizationStructureSeeder::class,
             MemberSeeder::class,
             KtaSeeder::class,
             PostSeeder::class,
             EventSeeder::class,
             AspirationSeeder::class,
+            PositionSeeder::class,
+            GalleryAndInfaqSeeder::class,
         ]);
     }
 }

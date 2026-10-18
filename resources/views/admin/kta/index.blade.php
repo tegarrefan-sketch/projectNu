@@ -101,8 +101,8 @@
         <div class="bg-white rounded-3xl border border-[#e6eeff] shadow-sm overflow-hidden space-y-3">
             
             <!-- Table Action Toolbar -->
-            <div class="p-4 sm:px-6 border-b border-gray-100 flex flex-wrap items-center justify-between gap-3 bg-[#fafcff]">
-                <div class="flex items-center gap-3 text-xs font-semibold text-gray-600">
+            <div class="p-4 sm:px-6 border-b border-gray-100 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-[#fafcff]">
+                <div class="flex items-center gap-3 text-xs font-semibold text-gray-600 min-h-[44px]">
                     <label class="flex items-center gap-2 cursor-pointer">
                         <input type="checkbox" id="selectAllCheckbox" class="w-4 h-4 rounded text-[#0c5a37] focus:ring-[#0c5a37] border-gray-300">
                         <span>Pilih Semua Halaman Ini</span>
@@ -113,15 +113,103 @@
 
                 <div class="flex items-center gap-2">
                     <button type="submit" id="bulkPrintBtn" disabled
-                        class="px-4 py-2 rounded-xl bg-[#0c5a37] disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-[#004125] text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                        class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-[#0c5a37] disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-[#004125] text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm min-h-[44px]">
                         <span class="material-symbols-outlined text-[16px]">print</span>
                         <span>Cetak KTA Terpilih</span>
                     </button>
                 </div>
             </div>
 
-            <!-- Table Responsive -->
-            <div class="overflow-x-auto">
+            <!-- Mobile Stacked Card View (sm:hidden) -->
+            <div class="sm:hidden p-4 space-y-3 bg-[#fbfcfe]">
+                @forelse($ktas as $index => $kta)
+                    <div class="bg-white rounded-2xl p-4 border border-[#e6eeff] shadow-xs space-y-3">
+                        <div class="flex items-start gap-3">
+                            <div class="pt-1">
+                                <input type="checkbox" name="kta_ids[]" value="{{ $kta->id }}" 
+                                    class="kta-row-checkbox w-5 h-5 rounded text-[#0c5a37] focus:ring-[#0c5a37] border-gray-300">
+                            </div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center justify-between gap-2">
+                                    <span class="font-mono font-bold text-xs text-[#004125] bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                                        {{ $kta->nomor_kta }}
+                                    </span>
+                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-[#004125]">
+                                        {{ $kta->member?->banom?->singkatan ?? '-' }}
+                                    </span>
+                                </div>
+                                <div class="font-bold text-gray-900 text-sm mt-1.5 break-words">
+                                    {{ $kta->member?->nama_lengkap ?? 'Kader Dihapus' }}
+                                </div>
+                                <div class="text-[11px] text-gray-500 font-mono">
+                                    NIA: {{ $kta->member?->nomor_anggota ?? '-' }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Details (label di kiri, isi di kanan) -->
+                        <div class="bg-[#f8f9ff] rounded-xl p-3 border border-[#dee9fc] divide-y divide-gray-100 text-xs">
+                            <div class="flex items-center justify-between py-1.5">
+                                <span class="text-gray-500 font-medium">Tanggal Terbit:</span>
+                                <span class="font-bold text-gray-800 text-right">{{ $kta->tanggal_terbit ? $kta->tanggal_terbit->format('d/m/Y') : '-' }}</span>
+                            </div>
+                            <div class="flex items-center justify-between py-1.5">
+                                <span class="text-gray-500 font-medium">Masa Berlaku:</span>
+                                <span class="font-bold text-gray-800 text-right">{{ $kta->tanggal_berlaku ? $kta->tanggal_berlaku->format('d/m/Y') : 'Seumur Hidup' }}</span>
+                            </div>
+                            <div class="flex items-center justify-between py-1.5">
+                                <span class="text-gray-500 font-medium">Status KTA:</span>
+                                <span>
+                                    @if($kta->status === 'Aktif')
+                                        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-100 text-emerald-800">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                                            <span>Aktif</span>
+                                        </span>
+                                    @elseif($kta->status === 'Tidak Aktif')
+                                        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-gray-100 text-gray-700">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+                                            <span>Tidak Aktif</span>
+                                        </span>
+                                    @else
+                                        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-rose-100 text-rose-800">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                                            <span>Kadaluarsa</span>
+                                        </span>
+                                    @endif
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons Grid: Touch >= 44px -->
+                        <div class="grid grid-cols-2 gap-2 pt-1">
+                            <a href="{{ route('admin.kta.show', $kta->id) }}" class="min-h-[44px] rounded-xl bg-gray-100 hover:bg-emerald-100 text-[#004125] font-bold text-xs flex items-center justify-center gap-1.5 border border-gray-200 transition">
+                                <span class="material-symbols-outlined text-[16px]">visibility</span>
+                                <span>Studio 3D</span>
+                            </a>
+
+                            <a href="{{ route('admin.kta.print', $kta->id) }}" target="_blank" class="min-h-[44px] rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-900 font-bold text-xs flex items-center justify-center gap-1.5 border border-emerald-200 transition">
+                                <span class="material-symbols-outlined text-[16px]">print</span>
+                                <span>Cetak PVC</span>
+                            </a>
+
+                            <a href="{{ route('admin.kta.download', $kta->id) }}" class="min-h-[44px] rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-900 font-bold text-xs flex items-center justify-center gap-1.5 border border-blue-200 transition">
+                                <span class="material-symbols-outlined text-[16px]">download</span>
+                                <span>Unduh PDF</span>
+                            </a>
+
+                            <button type="button" onclick="confirmDeleteKta('{{ $kta->id }}', '{{ $kta->nomor_kta }}')" class="min-h-[44px] rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-xs flex items-center justify-center gap-1.5 border border-rose-200 transition">
+                                <span class="material-symbols-outlined text-[16px]">delete</span>
+                                <span>Cabut KTA</span>
+                            </button>
+                        </div>
+                    </div>
+                @empty
+                    <div class="text-center py-10 text-gray-400 font-semibold text-xs">Belum ada KTA yang sesuai filter.</div>
+                @endforelse
+            </div>
+
+            <!-- Desktop & Tablet Table (hidden sm:block) -->
+            <div class="hidden sm:block overflow-x-auto">
                 <table class="w-full text-left text-xs">
                     <thead>
                         <tr class="border-b border-gray-100 text-[#526350] font-bold uppercase tracking-wider text-[10px] bg-gray-50/50">
@@ -159,15 +247,15 @@
                                 </td>
                                 <td class="py-3 px-3">
                                     <div class="font-bold text-gray-900 text-sm">
-                                        {{ $kta->member->nama_lengkap ?? 'Kader Dihapus' }}
+                                        {{ $kta->member?->nama_lengkap ?? 'Kader Dihapus' }}
                                     </div>
                                     <div class="text-[10px] text-gray-500">
-                                        NIA: {{ $kta->member->nomor_anggota ?? '-' }}
+                                        NIA: {{ $kta->member?->nomor_anggota ?? '-' }}
                                     </div>
                                 </td>
                                 <td class="py-3 px-3">
                                     <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-[#004125]">
-                                        {{ $kta->member->banom->singkatan ?? '-' }}
+                                        {{ $kta->member?->banom?->singkatan ?? '-' }}
                                     </span>
                                 </td>
                                 <td class="py-3 px-3 text-gray-600">

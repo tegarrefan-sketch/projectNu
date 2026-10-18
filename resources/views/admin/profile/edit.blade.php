@@ -6,7 +6,7 @@
 <div class="max-w-4xl mx-auto space-y-6">
 
     <!-- Header -->
-    <div class="flex items-center justify-between">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
             <nav class="flex items-center gap-2 text-xs text-gray-500 mb-1">
                 <a href="{{ route('admin.dashboard') }}" class="hover:text-emerald-800">Admin</a>
@@ -17,7 +17,7 @@
             <p class="text-xs text-[#526350]">Kelola narasi sejarah, visi, misi, nilai Aswaja, SK kepengurusan, dan alamat resmi PRNU Banjaranyar.</p>
         </div>
 
-        <a href="{{ route('profile') }}" target="_blank" class="px-3.5 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 text-gray-700 text-xs font-bold transition flex items-center gap-1.5">
+        <a href="{{ route('profile') }}" target="_blank" class="self-start sm:self-auto px-3.5 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 text-gray-700 text-xs font-bold transition flex items-center gap-1.5 min-h-[44px]">
             <span class="material-symbols-outlined text-[16px]">open_in_new</span>
             <span>Lihat Halaman Publik</span>
         </a>

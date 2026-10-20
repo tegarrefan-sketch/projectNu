@@ -60,7 +60,7 @@
             
             <div class="space-y-1 text-center">
                 <h1 class="text-2xl font-extrabold text-[#004125] tracking-tight">Otentikasi Pengurus</h1>
-                <p class="text-xs text-[#526350]">Masukkan kredensial akun administrator untuk mengelola sistem</p>
+                <p class="text-xs text-[#526350]">Masukkan akun administrator untuk mengelola sistem</p>
             </div>
 
             @if(session('info'))
@@ -87,7 +87,7 @@
                     </label>
                     <div class="relative">
                         <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-lg">mail</span>
-                        <input type="email" id="email" name="email" value="{{ old('email', 'admin@nu-banjaranyar.or.id') }}" required autofocus
+                        <input type="email" id="email" name="email" value="{{ old('email') }}" required autofocus
                             class="w-full pl-10 pr-4 py-3 rounded-xl border {{ $errors->has('email') ? 'border-red-500 bg-red-50/50' : 'border-gray-200 focus:border-[#0c5a37] focus:ring-2 focus:ring-[#0c5a37]/20' }} text-sm transition font-medium text-gray-900"
                             placeholder="nama@nu-banjaranyar.or.id">
                     </div>
@@ -138,18 +138,6 @@
                     <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </button>
             </form>
-
-            <!-- Dev Credentials Quick Info Badge -->
-            <div class="p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-200 text-xs text-emerald-900 space-y-1">
-                <div class="font-bold flex items-center gap-1.5 text-emerald-950">
-                    <span class="material-symbols-outlined text-sm text-[#004125]">key</span>
-                    <span>Kredensial Development / Pengurus:</span>
-                </div>
-                <div class="font-mono text-[11px] text-emerald-800 space-y-0.5">
-                    <div>Email: <strong class="text-[#004125]">admin@nu-banjaranyar.or.id</strong></div>
-                    <div>Kata Sandi: <strong class="text-[#004125]">admin123</strong></div>
-                </div>
-            </div>
 
             <!-- Footer Return Link -->
             <div class="text-center pt-2">

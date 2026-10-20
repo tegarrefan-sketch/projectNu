@@ -85,7 +85,7 @@ Route::get('/kta/unduh/{nomor_kta}', [KtaVerificationController::class, 'downloa
 Route::redirect('/admin', '/admin/login');
 Route::redirect('/login', '/admin/login');
 Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
-Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
+Route::post('/admin/login', [AdminAuthController::class, 'login'])->middleware('throttle:admin-login')->name('admin.login.submit');
 Route::post('/admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
 
 /*

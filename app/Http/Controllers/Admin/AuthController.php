@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
@@ -29,6 +31,10 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($credentials, $request->boolean('remember'))) {
+            $throttleKey = Str::lower((string) $credentials['email']) . '|' . $request->ip();
+            RateLimiter::clear(md5('admin-login' . $throttleKey));
+            RateLimiter::clear('admin-login:' . $throttleKey);
+
             $request->session()->regenerate();
             return redirect()->intended(route('admin.dashboard'))->with('success', 'Selamat datang di SIMNU Portal PRNU Banjaranyar.');
         }
